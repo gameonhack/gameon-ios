@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F9091C9F1BB27F5B005BCBFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9091C9E1BB27F5B005BCBFC /* AppDelegate.swift */; };
 		F9091CA11BB27F5B005BCBFC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9091CA01BB27F5B005BCBFC /* LoginViewController.swift */; };
-		F9091CA31BB27F5B005BCBFC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9091CA21BB27F5B005BCBFC /* FirstViewController.swift */; };
+		F9091CA31BB27F5B005BCBFC /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9091CA21BB27F5B005BCBFC /* ScheduleViewController.swift */; };
 		F9091CA61BB27F5B005BCBFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9091CA41BB27F5B005BCBFC /* Main.storyboard */; };
 		F9091CA81BB27F5B005BCBFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9091CA71BB27F5B005BCBFC /* Images.xcassets */; };
 		F9091CAB1BB27F5B005BCBFC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9091CA91BB27F5B005BCBFC /* LaunchScreen.xib */; };
@@ -37,6 +37,8 @@
 		F98154641BB28AEE00276455 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98154611BB28AEE00276455 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
 		F98154651BB28AEE00276455 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98154621BB28AEE00276455 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 		F98154661BB28AEE00276455 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98154631BB28AEE00276455 /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
+		F986F2081BB75EF900A4E79B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986F2071BB75EF900A4E79B /* DataManager.swift */; settings = {ASSET_TAGS = (); }; };
+		F986F20A1BB75F4700A4E79B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986F2091BB75F4700A4E79B /* Event.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +56,7 @@
 		F9091C9D1BB27F5B005BCBFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9091C9E1BB27F5B005BCBFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9091CA01BB27F5B005BCBFC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		F9091CA21BB27F5B005BCBFC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		F9091CA21BB27F5B005BCBFC /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		F9091CA51BB27F5B005BCBFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9091CA71BB27F5B005BCBFC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F9091CAA1BB27F5B005BCBFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -85,6 +87,8 @@
 		F98154621BB28AEE00276455 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		F98154631BB28AEE00276455 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		F98154671BB28B1C00276455 /* Game On Hackathon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Game On Hackathon-Bridging-Header.h"; sourceTree = "<group>"; };
+		F986F2071BB75EF900A4E79B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F986F2091BB75F4700A4E79B /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +157,7 @@
 				F9091CC21BB28076005BCBFC /* Views */,
 				F9091CC01BB2805E005BCBFC /* Helpers */,
 				F9091C9E1BB27F5B005BCBFC /* AppDelegate.swift */,
-				F9091CA21BB27F5B005BCBFC /* FirstViewController.swift */,
+				F9091CA21BB27F5B005BCBFC /* ScheduleViewController.swift */,
 				F9091CA01BB27F5B005BCBFC /* LoginViewController.swift */,
 				F9091CA41BB27F5B005BCBFC /* Main.storyboard */,
 				F9091CA71BB27F5B005BCBFC /* Images.xcassets */,
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				F98154591BB2830100276455 /* ParseKeys.swift */,
+				F986F2071BB75EF900A4E79B /* DataManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 		F9091CC11BB2806A005BCBFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F986F2091BB75F4700A4E79B /* Event.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,7 +347,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9091CA31BB27F5B005BCBFC /* FirstViewController.swift in Sources */,
+				F986F20A1BB75F4700A4E79B /* Event.swift in Sources */,
+				F9091CA31BB27F5B005BCBFC /* ScheduleViewController.swift in Sources */,
+				F986F2081BB75EF900A4E79B /* DataManager.swift in Sources */,
 				F981545A1BB2830100276455 /* ParseKeys.swift in Sources */,
 				F9091C9F1BB27F5B005BCBFC /* AppDelegate.swift in Sources */,
 				F9091CA11BB27F5B005BCBFC /* LoginViewController.swift in Sources */,
