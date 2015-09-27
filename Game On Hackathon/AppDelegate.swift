@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Register Class
         Event.registerSubclass()
+        Notification.registerSubclass()
         
         return true
     }
