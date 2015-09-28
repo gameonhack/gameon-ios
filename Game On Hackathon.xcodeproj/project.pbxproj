@@ -44,6 +44,8 @@
 		F986F2131BB8838400A4E79B /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986F2121BB8838400A4E79B /* GroupsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F98F884D1BB8C80A0014DDB7 /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98F884C1BB8C80A0014DDB7 /* GroupCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		F98F884F1BB8CB470014DDB7 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98F884E1BB8CB470014DDB7 /* Group.swift */; settings = {ASSET_TAGS = (); }; };
+		F98F88521BB900D70014DDB7 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98F88511BB900D70014DDB7 /* GroupViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F98F88541BB913470014DDB7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98F88531BB913470014DDB7 /* Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		F986F2121BB8838400A4E79B /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		F98F884C1BB8C80A0014DDB7 /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		F98F884E1BB8CB470014DDB7 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		F98F88511BB900D70014DDB7 /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		F98F88531BB913470014DDB7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 				F9091CC11BB2806A005BCBFC /* Models */,
 				F9091CC21BB28076005BCBFC /* Views */,
 				F9091CC01BB2805E005BCBFC /* Helpers */,
+				F98F88501BB900C30014DDB7 /* ViewControllers */,
 				F9091C9E1BB27F5B005BCBFC /* AppDelegate.swift */,
 				F9091CA21BB27F5B005BCBFC /* ScheduleViewController.swift */,
 				F986F20F1BB77EB600A4E79B /* FeedViewController.swift */,
@@ -210,6 +215,7 @@
 			children = (
 				F98154591BB2830100276455 /* ParseKeys.swift */,
 				F986F2071BB75EF900A4E79B /* DataManager.swift */,
+				F98F88531BB913470014DDB7 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -259,6 +265,14 @@
 				F9091CC41BB28151005BCBFC /* Social.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		F98F88501BB900C30014DDB7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F98F88511BB900D70014DDB7 /* GroupViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98F88521BB900D70014DDB7 /* GroupViewController.swift in Sources */,
 				F98F884F1BB8CB470014DDB7 /* Group.swift in Sources */,
 				F986F20A1BB75F4700A4E79B /* Event.swift in Sources */,
 				F9091CA31BB27F5B005BCBFC /* ScheduleViewController.swift in Sources */,
@@ -369,6 +384,7 @@
 				F986F20E1BB77CD300A4E79B /* Notification.swift in Sources */,
 				F981545A1BB2830100276455 /* ParseKeys.swift in Sources */,
 				F9091C9F1BB27F5B005BCBFC /* AppDelegate.swift in Sources */,
+				F98F88541BB913470014DDB7 /* Extensions.swift in Sources */,
 				F986F2101BB77EB600A4E79B /* FeedViewController.swift in Sources */,
 				F9091CA11BB27F5B005BCBFC /* LoginViewController.swift in Sources */,
 				F98F884D1BB8C80A0014DDB7 /* GroupCollectionViewCell.swift in Sources */,

@@ -34,7 +34,8 @@ class Group: PFObject, PFSubclassing {
     
     func downloadIconImage (completionBlock: PFDataResultBlock ) {
         if let imageData = imageData {
-             completionBlock(imageData, nil)
+            completionBlock(imageData, nil)
+            return
         }
         icon?.getDataInBackgroundWithBlock({ (data : NSData?, error : NSError?) -> Void in
             if let data = data {
