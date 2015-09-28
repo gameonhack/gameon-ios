@@ -41,6 +41,9 @@
 		F986F20A1BB75F4700A4E79B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986F2091BB75F4700A4E79B /* Event.swift */; settings = {ASSET_TAGS = (); }; };
 		F986F20E1BB77CD300A4E79B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986F20D1BB77CD300A4E79B /* Notification.swift */; settings = {ASSET_TAGS = (); }; };
 		F986F2101BB77EB600A4E79B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986F20F1BB77EB600A4E79B /* FeedViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F986F2131BB8838400A4E79B /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F986F2121BB8838400A4E79B /* GroupsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F98F884D1BB8C80A0014DDB7 /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98F884C1BB8C80A0014DDB7 /* GroupCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		F98F884F1BB8CB470014DDB7 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98F884E1BB8CB470014DDB7 /* Group.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		F986F2091BB75F4700A4E79B /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		F986F20D1BB77CD300A4E79B /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		F986F20F1BB77EB600A4E79B /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		F986F2121BB8838400A4E79B /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		F98F884C1BB8C80A0014DDB7 /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		F98F884E1BB8CB470014DDB7 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,7 @@
 				F9091C9E1BB27F5B005BCBFC /* AppDelegate.swift */,
 				F9091CA21BB27F5B005BCBFC /* ScheduleViewController.swift */,
 				F986F20F1BB77EB600A4E79B /* FeedViewController.swift */,
+				F986F2121BB8838400A4E79B /* GroupsViewController.swift */,
 				F9091CA01BB27F5B005BCBFC /* LoginViewController.swift */,
 				F9091CA41BB27F5B005BCBFC /* Main.storyboard */,
 				F9091CA71BB27F5B005BCBFC /* Images.xcassets */,
@@ -212,6 +219,7 @@
 			children = (
 				F986F2091BB75F4700A4E79B /* Event.swift */,
 				F986F20D1BB77CD300A4E79B /* Notification.swift */,
+				F98F884E1BB8CB470014DDB7 /* Group.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,6 +227,7 @@
 		F9091CC21BB28076005BCBFC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F98F884C1BB8C80A0014DDB7 /* GroupCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -353,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98F884F1BB8CB470014DDB7 /* Group.swift in Sources */,
 				F986F20A1BB75F4700A4E79B /* Event.swift in Sources */,
 				F9091CA31BB27F5B005BCBFC /* ScheduleViewController.swift in Sources */,
 				F986F2081BB75EF900A4E79B /* DataManager.swift in Sources */,
@@ -361,6 +371,8 @@
 				F9091C9F1BB27F5B005BCBFC /* AppDelegate.swift in Sources */,
 				F986F2101BB77EB600A4E79B /* FeedViewController.swift in Sources */,
 				F9091CA11BB27F5B005BCBFC /* LoginViewController.swift in Sources */,
+				F98F884D1BB8C80A0014DDB7 /* GroupCollectionViewCell.swift in Sources */,
+				F986F2131BB8838400A4E79B /* GroupsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
