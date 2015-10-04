@@ -90,6 +90,13 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         refreshUserInfo ()
     }
     
+    //MARK: - Actions
+    
+    @IBAction func cancelAction (sender : AnyObject) {
+        self.dismissViewControllerAnimated(true) { () -> Void in
+            
+        }
+    }
 
 
 }

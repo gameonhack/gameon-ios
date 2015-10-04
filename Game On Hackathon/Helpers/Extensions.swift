@@ -18,3 +18,13 @@ extension UINavigationBar {
         
     }
 }
+
+extension UIViewController {
+    func performSegueLogin() {
+        if let loginViewController = storyboard?.instantiateViewControllerWithIdentifier("loginNavigationController") as? UINavigationController {
+           self.presentViewController(loginViewController, animated: true, completion: { () -> Void in
+            
+           })
+        }
+    }
+}

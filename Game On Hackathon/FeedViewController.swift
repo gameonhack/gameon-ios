@@ -26,7 +26,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewWillAppear(animated: Bool) {
+        if PFUser.currentUser() == nil {
+            return
+        }
         getFeed()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if PFUser.currentUser() == nil {
+            self.tabBarController?.selectedIndex = 0
+            self.performSegueLogin()
+        }
     }
     
     func refresh(refreshControl: UIRefreshControl) {
