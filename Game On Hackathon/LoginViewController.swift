@@ -65,6 +65,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                         user.saveEventually()
                     }
                     self.refreshUserInfo ()
+                    self.dismissViewControllerAnimated(true) { () -> Void in
+                        
+                    }
                 })
                 
             } else {

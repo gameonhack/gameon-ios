@@ -87,6 +87,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMy-e8-0oi">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="m25-mV-GaB" kind="embed" identifier="infoSegue" id="FsH-ux-37f"/>
+                                </connections>
+                            </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3H-zl-62X">
                                 <rect key="frame" x="20" y="288" width="560" height="24"/>
                                 <animations/>
@@ -140,10 +147,14 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZMy-e8-0oi" firstAttribute="leading" secondItem="YJQ-w1-RIa" secondAttribute="leading" id="5oO-wi-in4"/>
                             <constraint firstItem="l3H-zl-62X" firstAttribute="leading" secondItem="YJQ-w1-RIa" secondAttribute="leadingMargin" id="Kto-MO-rff"/>
                             <constraint firstItem="Hoh-df-FjW" firstAttribute="top" secondItem="1hy-pJ-llO" secondAttribute="bottom" id="OtM-4f-YKf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="l3H-zl-62X" secondAttribute="trailing" id="XKY-2W-lD4"/>
                             <constraint firstAttribute="trailing" secondItem="Hoh-df-FjW" secondAttribute="trailing" id="ej4-CE-rpn"/>
+                            <constraint firstItem="ZMy-e8-0oi" firstAttribute="top" secondItem="1hy-pJ-llO" secondAttribute="bottom" id="hBB-2p-QQ3"/>
+                            <constraint firstAttribute="trailing" secondItem="ZMy-e8-0oi" secondAttribute="trailing" id="kEo-fA-nHS"/>
+                            <constraint firstItem="BDd-3C-Wo0" firstAttribute="top" secondItem="ZMy-e8-0oi" secondAttribute="bottom" id="mOK-44-GlP"/>
                             <constraint firstItem="BDd-3C-Wo0" firstAttribute="top" secondItem="Hoh-df-FjW" secondAttribute="bottom" id="p8t-nI-qrV"/>
                             <constraint firstItem="Hoh-df-FjW" firstAttribute="leading" secondItem="YJQ-w1-RIa" secondAttribute="leading" id="u63-ES-OvA"/>
                             <constraint firstItem="l3H-zl-62X" firstAttribute="centerY" secondItem="YJQ-w1-RIa" secondAttribute="centerY" id="y0G-B1-Eki"/>
@@ -151,6 +162,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Feed" id="SXU-S9-d9a"/>
                     <connections>
+                        <outlet property="infoContainerView" destination="ZMy-e8-0oi" id="IKi-gU-nsy"/>
                         <outlet property="messageLabel" destination="l3H-zl-62X" id="Wud-ui-wvy"/>
                         <outlet property="tableView" destination="Hoh-df-FjW" id="qVb-jQ-jHN"/>
                     </connections>
@@ -581,8 +593,66 @@
             </objects>
             <point key="canvasLocation" x="744" y="1075"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="6BM-7a-0Z6">
+            <objects>
+                <viewController id="m25-mV-GaB" customClass="InfoViewController" customModule="Game_On_Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sfS-Ra-nBZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKm-2Q-vgw">
+                                <rect key="frame" x="278" y="278" width="44" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Action"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="m25-mV-GaB" eventType="touchDown" id="ilT-wT-0VT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZ5-Nc-TIM">
+                                <rect key="frame" x="20" y="220" width="560" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="oGB-8r-bcZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="KUs-4I-WDd">
+                                <rect key="frame" x="225" y="50" width="150" height="150"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="q9b-cj-5OP"/>
+                                    <constraint firstAttribute="width" constant="150" id="xtb-4O-f9d"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KUs-4I-WDd" firstAttribute="centerX" secondItem="sfS-Ra-nBZ" secondAttribute="centerX" id="5uK-as-DTc"/>
+                            <constraint firstItem="LKm-2Q-vgw" firstAttribute="centerX" secondItem="sfS-Ra-nBZ" secondAttribute="centerX" id="Ays-w9-5rJ"/>
+                            <constraint firstItem="xZ5-Nc-TIM" firstAttribute="centerY" secondItem="sfS-Ra-nBZ" secondAttribute="centerY" id="NzY-gZ-rOB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xZ5-Nc-TIM" secondAttribute="trailing" id="aA7-qG-gTL"/>
+                            <constraint firstItem="xZ5-Nc-TIM" firstAttribute="leading" secondItem="sfS-Ra-nBZ" secondAttribute="leadingMargin" id="auy-WT-9bY"/>
+                            <constraint firstItem="xZ5-Nc-TIM" firstAttribute="top" secondItem="KUs-4I-WDd" secondAttribute="bottom" constant="20" id="bbh-wu-Oin"/>
+                            <constraint firstItem="LKm-2Q-vgw" firstAttribute="top" secondItem="xZ5-Nc-TIM" secondAttribute="bottom" constant="10" id="xgb-2h-FX1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="LKm-2Q-vgw" id="oCc-Ut-jpu"/>
+                        <outlet property="iconImageView" destination="KUs-4I-WDd" id="PMI-lD-AUA"/>
+                        <outlet property="messageLabel" destination="xZ5-Nc-TIM" id="SoG-Uv-zfK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CUw-Iz-Ywl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2449" y="-469.5"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Icon" width="227" height="297"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

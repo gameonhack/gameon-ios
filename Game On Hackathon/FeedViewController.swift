@@ -8,12 +8,13 @@
 
 import UIKit
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, InfoViewDelegate {
     
     var notifications : [Notification] = []
     
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet var tableView : UITableView!
+    @IBOutlet weak var infoContainerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,20 +24,24 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.AllEvents)
         tableView.addSubview(refreshControl)
+        
+        messageLabel.hidden = true
+        
+        infoContainerView.hidden = true
     }
     
     override func viewWillAppear(animated: Bool) {
         if PFUser.currentUser() == nil {
+            infoContainerView.hidden = false
+            tableView.hidden = true
             return
         }
+        messageLabel.hidden = false
         getFeed()
     }
     
     override func viewDidAppear(animated: Bool) {
-        if PFUser.currentUser() == nil {
-            self.tabBarController?.selectedIndex = 0
-            self.performSegueLogin()
-        }
+        
     }
     
     func refresh(refreshControl: UIRefreshControl) {
@@ -136,14 +141,26 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     */
     
-    /*
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "infoSegue" {
+            if let infoViewController = segue.destinationViewController as? InfoViewController {
+                infoViewController.buttonTitle = "Login"
+                infoViewController.message = "Please login to view your feed"
+            }
+        }
     }
-    */
+    
+    
+    // MARK: - InfoViewDelegate
+    
+    func infoViewAction() {
+        self.performSegueLogin()
+    }
 }
 

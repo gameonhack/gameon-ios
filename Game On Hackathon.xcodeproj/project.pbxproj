@@ -46,6 +46,7 @@
 		F98F884F1BB8CB470014DDB7 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98F884E1BB8CB470014DDB7 /* Group.swift */; settings = {ASSET_TAGS = (); }; };
 		F98F88521BB900D70014DDB7 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98F88511BB900D70014DDB7 /* GroupViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F98F88541BB913470014DDB7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98F88531BB913470014DDB7 /* Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		F9AA83931BC1C03900B91599 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AA83921BC1C03900B91599 /* InfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		F98F884E1BB8CB470014DDB7 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		F98F88511BB900D70014DDB7 /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		F98F88531BB913470014DDB7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F9AA83921BC1C03900B91599 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				F986F20F1BB77EB600A4E79B /* FeedViewController.swift */,
 				F986F2121BB8838400A4E79B /* GroupsViewController.swift */,
 				F9091CA01BB27F5B005BCBFC /* LoginViewController.swift */,
+				F9AA83921BC1C03900B91599 /* InfoViewController.swift */,
 				F9091CA41BB27F5B005BCBFC /* Main.storyboard */,
 				F9091CA71BB27F5B005BCBFC /* Images.xcassets */,
 				F9091CA91BB27F5B005BCBFC /* LaunchScreen.xib */,
@@ -386,6 +389,7 @@
 				F9091C9F1BB27F5B005BCBFC /* AppDelegate.swift in Sources */,
 				F98F88541BB913470014DDB7 /* Extensions.swift in Sources */,
 				F986F2101BB77EB600A4E79B /* FeedViewController.swift in Sources */,
+				F9AA83931BC1C03900B91599 /* InfoViewController.swift in Sources */,
 				F9091CA11BB27F5B005BCBFC /* LoginViewController.swift in Sources */,
 				F98F884D1BB8C80A0014DDB7 /* GroupCollectionViewCell.swift in Sources */,
 				F986F2131BB8838400A4E79B /* GroupsViewController.swift in Sources */,
