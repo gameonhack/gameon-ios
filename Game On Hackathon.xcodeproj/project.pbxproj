@@ -16,6 +16,7 @@
 		F9091CB71BB27F5B005BCBFC /* Game_On_HackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9091CB61BB27F5B005BCBFC /* Game_On_HackathonTests.swift */; };
 		F9091CC51BB28151005BCBFC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9091CC41BB28151005BCBFC /* Social.framework */; };
 		F9091CC71BB28158005BCBFC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9091CC61BB28158005BCBFC /* Accounts.framework */; };
+		F94FD8F11BC246D900AC46EA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94FD8F01BC246D900AC46EA /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F98154381BB281E000276455 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F98154371BB281E000276455 /* libsqlite3.tbd */; };
 		F981543A1BB281EB00276455 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F98154391BB281EB00276455 /* libz.tbd */; };
 		F981543C1BB281F400276455 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F981543B1BB281F400276455 /* SystemConfiguration.framework */; };
@@ -73,6 +74,7 @@
 		F9091CB61BB27F5B005BCBFC /* Game_On_HackathonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_On_HackathonTests.swift; sourceTree = "<group>"; };
 		F9091CC41BB28151005BCBFC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F9091CC61BB28158005BCBFC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		F94FD8F01BC246D900AC46EA /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F98154371BB281E000276455 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F98154391BB281EB00276455 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F981543B1BB281F400276455 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -177,7 +179,7 @@
 				F9091CA21BB27F5B005BCBFC /* ScheduleViewController.swift */,
 				F986F20F1BB77EB600A4E79B /* FeedViewController.swift */,
 				F986F2121BB8838400A4E79B /* GroupsViewController.swift */,
-				F9091CA01BB27F5B005BCBFC /* LoginViewController.swift */,
+				F94FD8F01BC246D900AC46EA /* ProfileViewController.swift */,
 				F9AA83921BC1C03900B91599 /* InfoViewController.swift */,
 				F9091CA41BB27F5B005BCBFC /* Main.storyboard */,
 				F9091CA71BB27F5B005BCBFC /* Images.xcassets */,
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				F98F88511BB900D70014DDB7 /* GroupViewController.swift */,
+				F9091CA01BB27F5B005BCBFC /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				F986F2101BB77EB600A4E79B /* FeedViewController.swift in Sources */,
 				F9AA83931BC1C03900B91599 /* InfoViewController.swift in Sources */,
 				F9091CA11BB27F5B005BCBFC /* LoginViewController.swift in Sources */,
+				F94FD8F11BC246D900AC46EA /* ProfileViewController.swift in Sources */,
 				F98F884D1BB8C80A0014DDB7 /* GroupCollectionViewCell.swift in Sources */,
 				F986F2131BB8838400A4E79B /* GroupsViewController.swift in Sources */,
 			);

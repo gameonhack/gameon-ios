@@ -8,6 +8,12 @@
 
 import UIKit
 
+extension UIView {
+    func inCircle () {
+        self.layer.cornerRadius = self.frame.size.width/2
+        self.clipsToBounds = true
+    }
+}
 extension UINavigationBar {
     func transparent () {
         
