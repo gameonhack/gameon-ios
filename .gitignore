@@ -1,2 +1,7 @@
 
-Game On Hackathon/Helpers/ParseKeys.swift
+ParseKeys.swift
+.DS_Store
+xcuserdata
+DerivedData
+Carthage
+Cartfile.resolved

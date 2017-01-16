@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,20 +17,6 @@
                BlueprintIdentifier = "F9091C981BB27F5B005BCBFC"
                BuildableName = "Game On Hackathon.app"
                BlueprintName = "Game On Hackathon"
-               ReferencedContainer = "container:Game On Hackathon.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F9091CAF1BB27F5B005BCBFC"
-               BuildableName = "Game On HackathonTests.xctest"
-               BlueprintName = "Game On HackathonTests"
                ReferencedContainer = "container:Game On Hackathon.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
