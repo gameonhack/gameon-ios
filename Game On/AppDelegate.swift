@@ -24,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ParseClientConfiguration.server = ParseKeys.server
         }))
         
+        UINavigationBar.appearance().barTintColor = UIColor.clear
+        UINavigationBar.appearance().isTranslucent = true
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        
         return true
     }
 

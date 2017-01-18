@@ -18,6 +18,9 @@
 		F92D7CA71E2CA9BD00D65BB8 /* Parse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F92D7CA31E2CA98500D65BB8 /* Parse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F92D7CAA1E2CA9C300D65BB8 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F92D7CA21E2CA98500D65BB8 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F92D7CB21E2CAB6A00D65BB8 /* ParseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D7CB11E2CAB6A00D65BB8 /* ParseKeys.swift */; };
+		F98FCA031E2F47E100FA06A2 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA021E2F47E100FA06A2 /* TitleView.swift */; };
+		F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; };
+		F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */,
 				F92D7CA71E2CA9BD00D65BB8 /* Parse.framework in Embed Frameworks */,
 				F92D7CAA1E2CA9C300D65BB8 /* Bolts.framework in Embed Frameworks */,
 			);
@@ -47,6 +51,8 @@
 		F92D7CA21E2CA98500D65BB8 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = SOURCE_ROOT; };
 		F92D7CA31E2CA98500D65BB8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = SOURCE_ROOT; };
 		F92D7CB11E2CAB6A00D65BB8 /* ParseKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseKeys.swift; sourceTree = "<group>"; };
+		F98FCA021E2F47E100FA06A2 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		F98FCA041E2F503700FA06A2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = ../Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */,
 				F92D7CA61E2CA9BD00D65BB8 /* Parse.framework in Frameworks */,
 				F92D7CA41E2CA98500D65BB8 /* Bolts.framework in Frameworks */,
 			);
@@ -100,6 +107,7 @@
 		F92D7CA11E2CA97100D65BB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F98FCA041E2F503700FA06A2 /* SnapKit.framework */,
 				F92D7CA21E2CA98500D65BB8 /* Bolts.framework */,
 				F92D7CA31E2CA98500D65BB8 /* Parse.framework */,
 			);
@@ -116,6 +124,7 @@
 		F92D7CAC1E2CA9F100D65BB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F98FCA021E2F47E100FA06A2 /* TitleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +222,7 @@
 				F92D7CB21E2CAB6A00D65BB8 /* ParseKeys.swift in Sources */,
 				F92D7C8E1E2CA91D00D65BB8 /* AppDelegate.swift in Sources */,
 				F92D7C901E2CA91D00D65BB8 /* FirstViewController.swift in Sources */,
+				F98FCA031E2F47E100FA06A2 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
