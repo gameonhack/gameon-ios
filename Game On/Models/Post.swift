@@ -15,7 +15,7 @@ class Post: PFObject, PFSubclassing {
         return "Post"
     }
     
-    @NSManaged var user : PFUser!
+    @NSManaged var user : User!
     @NSManaged var content : String!
     @NSManaged var image : UIImage?
     
