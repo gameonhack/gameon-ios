@@ -10,11 +10,13 @@ import UIKit
 
 class RootViewController: UIViewController {
 
+    private var topview : UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let topview = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 20))
+        topview = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 20))
         topview.backgroundColor = UIColor.white
         self.view.addSubview(topview)
         
@@ -41,6 +43,9 @@ class RootViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func removeTopGap() {
+        topview.removeFromSuperview()
+    }
 
     /*
     // MARK: - Navigation

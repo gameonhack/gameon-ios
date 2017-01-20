@@ -11,6 +11,7 @@ import Parse
 
 class DataManager: NSObject {
 
+    
     static func getPosts(block: @escaping (_ : [Post]?, _ : Error?) -> Void) {
         let query = PFQuery(className: Post.parseClassName())
         query.order(byDescending: #keyPath(Post.createdAt))
@@ -19,4 +20,13 @@ class DataManager: NSObject {
             block(objects as? [Post], error)
         }
     }
+    
+    static func getEvents(block: @escaping (_ : [Event]?, _ : Error?) -> Void) {
+        let query = PFQuery(className: Event.parseClassName())
+        query.order(byAscending: #keyPath(Event.date))
+        query.findObjectsInBackground { (objects, error) in
+            block(objects as? [Event], error)
+        }
+    }
+    
 }

@@ -26,14 +26,16 @@ extension PFObject {
         if PFObject.filesCache == nil {
             PFObject.filesCache =  [String: Any]()
         }
-        if let data = PFObject.filesCache![classname + key] as? Data {
+        
+        let identifier = classname + key + self.objectId!
+        if let data = PFObject.filesCache![identifier] as? Data {
             block(data)
         } else {
             
             if let file = self.value(forKey: key) as? PFFile {
                 file.getDataInBackground(block: { (data, error) in
                     
-                    PFObject.filesCache![classname + key] = data
+                    PFObject.filesCache![identifier] = data
                     block(data)
                 })
             }

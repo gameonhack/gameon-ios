@@ -23,13 +23,17 @@
 		F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */; };
 		F94F6F911E318F360086A727 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F901E318F360086A727 /* User.swift */; };
 		F94F6F931E3190380086A727 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F921E3190380086A727 /* Extensions.swift */; };
-		F98FCA031E2F47E100FA06A2 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA021E2F47E100FA06A2 /* TitleView.swift */; };
 		F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; };
 		F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA081E2FE95600FA06A2 /* RootViewController.swift */; };
 		F98FCA0D1E2FE9A600FA06A2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */; };
 		F9A7981A1E31F03600D37C32 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; };
 		F9A7981B1E31F03600D37C32 /* DateTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9ED68351E31F845001B7C45 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68341E31F845001B7C45 /* EventsViewController.swift */; };
+		F9ED68371E31FC58001B7C45 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68361E31FC58001B7C45 /* Event.swift */; };
+		F9ED683A1E32A669001B7C45 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68391E32A669001B7C45 /* ImageTableViewCell.swift */; };
+		F9ED683C1E32A681001B7C45 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED683B1E32A680001B7C45 /* TitleView.swift */; };
+		F9ED683F1E32A72E001B7C45 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED683E1E32A72E001B7C45 /* EventTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,11 +70,15 @@
 		F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F94F6F901E318F360086A727 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F94F6F921E3190380086A727 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		F98FCA021E2F47E100FA06A2 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		F98FCA041E2F503700FA06A2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = ../Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		F98FCA081E2FE95600FA06A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		F9A798191E31F03600D37C32 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = ../Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
+		F9ED68341E31F845001B7C45 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		F9ED68361E31FC58001B7C45 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		F9ED68391E32A669001B7C45 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		F9ED683B1E32A680001B7C45 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		F9ED683E1E32A72E001B7C45 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,7 @@
 			children = (
 				F94F6F901E318F360086A727 /* User.swift */,
 				F94F6F891E3099CB0086A727 /* Post.swift */,
+				F9ED68361E31FC58001B7C45 /* Event.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,8 +155,9 @@
 		F92D7CAC1E2CA9F100D65BB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F98FCA021E2F47E100FA06A2 /* TitleView.swift */,
+				F9ED68381E32A653001B7C45 /* General */,
 				F94F6F8D1E318C240086A727 /* Posts */,
+				F9ED683D1E32A724001B7C45 /* Events */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +167,7 @@
 			children = (
 				F98FCA071E2FE94500FA06A2 /* General */,
 				F98FCA0B1E2FE99000FA06A2 /* Posts */,
+				F9ED68331E31F82E001B7C45 /* Events */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,6 +204,31 @@
 				F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */,
 			);
 			path = Posts;
+			sourceTree = "<group>";
+		};
+		F9ED68331E31F82E001B7C45 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				F9ED68341E31F845001B7C45 /* EventsViewController.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		F9ED68381E32A653001B7C45 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				F9ED683B1E32A680001B7C45 /* TitleView.swift */,
+				F9ED68391E32A669001B7C45 /* ImageTableViewCell.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		F9ED683D1E32A724001B7C45 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				F9ED683E1E32A72E001B7C45 /* EventTableViewCell.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,11 +312,15 @@
 				F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */,
 				F92D7C8E1E2CA91D00D65BB8 /* AppDelegate.swift in Sources */,
 				F92D7C901E2CA91D00D65BB8 /* FirstViewController.swift in Sources */,
+				F9ED68351E31F845001B7C45 /* EventsViewController.swift in Sources */,
+				F9ED683F1E32A72E001B7C45 /* EventTableViewCell.swift in Sources */,
 				F94F6F931E3190380086A727 /* Extensions.swift in Sources */,
 				F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */,
 				F94F6F8C1E3136070086A727 /* DataManager.swift in Sources */,
-				F98FCA031E2F47E100FA06A2 /* TitleView.swift in Sources */,
+				F9ED683A1E32A669001B7C45 /* ImageTableViewCell.swift in Sources */,
+				F9ED68371E31FC58001B7C45 /* Event.swift in Sources */,
 				F94F6F911E318F360086A727 /* User.swift in Sources */,
+				F9ED683C1E32A681001B7C45 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
