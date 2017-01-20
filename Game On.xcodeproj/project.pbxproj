@@ -18,9 +18,18 @@
 		F92D7CA71E2CA9BD00D65BB8 /* Parse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F92D7CA31E2CA98500D65BB8 /* Parse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F92D7CAA1E2CA9C300D65BB8 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F92D7CA21E2CA98500D65BB8 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F92D7CB21E2CAB6A00D65BB8 /* ParseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D7CB11E2CAB6A00D65BB8 /* ParseKeys.swift */; };
+		F94F6F8A1E3099CB0086A727 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F891E3099CB0086A727 /* Post.swift */; };
+		F94F6F8C1E3136070086A727 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F8B1E3136070086A727 /* DataManager.swift */; };
+		F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */; };
+		F94F6F911E318F360086A727 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F901E318F360086A727 /* User.swift */; };
+		F94F6F931E3190380086A727 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F921E3190380086A727 /* Extensions.swift */; };
 		F98FCA031E2F47E100FA06A2 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA021E2F47E100FA06A2 /* TitleView.swift */; };
 		F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; };
 		F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA081E2FE95600FA06A2 /* RootViewController.swift */; };
+		F98FCA0D1E2FE9A600FA06A2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */; };
+		F9A7981A1E31F03600D37C32 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; };
+		F9A7981B1E31F03600D37C32 /* DateTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +41,7 @@
 			files = (
 				F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */,
 				F92D7CA71E2CA9BD00D65BB8 /* Parse.framework in Embed Frameworks */,
+				F9A7981B1E31F03600D37C32 /* DateTools.framework in Embed Frameworks */,
 				F92D7CAA1E2CA9C300D65BB8 /* Bolts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -51,8 +61,16 @@
 		F92D7CA21E2CA98500D65BB8 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = SOURCE_ROOT; };
 		F92D7CA31E2CA98500D65BB8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = SOURCE_ROOT; };
 		F92D7CB11E2CAB6A00D65BB8 /* ParseKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseKeys.swift; sourceTree = "<group>"; };
+		F94F6F891E3099CB0086A727 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F94F6F8B1E3136070086A727 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		F94F6F901E318F360086A727 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F94F6F921E3190380086A727 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F98FCA021E2F47E100FA06A2 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		F98FCA041E2F503700FA06A2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = ../Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		F98FCA081E2FE95600FA06A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		F9A798191E31F03600D37C32 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = ../Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +80,7 @@
 			files = (
 				F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */,
 				F92D7CA61E2CA9BD00D65BB8 /* Parse.framework in Frameworks */,
+				F9A7981A1E31F03600D37C32 /* DateTools.framework in Frameworks */,
 				F92D7CA41E2CA98500D65BB8 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +126,7 @@
 		F92D7CA11E2CA97100D65BB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9A798191E31F03600D37C32 /* DateTools.framework */,
 				F98FCA041E2F503700FA06A2 /* SnapKit.framework */,
 				F92D7CA21E2CA98500D65BB8 /* Bolts.framework */,
 				F92D7CA31E2CA98500D65BB8 /* Parse.framework */,
@@ -117,6 +137,8 @@
 		F92D7CAB1E2CA9E700D65BB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F94F6F901E318F360086A727 /* User.swift */,
+				F94F6F891E3099CB0086A727 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				F98FCA021E2F47E100FA06A2 /* TitleView.swift */,
+				F94F6F8D1E318C240086A727 /* Posts */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +155,8 @@
 		F92D7CAD1E2CA9FD00D65BB8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F98FCA071E2FE94500FA06A2 /* General */,
+				F98FCA0B1E2FE99000FA06A2 /* Posts */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,9 +164,35 @@
 		F92D7CAE1E2CAA0900D65BB8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F94F6F8B1E3136070086A727 /* DataManager.swift */,
+				F94F6F921E3190380086A727 /* Extensions.swift */,
 				F92D7CB11E2CAB6A00D65BB8 /* ParseKeys.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F94F6F8D1E318C240086A727 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		F98FCA071E2FE94500FA06A2 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				F98FCA081E2FE95600FA06A2 /* RootViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		F98FCA0B1E2FE99000FA06A2 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */,
+			);
+			path = Posts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,11 +269,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F98FCA0D1E2FE9A600FA06A2 /* PostsViewController.swift in Sources */,
 				F92D7C921E2CA91D00D65BB8 /* SecondViewController.swift in Sources */,
 				F92D7CB21E2CAB6A00D65BB8 /* ParseKeys.swift in Sources */,
+				F94F6F8A1E3099CB0086A727 /* Post.swift in Sources */,
+				F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */,
 				F92D7C8E1E2CA91D00D65BB8 /* AppDelegate.swift in Sources */,
 				F92D7C901E2CA91D00D65BB8 /* FirstViewController.swift in Sources */,
+				F94F6F931E3190380086A727 /* Extensions.swift in Sources */,
+				F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */,
+				F94F6F8C1E3136070086A727 /* DataManager.swift in Sources */,
 				F98FCA031E2F47E100FA06A2 /* TitleView.swift in Sources */,
+				F94F6F911E318F360086A727 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,13 @@
 
 import UIKit
 import Parse
+import DateTools
+
+extension Date {
+    func shortTimeAgo() -> String {
+        return NSDate().shortTimeAgo(since: self)
+    }
+}
 
 extension PFObject {
     
@@ -33,4 +40,18 @@ extension PFObject {
         }
     }
     
+}
+
+extension UIView {
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+    }
+
 }

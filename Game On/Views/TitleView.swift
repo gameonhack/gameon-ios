@@ -41,18 +41,18 @@ class TitleView: UIView {
         
         lineView.snp.makeConstraints { (make) -> Void in
             make.bottom.equalTo(0)
-            make.left.equalTo(20)
+            make.left.equalTo(16)
             make.right.equalTo(0)
             make.height.equalTo(1)
         }
         
         titleLabel = UILabel(frame: CGRect(x: 0, y: 00, width: 0, height: 0))
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 38)
+        titleLabel.font = UIFont.systemFont(ofSize: 38, weight: UIFontWeightHeavy)
         self.addSubview(titleLabel)
-        
+
         titleLabel.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(28)
-            make.left.equalTo(20)
+            make.left.equalTo(16)
             make.right.equalTo(0)
         }
     }
