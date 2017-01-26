@@ -10,6 +10,7 @@ import UIKit
 
 class ImageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imageImageView: UIImageView!
     @IBOutlet weak var bottomSpaceConstraint: NSLayoutConstraint!
     @IBOutlet weak var topSpaceConstraint: NSLayoutConstraint!
     

@@ -12,9 +12,9 @@ import SnapKit
 @IBDesignable
 class TitleView: UIView {
 
-    @IBInspectable var title: String = "" {
+    @IBInspectable var text: String = "" {
         didSet {
-            titleLabel.text = title
+            titleLabel.text = text
         }
     }
     
