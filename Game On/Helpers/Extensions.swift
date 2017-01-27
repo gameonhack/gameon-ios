@@ -14,6 +14,25 @@ extension Date {
     func shortTimeAgo() -> String {
         return NSDate().shortTimeAgo(since: self)
     }
+    
+    func truncateTime() -> Date {
+        let date = (self as NSDate)
+        let year = String(date.year())
+        let month = String(date.month())
+        let day = String(date.day())
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        return dateFormatter.date(from: year + "-" + month + "-" + day)!
+    }
+    func hourTime() -> String {
+        let date = (self as NSDate)
+        let hour = date.hour() <= 12 ? date.hour() : date.hour() - 12
+        let amPm = date.hour() < 12 ? "AM" : "PM"
+        let minutes = date.minute() < 10 ? "0\(date.minute())" : "\(date.minute())"
+        return "\(hour):\(minutes) \(amPm)"
+    }
 }
 
 extension PFObject {

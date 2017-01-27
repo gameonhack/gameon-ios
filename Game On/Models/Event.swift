@@ -21,4 +21,13 @@ class Event: PFObject, PFSubclassing {
     @NSManaged var date : Date!
     @NSManaged var icon : PFFile!
     @NSManaged var banner : PFFile!
+    @NSManaged var schedules : PFRelation<Schedule>!
+    
+    func getSchedules(block : @escaping ([Schedule]) -> Void ) {
+        let query = self.schedules.query()
+        query.order(byAscending: #keyPath(Schedule.date))
+        query.findObjectsInBackground { (schedules, error) in
+            block(schedules!)
+        }
+    }
 }

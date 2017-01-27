@@ -11,6 +11,16 @@ import UIKit
 class EventViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var event : Event!
+    var schedules = [Date : [Schedule]]() {
+        didSet {
+            for _ in schedules {
+                headers.append(nil)
+            }
+            tableView.reloadData()
+        }
+    }
+    
+    var headers = [EventDayHeaderTableViewCell?]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,6 +29,14 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         // Do any additional setup after loading the view.
         
+        event.getSchedules { (schedules) in
+            for schedule in schedules {
+                if self.schedules[schedule.date.truncateTime()] == nil {
+                    self.schedules[schedule.date.truncateTime()] = []
+                }
+                self.schedules[schedule.date.truncateTime()]?.append(schedule)
+            }
+        }
         
     }
 
@@ -52,11 +70,11 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 2 + schedules.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 || section == 1 ? 1 : 0
+        return section == 0 || section == 1 ? 1 : schedules[schedules.keys.sorted()[section - 2]]!.count
     }
     
     func getCellIdentifier(index : Int) -> String {
@@ -66,7 +84,7 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
         case 1:
             return "EventHeaderCell"
         default:
-            return "EventCell"
+            return "EventScheduleCell"
         }
     }
     
@@ -94,6 +112,11 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.aboutTextView.text = event.caption
         }
 
+        if let cell = cell as? EventScheduleTableViewCell {
+            let schedule = schedules[schedules.keys.sorted()[indexPath.section - 2]]![indexPath.row]
+            cell.nameLabel.text = schedule.name
+            cell.timeLabel.text = schedule.date.hourTime()
+        }
         
         return cell
     }
@@ -103,12 +126,39 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
         case 0:
             return 215.0
         case 1:
-            let aboutLabelHeight : CGFloat = 166.0
+            let aboutLabelHeight : CGFloat = 178.0
             let frameSize = CGSize(width: self.view.frame.width - 40.0, height: 1000.0)
             let aboutTextViewSize = event.caption.boundingRect(with: frameSize, options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: 22)], context: nil)
             return aboutLabelHeight + aboutTextViewSize.height
         default:
-            return 100.0
+            return 60.0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 1 {
+            let headerCell = tableView.dequeueReusableCell(withIdentifier: "EventAboutHeaderCell")
+            return headerCell
+        }
+        
+        let header = tableView.dequeueReusableCell(withIdentifier: "EventDayHeaderCell") as! EventDayHeaderTableViewCell
+        header.dayLabel.text = "Day \(section - 1)"
+        
+        if headers.count > section - 2 {
+            headers[section - 2] = header
+        }
+        return header
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch section {
+        case 0:
+            return 0.0
+        case 1:
+            return 20.0
+        default:
+            return 64.0
         }
     }
     
@@ -119,6 +169,34 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: - Scroll view delegate
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        for headerCell in headers {
+            if let headerCell = headerCell {
+                headerCell.dayLabel.textColor = UIColor.lightGray
+                headerCell.dayLabel.textAlignment = .left
+            }
+        }
+        
+        
+        if let indexPath = self.tableView.indexPathsForVisibleRows?.first {
+            
+            if indexPath.section >= 1 {
+                UIApplication.shared.statusBarStyle = .default
+            } else {
+                UIApplication.shared.statusBarStyle = .lightContent
+            }
+            
+            if indexPath.section >= 2 {
+                
+                if let headerCell = headers[indexPath.section - 2] {
+                    headerCell.dayLabel.textColor = UIColor.black
+                    headerCell.dayLabel.textAlignment = .center
+                }
+                
+                
+            }
+        }
+        
         if let imageCell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? ImageTableViewCell {
             imageCell.scrollViewDidScroll(scrollView)
         }

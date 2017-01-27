@@ -24,6 +24,7 @@ class DataManager: NSObject {
     static func getEvents(block: @escaping (_ : [Event]?, _ : Error?) -> Void) {
         let query = PFQuery(className: Event.parseClassName())
         query.order(byAscending: #keyPath(Event.date))
+        query.includeKey(#keyPath(Event.schedules))
         query.findObjectsInBackground { (objects, error) in
             block(objects as? [Event], error)
         }
