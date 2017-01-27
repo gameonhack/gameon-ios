@@ -632,7 +632,7 @@
                             <constraint firstItem="Crf-83-JmJ" firstAttribute="top" secondItem="sWw-Tl-x3O" secondAttribute="bottom" id="aog-wO-tif"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Groups" image="first" id="nYV-Sh-x2Q"/>
+                    <tabBarItem key="tabBarItem" title="Groups" image="Groups-Off" id="nYV-Sh-x2Q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XxJ-zu-YzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -677,7 +677,7 @@
                             <constraint firstItem="dmk-Ei-ntJ" firstAttribute="leading" secondItem="vxp-ZN-exn" secondAttribute="leading" id="zvZ-FG-Fpb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="first" id="XUY-UE-ymT"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="User-Off" selectedImage="User-On" id="XUY-UE-ymT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3N-S5-oRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -710,7 +710,7 @@
         <scene sceneID="S2E-io-Q4R">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XJI-WG-CUb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Games" image="first" id="2hA-3O-nNx"/>
+                    <tabBarItem key="tabBarItem" title="Games" image="Games-Off" selectedImage="Games-On" id="2hA-3O-nNx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bo4-ne-g1b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -729,7 +729,7 @@
         <scene sceneID="pAA-uW-YLi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VfU-gn-Izi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Posts" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Posts" image="Posts-Off" selectedImage="Posts-On" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OkG-UD-s0j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -753,7 +753,7 @@
         <scene sceneID="tNC-MB-2FL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nca-pd-pyo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" image="first" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="Events-Off" selectedImage="Events-On" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kst-tn-Lgs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -771,7 +771,16 @@
     </scenes>
     <resources>
         <image name="Add" width="18" height="18"/>
+        <image name="Events-Off" width="30" height="30"/>
+        <image name="Events-On" width="30" height="30"/>
+        <image name="Games-Off" width="30" height="30"/>
+        <image name="Games-On" width="30" height="30"/>
+        <image name="Groups-Off" width="30" height="30"/>
+        <image name="Posts-Off" width="30" height="30"/>
+        <image name="Posts-On" width="30" height="30"/>
         <image name="Top Banner" width="375" height="215"/>
+        <image name="User-Off" width="30" height="30"/>
+        <image name="User-On" width="30" height="30"/>
         <image name="first" width="30" height="30"/>
     </resources>
     <color key="tintColor" red="0.91764705882352937" green="0.12941176470588234" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
