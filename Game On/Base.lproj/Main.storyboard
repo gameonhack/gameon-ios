@@ -474,8 +474,39 @@
                                             <outlet property="dayLabelLeadingConstraint" destination="197-Im-yoG" id="sfU-qP-s6X"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventNoSchedulesCell" rowHeight="220" id="G46-ae-ZQU">
+                                        <rect key="frame" x="0.0" y="597" width="375" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G46-ae-ZQU" id="yrS-AP-PLp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sessions are not available." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iff-Dh-3Nb">
+                                                    <rect key="frame" x="8" y="180.5" width="359" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="VF5-UH-zMS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Monster" translatesAutoresizingMaskIntoConstraints="NO" id="WiU-V1-Ttt">
+                                                    <rect key="frame" x="28" y="28" width="319" height="132.5"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Iff-Dh-3Nb" firstAttribute="top" secondItem="WiU-V1-Ttt" secondAttribute="bottom" constant="20" id="5AQ-5F-lrj"/>
+                                                <constraint firstItem="WiU-V1-Ttt" firstAttribute="top" secondItem="yrS-AP-PLp" secondAttribute="topMargin" constant="20" id="BPV-RY-ise"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Iff-Dh-3Nb" secondAttribute="trailing" id="N7Y-qp-DUK"/>
+                                                <constraint firstItem="Iff-Dh-3Nb" firstAttribute="leading" secondItem="yrS-AP-PLp" secondAttribute="leadingMargin" id="WSq-F7-prx"/>
+                                                <constraint firstItem="WiU-V1-Ttt" firstAttribute="leading" secondItem="yrS-AP-PLp" secondAttribute="leadingMargin" constant="20" id="Zwn-ev-XuW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="WiU-V1-Ttt" secondAttribute="trailing" constant="20" id="gwG-ie-0U3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Iff-Dh-3Nb" secondAttribute="bottom" constant="10" id="r2v-gz-CR2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventScheduleCell" id="vYv-yH-RtP" customClass="EventScheduleTableViewCell" customModule="Game_On" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="597" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="817" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vYv-yH-RtP" id="amb-JI-zGy">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -776,6 +807,7 @@
         <image name="Games-Off" width="30" height="30"/>
         <image name="Games-On" width="30" height="30"/>
         <image name="Groups-Off" width="30" height="30"/>
+        <image name="Monster" width="481" height="530"/>
         <image name="Posts-Off" width="30" height="30"/>
         <image name="Posts-On" width="30" height="30"/>
         <image name="Top Banner" width="375" height="215"/>

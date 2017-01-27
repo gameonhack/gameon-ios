@@ -70,11 +70,11 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2 + schedules.count
+        return 2 + max(schedules.count, 1)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 || section == 1 ? 1 : schedules[schedules.keys.sorted()[section - 2]]!.count
+        return section == 0 || section == 1 ? 1 : schedules.count > 0 ? schedules[schedules.keys.sorted()[section - 2]]!.count : 1
     }
     
     func getCellIdentifier(index : Int) -> String {
@@ -84,7 +84,7 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
         case 1:
             return "EventHeaderCell"
         default:
-            return "EventScheduleCell"
+            return schedules.count > 0 ? "EventScheduleCell" : "EventNoSchedulesCell"
         }
     }
     
@@ -131,7 +131,7 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let aboutTextViewSize = event.caption.boundingRect(with: frameSize, options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: 22)], context: nil)
             return aboutLabelHeight + aboutTextViewSize.height
         default:
-            return 60.0
+            return schedules.count > 0 ? 64.0 : 220.0
         }
     }
     
@@ -139,6 +139,10 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if section == 1 {
             let headerCell = tableView.dequeueReusableCell(withIdentifier: "EventAboutHeaderCell")
             return headerCell
+        }
+        
+        if schedules.count == 0 {
+            return nil
         }
         
         let header = tableView.dequeueReusableCell(withIdentifier: "EventDayHeaderCell") as! EventDayHeaderTableViewCell
@@ -158,7 +162,7 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
         case 1:
             return 20.0
         default:
-            return 64.0
+            return schedules.count > 0 ? 64.0 : 0.0
         }
     }
     
