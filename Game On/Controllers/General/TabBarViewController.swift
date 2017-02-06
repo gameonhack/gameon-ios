@@ -14,6 +14,7 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(TabBarViewController.showLogin(_:)), name: NSNotification.Name.GOShowLogin , object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,11 +22,8 @@ class TabBarViewController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-       let index = tabBar.items!.index(of: item)!
-        if index == tabBar.items!.count - 1 {
-            self.performSegue(withIdentifier: "ShowLoginSegue", sender: item)
-        }
+    func showLogin(_ sender : Any) {
+       self.performSegue(withIdentifier: "ShowLoginSegue", sender: sender)
     }
     
     /*

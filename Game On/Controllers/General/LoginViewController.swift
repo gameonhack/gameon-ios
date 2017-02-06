@@ -12,17 +12,25 @@ import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var facebookButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        
-        let loginButton = FBSDKLoginButton()
-        loginButton.center = self.view.center
-        loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-        self.view.addSubview(loginButton)
-        
+        if User.current() != nil {
+            facebookButton.setTitle("Log out", for: UIControlState.normal)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = .default
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +39,33 @@ class LoginViewController: UIViewController {
     }
     
 
+    @IBAction func loginAction(_ sender: Any) {
+        facebookButton.isEnabled = false
+        
+        if User.current() != nil {
+            User.logOut()
+            facebookButton.setTitle("Continue with Facebook", for: UIControlState.normal)
+            facebookButton.isEnabled = true
+        } else {
+            PFFacebookUtils.logInInBackground(withReadPermissions: ["public_profile", "email", "user_friends"]) { (user, error) in
+                if let user = user {
+                    if user.isNew {
+                        // User signed up and logged in through Facebook!
+                        self.performSegue(withIdentifier: "ShowEditSegue", sender: nil)
+                    } else {
+                        // User logged in through Facebook!
+                        self.cancelAction(self.facebookButton)
+                    }
+                    self.facebookButton.isEnabled = true
+                    self.facebookButton.setTitle("Log out", for: UIControlState.normal)
+                } else {
+                    // Uh oh. The user cancelled the Facebook login.
+                    self.facebookButton.isEnabled = true
+                }
+            }
+        }
+    }
+    
     @IBAction func cancelAction(_ sender: Any) {
         self.dismiss(animated: true) {
             

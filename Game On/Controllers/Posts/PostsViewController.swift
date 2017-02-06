@@ -38,6 +38,14 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
     }
     
 
+    // MARK: - Actions
+    
+    @IBAction func postAction(_ sender: Any) {
+        if User.current() == nil {
+            NotificationCenter.default.post(name: NSNotification.Name.GOShowLogin, object: nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

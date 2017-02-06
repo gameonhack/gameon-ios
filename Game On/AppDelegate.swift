@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ParseClientConfiguration.server = ParseKeys.server
         }))
         
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         
         UINavigationBar.appearance().barTintColor = UIColor.clear
         UINavigationBar.appearance().isTranslucent = true

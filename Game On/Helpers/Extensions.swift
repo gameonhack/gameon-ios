@@ -74,5 +74,8 @@ extension UIView {
             layer.masksToBounds = newValue > 0
         }
     }
+}
 
+extension Notification.Name {
+    static let GOShowLogin = Notification.Name("show-login")
 }
