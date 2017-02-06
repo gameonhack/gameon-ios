@@ -1,3 +1,4 @@
 github "ParsePlatform/Parse-SDK-iOS-OSX"
-github "SnapKit/SnapKit" 
+github "facebook/facebook-ios-sdk"
+github "SnapKit/SnapKit"
 github "AndrewSB/DateTools"

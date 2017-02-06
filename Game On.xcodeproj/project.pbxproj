@@ -30,6 +30,12 @@
 		F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA081E2FE95600FA06A2 /* RootViewController.swift */; };
 		F98FCA0D1E2FE9A600FA06A2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */; };
+		F994801E1E47FE1F008481EF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F994801D1E47FE1F008481EF /* TabBarViewController.swift */; };
+		F99480201E480132008481EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F994801F1E480132008481EF /* LoginViewController.swift */; };
+		F99480271E481282008481EF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99480251E481282008481EF /* FBSDKCoreKit.framework */; };
+		F99480281E481282008481EF /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F99480251E481282008481EF /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F99480291E481282008481EF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99480261E481282008481EF /* FBSDKLoginKit.framework */; };
+		F994802A1E481282008481EF /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F99480261E481282008481EF /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F9A7981A1E31F03600D37C32 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; };
 		F9A7981B1E31F03600D37C32 /* DateTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F9ED68351E31F845001B7C45 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68341E31F845001B7C45 /* EventsViewController.swift */; };
@@ -47,7 +53,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F99480281E481282008481EF /* FBSDKCoreKit.framework in Embed Frameworks */,
 				F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */,
+				F994802A1E481282008481EF /* FBSDKLoginKit.framework in Embed Frameworks */,
 				F92D7CA71E2CA9BD00D65BB8 /* Parse.framework in Embed Frameworks */,
 				F9A7981B1E31F03600D37C32 /* DateTools.framework in Embed Frameworks */,
 				F92D7CAA1E2CA9C300D65BB8 /* Bolts.framework in Embed Frameworks */,
@@ -80,6 +88,10 @@
 		F98FCA041E2F503700FA06A2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = ../Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		F98FCA081E2FE95600FA06A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		F994801D1E47FE1F008481EF /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F994801F1E480132008481EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F99480251E481282008481EF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		F99480261E481282008481EF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		F9A798191E31F03600D37C32 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = ../Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
 		F9ED68341E31F845001B7C45 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		F9ED68361E31FC58001B7C45 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -94,7 +106,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F99480271E481282008481EF /* FBSDKCoreKit.framework in Frameworks */,
 				F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */,
+				F99480291E481282008481EF /* FBSDKLoginKit.framework in Frameworks */,
 				F92D7CA61E2CA9BD00D65BB8 /* Parse.framework in Frameworks */,
 				F9A7981A1E31F03600D37C32 /* DateTools.framework in Frameworks */,
 				F92D7CA41E2CA98500D65BB8 /* Bolts.framework in Frameworks */,
@@ -141,6 +155,8 @@
 		F92D7CA11E2CA97100D65BB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F99480251E481282008481EF /* FBSDKCoreKit.framework */,
+				F99480261E481282008481EF /* FBSDKLoginKit.framework */,
 				F9A798191E31F03600D37C32 /* DateTools.framework */,
 				F98FCA041E2F503700FA06A2 /* SnapKit.framework */,
 				F92D7CA21E2CA98500D65BB8 /* Bolts.framework */,
@@ -201,7 +217,9 @@
 		F98FCA071E2FE94500FA06A2 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				F994801D1E47FE1F008481EF /* TabBarViewController.swift */,
 				F98FCA081E2FE95600FA06A2 /* RootViewController.swift */,
+				F994801F1E480132008481EF /* LoginViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -321,11 +339,13 @@
 				F92D7C921E2CA91D00D65BB8 /* SecondViewController.swift in Sources */,
 				F92D7CB21E2CAB6A00D65BB8 /* ParseKeys.swift in Sources */,
 				F94F6F8A1E3099CB0086A727 /* Post.swift in Sources */,
+				F994801E1E47FE1F008481EF /* TabBarViewController.swift in Sources */,
 				F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */,
 				F92D7C8E1E2CA91D00D65BB8 /* AppDelegate.swift in Sources */,
 				F907447F1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift in Sources */,
 				F9ED68351E31F845001B7C45 /* EventsViewController.swift in Sources */,
 				F9ED683F1E32A72E001B7C45 /* EventTableViewCell.swift in Sources */,
+				F99480201E480132008481EF /* LoginViewController.swift in Sources */,
 				F94F6F931E3190380086A727 /* Extensions.swift in Sources */,
 				F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */,
 				F94F6F8C1E3136070086A727 /* DataManager.swift in Sources */,
@@ -463,6 +483,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "Game On/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -480,6 +501,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "Game On/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
