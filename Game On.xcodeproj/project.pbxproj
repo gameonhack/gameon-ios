@@ -25,6 +25,8 @@
 		F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */; };
 		F94F6F911E318F360086A727 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F901E318F360086A727 /* User.swift */; };
 		F94F6F931E3190380086A727 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F921E3190380086A727 /* Extensions.swift */; };
+		F96967D01E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96967CF1E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift */; };
+		F96967D21E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96967D11E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift */; };
 		F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; };
 		F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA081E2FE95600FA06A2 /* RootViewController.swift */; };
@@ -39,6 +41,7 @@
 		F99482361E485AB6008481EF /* PFFacebookAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F994822B1E485AB6008481EF /* PFFacebookAuthenticationProvider.m */; };
 		F99482381E485AB6008481EF /* PFFacebookPrivateUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F99482301E485AB6008481EF /* PFFacebookPrivateUtilities.m */; };
 		F99482391E485AB6008481EF /* PFFacebookUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F99482341E485AB6008481EF /* PFFacebookUtils.m */; };
+		F99482411E486F2D008481EF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99482401E486F2D008481EF /* UserViewController.swift */; };
 		F9A7981A1E31F03600D37C32 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; };
 		F9A7981B1E31F03600D37C32 /* DateTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F9ED68351E31F845001B7C45 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68341E31F845001B7C45 /* EventsViewController.swift */; };
@@ -87,6 +90,8 @@
 		F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F94F6F901E318F360086A727 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F94F6F921E3190380086A727 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F96967CF1E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		F96967D11E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAboutTableViewCell.swift; sourceTree = "<group>"; };
 		F98FCA041E2F503700FA06A2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = ../Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		F98FCA081E2FE95600FA06A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 		F99482331E485AB6008481EF /* PFFacebookUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookUtils.h; sourceTree = "<group>"; };
 		F99482341E485AB6008481EF /* PFFacebookUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFFacebookUtils.m; sourceTree = "<group>"; };
 		F994823D1E485B2B008481EF /* Game On-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Game On-Bridging-Header.h"; sourceTree = "<group>"; };
+		F99482401E486F2D008481EF /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F9A798191E31F03600D37C32 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = ../Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
 		F9ED68341E31F845001B7C45 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		F9ED68361E31FC58001B7C45 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -197,6 +203,7 @@
 				F9ED68381E32A653001B7C45 /* General */,
 				F94F6F8D1E318C240086A727 /* Posts */,
 				F9ED683D1E32A724001B7C45 /* Events */,
+				F96967CE1E499F4500C84D00 /* Profile */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 				F98FCA071E2FE94500FA06A2 /* General */,
 				F98FCA0B1E2FE99000FA06A2 /* Posts */,
 				F9ED68331E31F82E001B7C45 /* Events */,
+				F994823F1E486EE4008481EF /* Profile */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,6 +235,15 @@
 				F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */,
 			);
 			path = Posts;
+			sourceTree = "<group>";
+		};
+		F96967CE1E499F4500C84D00 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F96967CF1E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift */,
+				F96967D11E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		F98FCA071E2FE94500FA06A2 /* General */ = {
@@ -288,6 +305,14 @@
 				F99482291E485AB6008481EF /* PFFacebookMobileAuthenticationProvider_Private.h */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		F994823F1E486EE4008481EF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F99482401E486F2D008481EF /* UserViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		F9ED68331E31F82E001B7C45 /* Events */ = {
@@ -407,7 +432,9 @@
 				F9ED683F1E32A72E001B7C45 /* EventTableViewCell.swift in Sources */,
 				F99480201E480132008481EF /* LoginViewController.swift in Sources */,
 				F94F6F931E3190380086A727 /* Extensions.swift in Sources */,
+				F96967D01E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift in Sources */,
 				F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */,
+				F99482411E486F2D008481EF /* UserViewController.swift in Sources */,
 				F99482351E485AB6008481EF /* PFFacebookMobileAuthenticationProvider.m in Sources */,
 				F94F6F8C1E3136070086A727 /* DataManager.swift in Sources */,
 				F93A2A8C1E3A89840097CE90 /* EventAboutTableViewCell.swift in Sources */,
@@ -416,6 +443,7 @@
 				F9ED683A1E32A669001B7C45 /* ImageTableViewCell.swift in Sources */,
 				F9ED68371E31FC58001B7C45 /* Event.swift in Sources */,
 				F94F6F911E318F360086A727 /* User.swift in Sources */,
+				F96967D21E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift in Sources */,
 				F9ED683C1E32A681001B7C45 /* TitleView.swift in Sources */,
 				F9ED68411E32AF45001B7C45 /* EventViewController.swift in Sources */,
 			);
