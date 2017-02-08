@@ -7,7 +7,16 @@
 //
 
 import UIKit
+import Parse
 
-class Group: NSObject {
-
+class Group: PFObject, PFSubclassing {
+    static func parseClassName() -> String {
+        return "Group"
+    }
+    
+    @NSManaged var name:String!
+    @NSManaged var bio:String!
+    @NSManaged var status:String!
+    @NSManaged var icon:PFFile!
+    
 }
