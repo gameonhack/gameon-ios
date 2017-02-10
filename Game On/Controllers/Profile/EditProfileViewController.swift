@@ -83,7 +83,7 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         user.saveEventually()
         
         if didEditedImage {
-            let data = UIImageJPEGRepresentation(imageCell.photoImageView.image!, 1.0)
+            let data = UIImageJPEGRepresentation(imageCell.photoImageView.image!, 7.0)
             user.setFile(forKey: #keyPath(User.image), withData: data!, andName: "image.jpeg") { (succeeded, error) in
                 let _ = self.navigationController?.popViewController(animated: true)
             }
@@ -193,20 +193,9 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage, let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? ProfileEditPhotoTableViewCell  {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage, let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? ProfileEditPhotoTableViewCell  {
             
-            let desiredSize = 600.0 / image.size.width
-            let size = image.size.applying(CGAffineTransform(scaleX: desiredSize, y: desiredSize))
-            let hasAlpha = false
-            let scale: CGFloat = 0.0 // Automatically use scale factor of main screen
-            
-            UIGraphicsBeginImageContextWithOptions(size, !hasAlpha, scale)
-            image.draw(in: CGRect(origin: CGPoint() , size: size))
-            
-            let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            
-            cell.photoImageView.image = scaledImage
+            cell.photoImageView.image = image.resize(toWidth: 400.00)
             didEditedImage = true
         }
         picker.dismiss(animated: true, completion: nil)
