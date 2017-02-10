@@ -27,6 +27,7 @@
 		F94F6F931E3190380086A727 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F921E3190380086A727 /* Extensions.swift */; };
 		F96967D01E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96967CF1E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift */; };
 		F96967D21E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96967D11E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift */; };
+		F96E582A1E4BCA4000C44B17 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E58291E4BCA4000C44B17 /* Group.swift */; };
 		F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; };
 		F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA081E2FE95600FA06A2 /* RootViewController.swift */; };
@@ -92,6 +93,7 @@
 		F94F6F921E3190380086A727 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F96967CF1E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F96967D11E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAboutTableViewCell.swift; sourceTree = "<group>"; };
+		F96E58291E4BCA4000C44B17 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		F98FCA041E2F503700FA06A2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = ../Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		F98FCA081E2FE95600FA06A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				F94F6F891E3099CB0086A727 /* Post.swift */,
 				F9ED68361E31FC58001B7C45 /* Event.swift */,
 				F93A2A8D1E3AB31D0097CE90 /* Schedule.swift */,
+				F96E58291E4BCA4000C44B17 /* Group.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				F93A2A8C1E3A89840097CE90 /* EventAboutTableViewCell.swift in Sources */,
 				F93A2A8E1E3AB31D0097CE90 /* Schedule.swift in Sources */,
 				F93A2A901E3ACEA10097CE90 /* EventDayHeaderTableViewCell.swift in Sources */,
+				F96E582A1E4BCA4000C44B17 /* Group.swift in Sources */,
 				F9ED683A1E32A669001B7C45 /* ImageTableViewCell.swift in Sources */,
 				F9ED68371E31FC58001B7C45 /* Event.swift in Sources */,
 				F94F6F911E318F360086A727 /* User.swift in Sources */,
