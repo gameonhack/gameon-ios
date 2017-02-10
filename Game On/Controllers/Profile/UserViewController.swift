@@ -136,7 +136,7 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
         
         if indexPath.section == 1 {
             
-            let defaultHeight : CGFloat = 100.0
+            let defaultHeight : CGFloat = 108.0
             
             guard let user = User.current() else {
                 return defaultHeight

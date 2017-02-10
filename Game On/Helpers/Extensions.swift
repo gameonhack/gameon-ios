@@ -10,6 +10,10 @@ import UIKit
 import Parse
 import DateTools
 
+extension Notification.Name {
+    static let GOShowLogin = Notification.Name("show-login")
+}
+
 extension Date {
     func shortTimeAgo() -> String {
         return NSDate().shortTimeAgo(since: self)
@@ -61,6 +65,22 @@ extension PFObject {
         }
     }
     
+    func setFile(forKey key : String, withData data : Data, andName name: String, block : ((_ succeeded : Bool, _ error: Error?) -> Void)? ) {
+        
+        let identifier = self.parseClassName + key + self.objectId!
+        PFObject.filesCache![identifier] = data
+        
+        let file = PFFile(name: name, data: data)
+        file?.saveInBackground(block: { (succeeded, error) in
+            self.setValue(file, forKey: key)
+            self.saveInBackground(block: { (succeeded, error) in
+                if let block = block {
+                    block(succeeded, error)
+                }
+            })
+        })
+    }
+    
 }
 
 extension UIView {
@@ -76,6 +96,15 @@ extension UIView {
     }
 }
 
-extension Notification.Name {
-    static let GOShowLogin = Notification.Name("show-login")
+
+extension UIViewController {
+    
+    func addHideKeyboardWithTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(UIViewController.hideKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    func hideKeyboard() {
+        view.endEditing(true)
+    }
 }

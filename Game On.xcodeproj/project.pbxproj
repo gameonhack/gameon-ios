@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F907447F1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907447E1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift */; };
+		F90BDFC61E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90BDFC51E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift */; };
 		F92D7C8E1E2CA91D00D65BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D7C8D1E2CA91D00D65BB8 /* AppDelegate.swift */; };
 		F92D7C951E2CA91D00D65BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92D7C931E2CA91D00D65BB8 /* Main.storyboard */; };
 		F92D7C971E2CA91D00D65BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F92D7C961E2CA91D00D65BB8 /* Assets.xcassets */; };
@@ -28,6 +29,8 @@
 		F96967D01E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96967CF1E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift */; };
 		F96967D21E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96967D11E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift */; };
 		F96E582A1E4BCA4000C44B17 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E58291E4BCA4000C44B17 /* Group.swift */; };
+		F96E58341E4D758C00C44B17 /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E58331E4D758C00C44B17 /* EditTableViewCell.swift */; };
+		F96E58361E4D766F00C44B17 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E58351E4D766F00C44B17 /* EditProfileViewController.swift */; };
 		F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; };
 		F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA081E2FE95600FA06A2 /* RootViewController.swift */; };
@@ -74,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		F907447E1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		F90BDFC51E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		F92D7C8A1E2CA91D00D65BB8 /* Game On.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game On.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92D7C8D1E2CA91D00D65BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F92D7C941E2CA91D00D65BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 		F96967CF1E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F96967D11E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAboutTableViewCell.swift; sourceTree = "<group>"; };
 		F96E58291E4BCA4000C44B17 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		F96E58331E4D758C00C44B17 /* EditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
+		F96E58351E4D766F00C44B17 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		F98FCA041E2F503700FA06A2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = ../Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		F98FCA081E2FE95600FA06A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +251,7 @@
 			children = (
 				F96967CF1E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift */,
 				F96967D11E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift */,
+				F90BDFC51E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -314,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				F99482401E486F2D008481EF /* UserViewController.swift */,
+				F96E58351E4D766F00C44B17 /* EditProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -332,6 +340,7 @@
 			children = (
 				F9ED683B1E32A680001B7C45 /* TitleView.swift */,
 				F9ED68391E32A669001B7C45 /* ImageTableViewCell.swift */,
+				F96E58331E4D758C00C44B17 /* EditTableViewCell.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -425,11 +434,13 @@
 				F99482391E485AB6008481EF /* PFFacebookUtils.m in Sources */,
 				F99482361E485AB6008481EF /* PFFacebookAuthenticationProvider.m in Sources */,
 				F92D7CB21E2CAB6A00D65BB8 /* ParseKeys.swift in Sources */,
+				F96E58361E4D766F00C44B17 /* EditProfileViewController.swift in Sources */,
 				F94F6F8A1E3099CB0086A727 /* Post.swift in Sources */,
 				F994801E1E47FE1F008481EF /* TabBarViewController.swift in Sources */,
 				F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */,
 				F92D7C8E1E2CA91D00D65BB8 /* AppDelegate.swift in Sources */,
 				F907447F1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift in Sources */,
+				F96E58341E4D758C00C44B17 /* EditTableViewCell.swift in Sources */,
 				F9ED68351E31F845001B7C45 /* EventsViewController.swift in Sources */,
 				F99482381E485AB6008481EF /* PFFacebookPrivateUtilities.m in Sources */,
 				F9ED683F1E32A72E001B7C45 /* EventTableViewCell.swift in Sources */,
@@ -437,6 +448,7 @@
 				F94F6F931E3190380086A727 /* Extensions.swift in Sources */,
 				F96967D01E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift in Sources */,
 				F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */,
+				F90BDFC61E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift in Sources */,
 				F99482411E486F2D008481EF /* UserViewController.swift in Sources */,
 				F99482351E485AB6008481EF /* PFFacebookMobileAuthenticationProvider.m in Sources */,
 				F94F6F8C1E3136070086A727 /* DataManager.swift in Sources */,

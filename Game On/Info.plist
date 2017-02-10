@@ -58,25 +58,31 @@
 	</dict>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb268551873519887</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>268551873519887</string>
-    <key>FacebookDisplayName</key>
-    <string>Game On</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>So you can share your photos </string>
+	<key>NSCameraUsageDescription</key>
+	<string>So you can share your photos </string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>So you can share your photos </string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb268551873519887</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>268551873519887</string>
+	<key>FacebookDisplayName</key>
+	<string>Game On</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 </dict>
 </plist>
