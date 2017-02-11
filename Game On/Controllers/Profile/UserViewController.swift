@@ -56,7 +56,7 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
     */
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return User.current() == nil ? 0 : 3
+        return User.current() == nil ? 0 : 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,6 +70,8 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
         case 1:
             return "AboutCell"
         case 2:
+            return "GroupsCell"
+        case 3:
             return "LogOutCell"
         default:
             return ""
@@ -101,13 +103,21 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
             cell.aboutTextView.text = user.bio
         }
         
+        if let cell = cell as? ProfileGroupsTableViewCell {
+            if cell.groups == nil {
+                user.getGroups { (groups) in
+                    cell.groups = groups
+                }
+            }
+        }
+        
         cell.selectionStyle = .none
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 2 {
+        if indexPath.section == 3 {
             guard let user = User.current() else {
                 return
             }
@@ -148,6 +158,10 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
             return  contentHeight + defaultHeight
         }
         
+        if indexPath.section == 2 {
+            return 200.0
+        }
+
         return 60.0
     }
     
