@@ -53,6 +53,7 @@ extension UIImage {
     }
 
 }
+
 extension PFObject {
     
     fileprivate static var filesCache : [String: Any]?
@@ -95,6 +96,17 @@ extension PFObject {
         })
     }
     
+}
+
+extension PFQuery {
+    
+    func whereEquals(options : [String: Any]?) {
+        if let options = options  {
+            for key in options.keys {
+                self.whereKey(key, equalTo: options[key]!)
+            }
+        }
+    }
 }
 
 extension UIView {
