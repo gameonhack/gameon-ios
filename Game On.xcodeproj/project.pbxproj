@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7AD68FEF1E4B7C8200D3FCB7 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD68FEE1E4B7C8200D3FCB7 /* Group.swift */; };
 		F907447F1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907447E1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift */; };
 		F90BDFC61E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90BDFC51E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift */; };
 		F90BDFCA1E4FAD8700132DC2 /* ProfileGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90BDFC91E4FAD8700132DC2 /* ProfileGroupsTableViewCell.swift */; };
@@ -24,6 +23,10 @@
 		F93A2A8C1E3A89840097CE90 /* EventAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93A2A8B1E3A89840097CE90 /* EventAboutTableViewCell.swift */; };
 		F93A2A8E1E3AB31D0097CE90 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93A2A8D1E3AB31D0097CE90 /* Schedule.swift */; };
 		F93A2A901E3ACEA10097CE90 /* EventDayHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93A2A8F1E3ACEA10097CE90 /* EventDayHeaderTableViewCell.swift */; };
+		F93D63BF1E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D63B21E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider.m */; };
+		F93D63C01E4FC71D007BAAE1 /* PFFacebookAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D63B51E4FC71D007BAAE1 /* PFFacebookAuthenticationProvider.m */; };
+		F93D63C21E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D63BA1E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.m */; };
+		F93D63C31E4FC71D007BAAE1 /* PFFacebookUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D63BE1E4FC71D007BAAE1 /* PFFacebookUtils.m */; };
 		F94F6F8A1E3099CB0086A727 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F891E3099CB0086A727 /* Post.swift */; };
 		F94F6F8C1E3136070086A727 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F8B1E3136070086A727 /* DataManager.swift */; };
 		F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */; };
@@ -44,10 +47,6 @@
 		F99480281E481282008481EF /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F99480251E481282008481EF /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F99480291E481282008481EF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99480261E481282008481EF /* FBSDKLoginKit.framework */; };
 		F994802A1E481282008481EF /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F99480261E481282008481EF /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F99482351E485AB6008481EF /* PFFacebookMobileAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F99482281E485AB6008481EF /* PFFacebookMobileAuthenticationProvider.m */; };
-		F99482361E485AB6008481EF /* PFFacebookAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F994822B1E485AB6008481EF /* PFFacebookAuthenticationProvider.m */; };
-		F99482381E485AB6008481EF /* PFFacebookPrivateUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F99482301E485AB6008481EF /* PFFacebookPrivateUtilities.m */; };
-		F99482391E485AB6008481EF /* PFFacebookUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F99482341E485AB6008481EF /* PFFacebookUtils.m */; };
 		F99482411E486F2D008481EF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99482401E486F2D008481EF /* UserViewController.swift */; };
 		F9A7981A1E31F03600D37C32 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; };
 		F9A7981B1E31F03600D37C32 /* DateTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -96,6 +95,17 @@
 		F93A2A8B1E3A89840097CE90 /* EventAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAboutTableViewCell.swift; sourceTree = "<group>"; };
 		F93A2A8D1E3AB31D0097CE90 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		F93A2A8F1E3ACEA10097CE90 /* EventDayHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDayHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		F93D63B11E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookMobileAuthenticationProvider.h; sourceTree = "<group>"; };
+		F93D63B21E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFFacebookMobileAuthenticationProvider.m; sourceTree = "<group>"; };
+		F93D63B31E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookMobileAuthenticationProvider_Private.h; sourceTree = "<group>"; };
+		F93D63B41E4FC71D007BAAE1 /* PFFacebookAuthenticationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookAuthenticationProvider.h; sourceTree = "<group>"; };
+		F93D63B51E4FC71D007BAAE1 /* PFFacebookAuthenticationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFFacebookAuthenticationProvider.m; sourceTree = "<group>"; };
+		F93D63B91E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookPrivateUtilities.h; sourceTree = "<group>"; };
+		F93D63BA1E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFFacebookPrivateUtilities.m; sourceTree = "<group>"; };
+		F93D63BB1E4FC71D007BAAE1 /* PFFacebookUtils_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookUtils_Private.h; sourceTree = "<group>"; };
+		F93D63BC1E4FC71D007BAAE1 /* ParseFacebookUtilsV4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseFacebookUtilsV4.h; sourceTree = "<group>"; };
+		F93D63BD1E4FC71D007BAAE1 /* PFFacebookUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookUtils.h; sourceTree = "<group>"; };
+		F93D63BE1E4FC71D007BAAE1 /* PFFacebookUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFFacebookUtils.m; sourceTree = "<group>"; };
 		F94F6F891E3099CB0086A727 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F94F6F8B1E3136070086A727 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
@@ -113,17 +123,6 @@
 		F994801F1E480132008481EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F99480251E481282008481EF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		F99480261E481282008481EF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		F99482271E485AB6008481EF /* PFFacebookMobileAuthenticationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookMobileAuthenticationProvider.h; sourceTree = "<group>"; };
-		F99482281E485AB6008481EF /* PFFacebookMobileAuthenticationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFFacebookMobileAuthenticationProvider.m; sourceTree = "<group>"; };
-		F99482291E485AB6008481EF /* PFFacebookMobileAuthenticationProvider_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookMobileAuthenticationProvider_Private.h; sourceTree = "<group>"; };
-		F994822A1E485AB6008481EF /* PFFacebookAuthenticationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookAuthenticationProvider.h; sourceTree = "<group>"; };
-		F994822B1E485AB6008481EF /* PFFacebookAuthenticationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFFacebookAuthenticationProvider.m; sourceTree = "<group>"; };
-		F994822F1E485AB6008481EF /* PFFacebookPrivateUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookPrivateUtilities.h; sourceTree = "<group>"; };
-		F99482301E485AB6008481EF /* PFFacebookPrivateUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFFacebookPrivateUtilities.m; sourceTree = "<group>"; };
-		F99482311E485AB6008481EF /* PFFacebookUtils_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookUtils_Private.h; sourceTree = "<group>"; };
-		F99482321E485AB6008481EF /* ParseFacebookUtilsV4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseFacebookUtilsV4.h; sourceTree = "<group>"; };
-		F99482331E485AB6008481EF /* PFFacebookUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookUtils.h; sourceTree = "<group>"; };
-		F99482341E485AB6008481EF /* PFFacebookUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFFacebookUtils.m; sourceTree = "<group>"; };
 		F994823D1E485B2B008481EF /* Game On-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Game On-Bridging-Header.h"; sourceTree = "<group>"; };
 		F99482401E486F2D008481EF /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F9A798191E31F03600D37C32 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = ../Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
@@ -189,7 +188,7 @@
 		F92D7CA11E2CA97100D65BB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F99482231E485AB6008481EF /* ParseFacebookUtils */,
+				F93D63AD1E4FC71D007BAAE1 /* ParseFacebookUtils */,
 				F99480251E481282008481EF /* FBSDKCoreKit.framework */,
 				F99480261E481282008481EF /* FBSDKLoginKit.framework */,
 				F9A798191E31F03600D37C32 /* DateTools.framework */,
@@ -245,6 +244,48 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		F93D63AD1E4FC71D007BAAE1 /* ParseFacebookUtils */ = {
+			isa = PBXGroup;
+			children = (
+				F93D63AE1E4FC71D007BAAE1 /* Internal */,
+				F93D63BC1E4FC71D007BAAE1 /* ParseFacebookUtilsV4.h */,
+				F93D63BD1E4FC71D007BAAE1 /* PFFacebookUtils.h */,
+				F93D63BE1E4FC71D007BAAE1 /* PFFacebookUtils.m */,
+			);
+			path = ParseFacebookUtils;
+			sourceTree = "<group>";
+		};
+		F93D63AE1E4FC71D007BAAE1 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F93D63AF1E4FC71D007BAAE1 /* AuthenticationProvider */,
+				F93D63B91E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.h */,
+				F93D63BA1E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.m */,
+				F93D63BB1E4FC71D007BAAE1 /* PFFacebookUtils_Private.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		F93D63AF1E4FC71D007BAAE1 /* AuthenticationProvider */ = {
+			isa = PBXGroup;
+			children = (
+				F93D63B01E4FC71D007BAAE1 /* iOS */,
+				F93D63B41E4FC71D007BAAE1 /* PFFacebookAuthenticationProvider.h */,
+				F93D63B51E4FC71D007BAAE1 /* PFFacebookAuthenticationProvider.m */,
+			);
+			path = AuthenticationProvider;
+			sourceTree = "<group>";
+		};
+		F93D63B01E4FC71D007BAAE1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F93D63B11E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider.h */,
+				F93D63B21E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider.m */,
+				F93D63B31E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider_Private.h */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 		F94F6F8D1E318C240086A727 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,49 +322,6 @@
 				F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */,
 			);
 			path = Posts;
-			sourceTree = "<group>";
-		};
-		F99482231E485AB6008481EF /* ParseFacebookUtils */ = {
-			isa = PBXGroup;
-			children = (
-				F99482241E485AB6008481EF /* Internal */,
-				F99482321E485AB6008481EF /* ParseFacebookUtilsV4.h */,
-				F99482331E485AB6008481EF /* PFFacebookUtils.h */,
-				F99482341E485AB6008481EF /* PFFacebookUtils.m */,
-			);
-			name = ParseFacebookUtils;
-			path = "../../../../Downloads/ParseFacebookUtils-iOS-4-1.11.1/ParseFacebookUtils";
-			sourceTree = "<group>";
-		};
-		F99482241E485AB6008481EF /* Internal */ = {
-			isa = PBXGroup;
-			children = (
-				F99482251E485AB6008481EF /* AuthenticationProvider */,
-				F994822F1E485AB6008481EF /* PFFacebookPrivateUtilities.h */,
-				F99482301E485AB6008481EF /* PFFacebookPrivateUtilities.m */,
-				F99482311E485AB6008481EF /* PFFacebookUtils_Private.h */,
-			);
-			path = Internal;
-			sourceTree = "<group>";
-		};
-		F99482251E485AB6008481EF /* AuthenticationProvider */ = {
-			isa = PBXGroup;
-			children = (
-				F99482261E485AB6008481EF /* iOS */,
-				F994822A1E485AB6008481EF /* PFFacebookAuthenticationProvider.h */,
-				F994822B1E485AB6008481EF /* PFFacebookAuthenticationProvider.m */,
-			);
-			path = AuthenticationProvider;
-			sourceTree = "<group>";
-		};
-		F99482261E485AB6008481EF /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				F99482271E485AB6008481EF /* PFFacebookMobileAuthenticationProvider.h */,
-				F99482281E485AB6008481EF /* PFFacebookMobileAuthenticationProvider.m */,
-				F99482291E485AB6008481EF /* PFFacebookMobileAuthenticationProvider_Private.h */,
-			);
-			path = iOS;
 			sourceTree = "<group>";
 		};
 		F994823F1E486EE4008481EF /* Profile */ = {
@@ -398,7 +396,7 @@
 				TargetAttributes = {
 					F92D7C891E2CA91D00D65BB8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = CVFE3Q56BM;
+						DevelopmentTeam = KDY2FY8979;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -440,18 +438,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F98FCA0D1E2FE9A600FA06A2 /* PostsViewController.swift in Sources */,
-				F99482391E485AB6008481EF /* PFFacebookUtils.m in Sources */,
-				F99482361E485AB6008481EF /* PFFacebookAuthenticationProvider.m in Sources */,
 				F92D7CB21E2CAB6A00D65BB8 /* ParseKeys.swift in Sources */,
 				F96E58361E4D766F00C44B17 /* EditProfileViewController.swift in Sources */,
 				F94F6F8A1E3099CB0086A727 /* Post.swift in Sources */,
 				F994801E1E47FE1F008481EF /* TabBarViewController.swift in Sources */,
+				F93D63C31E4FC71D007BAAE1 /* PFFacebookUtils.m in Sources */,
 				F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */,
+				F93D63C21E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.m in Sources */,
 				F92D7C8E1E2CA91D00D65BB8 /* AppDelegate.swift in Sources */,
+				F93D63BF1E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider.m in Sources */,
 				F907447F1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift in Sources */,
 				F96E58341E4D758C00C44B17 /* EditTableViewCell.swift in Sources */,
 				F9ED68351E31F845001B7C45 /* EventsViewController.swift in Sources */,
-				F99482381E485AB6008481EF /* PFFacebookPrivateUtilities.m in Sources */,
 				F9ED683F1E32A72E001B7C45 /* EventTableViewCell.swift in Sources */,
 				F90BDFCA1E4FAD8700132DC2 /* ProfileGroupsTableViewCell.swift in Sources */,
 				F99480201E480132008481EF /* LoginViewController.swift in Sources */,
@@ -461,11 +459,11 @@
 				F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */,
 				F90BDFC61E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift in Sources */,
 				F99482411E486F2D008481EF /* UserViewController.swift in Sources */,
-				F99482351E485AB6008481EF /* PFFacebookMobileAuthenticationProvider.m in Sources */,
 				F94F6F8C1E3136070086A727 /* DataManager.swift in Sources */,
 				F93A2A8C1E3A89840097CE90 /* EventAboutTableViewCell.swift in Sources */,
 				F93A2A8E1E3AB31D0097CE90 /* Schedule.swift in Sources */,
 				F93A2A901E3ACEA10097CE90 /* EventDayHeaderTableViewCell.swift in Sources */,
+				F93D63C01E4FC71D007BAAE1 /* PFFacebookAuthenticationProvider.m in Sources */,
 				F96E582A1E4BCA4000C44B17 /* Group.swift in Sources */,
 				F9ED683A1E32A669001B7C45 /* ImageTableViewCell.swift in Sources */,
 				F9ED68371E31FC58001B7C45 /* Event.swift in Sources */,
@@ -595,7 +593,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CVFE3Q56BM;
+				DEVELOPMENT_TEAM = KDY2FY8979;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -614,7 +612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CVFE3Q56BM;
+				DEVELOPMENT_TEAM = KDY2FY8979;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
