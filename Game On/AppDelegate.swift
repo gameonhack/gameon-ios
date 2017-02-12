@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }))
         
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         UINavigationBar.appearance().barTintColor = UIColor.clear
         UINavigationBar.appearance().isTranslucent = true
@@ -55,6 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

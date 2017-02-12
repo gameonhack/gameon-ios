@@ -14,13 +14,23 @@ class User: PFUser {
     @NSManaged var name : String!
     @NSManaged var bio : String!
     @NSManaged var image : PFFile!
-    @NSManaged var groups : PFRelation<Group>!
+    @NSManaged var groups : PFRelation<Group>?
+    
+    var hasGroups : Bool {
+        get {
+            return groups != nil
+        }
+    }
     
     func getGroups(block : @escaping ([Group]) -> Void ) {
-        let query = self.groups.query()
-        query.order(byAscending: #keyPath(Group.name))
-        query.findObjectsInBackground { (groups, error) in
-            block(groups!)
+        if let groups = groups {
+            let query = groups.query()
+            query.order(byAscending: #keyPath(Group.name))
+            query.findObjectsInBackground { (groups, error) in
+                if let groups = groups {
+                    block(groups)
+                }
+            }
         }
     }
 }

@@ -104,10 +104,14 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
         }
         
         if let cell = cell as? ProfileGroupsTableViewCell {
-            if cell.groups == nil {
-                user.getGroups { (groups) in
-                    cell.groups = groups
+            if user.hasGroups {
+                if cell.groups == nil {
+                    user.getGroups { (groups) in
+                        cell.groups = groups
+                    }
                 }
+            }  else {
+                cell.groups = nil
             }
         }
         
@@ -152,8 +156,12 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
                 return defaultHeight
             }
             
-            let constraintRect = CGSize(width: self.view.frame.width - 32, height: self.view.frame.height)
-            let contentHeight = user.bio.boundingRect(with: constraintRect, options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 17) ], context: nil).height
+            var contentHeight : CGFloat = 0.0
+            
+            if let bio = user.bio {
+                let constraintRect = CGSize(width: self.view.frame.width - 32, height: self.view.frame.height)
+                contentHeight = bio.boundingRect(with: constraintRect, options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 17) ], context: nil).height
+            }
             
             return  contentHeight + defaultHeight
         }

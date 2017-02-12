@@ -16,6 +16,7 @@ enum PersonalSetting : String {
 
 class EditProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, ProfileEditPhotoTableViewCellDelegate, EditTableViewCellDelegate {
 
+    var isFromSignUp = false
     var didEditedImage = false
     var personalSettings : [PersonalSetting] = [.name, .username, .email]
     
@@ -27,6 +28,9 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         // Do any additional setup after loading the view.
         
         self.navigationController?.navigationBar.backgroundColor = UIColor.white
+        if isFromSignUp {
+            self.navigationItem.hidesBackButton = true
+        }
         
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         
@@ -55,6 +59,14 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
+    func dismiss() {
+        if isFromSignUp {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            let _ = self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -74,6 +86,11 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
                 return
         }
         
+        if nameCell.input == "" || usernameCell.input == "" || emailCell.input == ""  {
+            showSimpleAlert(title: "Oups, your info!", message: "Please fill out the personal info.")
+            return
+        }
+        
         user.name = nameCell.input
         user.username = usernameCell.input
         user.email = emailCell.input
@@ -85,12 +102,12 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
         if didEditedImage {
             let data = UIImageJPEGRepresentation(imageCell.photoImageView.image!, 7.0)
             user.setFile(forKey: #keyPath(User.image), withData: data!, andName: "image.jpeg") { (succeeded, error) in
-                let _ = self.navigationController?.popViewController(animated: true)
+                self.dismiss()
             }
             return
         }
         
-        let _ = self.navigationController?.popViewController(animated: true)
+        dismiss()
     }
     
     /*
@@ -151,7 +168,9 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
                 guard let titleLabel = cell.titleLabel, let inputTextField = cell.inputTextField else {
                     return cell
                 }
-                titleLabel.text = personalSettings[indexPath.row].rawValue
+                titleLabel.text = personalSettings[indexPath.row].rawValue.localizedCapitalized
+                inputTextField.placeholder = personalSettings[indexPath.row].rawValue.localizedCapitalized
+                
                 inputTextField.text = user.object(forKey: personalSettings[indexPath.row].rawValue) as! String?
                 
                 switch personalSettings[indexPath.row] {

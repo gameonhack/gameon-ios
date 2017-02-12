@@ -16,12 +16,18 @@ class ProfileGroupsTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
                 if groups.count >= 0 {
                     titleLabel.text = "Groups"
                 }
+                noGroupView.isHidden = true
+                collectionView.isHidden = false
+                collectionView.reloadData()
+            } else {
+                noGroupView.isHidden = false
+                collectionView.isHidden = true
             }
-            collectionView.reloadData()
         }
     }
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var noGroupView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {

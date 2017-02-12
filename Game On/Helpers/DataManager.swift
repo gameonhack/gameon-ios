@@ -53,7 +53,7 @@ class DataManager: NSObject {
     
     /**
      
-     Get all Grpsou filtered by the options paramenter. If the options paramenter is nil the function will query all the groups. The request is order in ascending way by the name
+     Get all Groups filtered by the options paramenter. If the options paramenter is nil the function will query all the groups. The request is ordered in ascending way by the name.
      
      - Parameter options: A dictionary to filter the groups request
      - Parameter block: A block returning the requested array of Groups or an error

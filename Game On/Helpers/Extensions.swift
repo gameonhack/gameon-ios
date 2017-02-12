@@ -133,4 +133,14 @@ extension UIViewController {
     func hideKeyboard() {
         view.endEditing(true)
     }
+    
+    func showSimpleAlert(title : String, message : String, buttonTitle : String = "Ok") {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let defaultAction = UIAlertAction(title: buttonTitle, style: UIAlertActionStyle.default, handler: nil)
+        
+        alertController.addAction(defaultAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
