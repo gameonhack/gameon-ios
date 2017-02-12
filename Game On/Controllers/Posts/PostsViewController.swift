@@ -8,11 +8,14 @@
 
 import UIKit
 
-class PostsViewController: RootViewController, UITableViewDelegate, UITableViewDataSource {
+class PostsViewController: RootViewController, UITableViewDelegate, UITableViewDataSource, AddPostViewDelegate {
 
     var posts = [Post]() {
         didSet {
-            tableView.reloadData()
+            if loadingActivityIndicatorView.isAnimating {
+                self.loadingActivityIndicatorView.stopAnimating()
+                tableView.reloadData()
+            }
         }
     }
     
@@ -23,10 +26,10 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         
         DataManager.getPosts { (posts, error) in
             if let posts = posts {
-                self.loadingActivityIndicatorView.stopAnimating()
                 self.posts = posts
             }
         }
@@ -43,18 +46,23 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
     @IBAction func postAction(_ sender: Any) {
         if User.current() == nil {
             NotificationCenter.default.post(name: NSNotification.Name.GOShowLogin, object: nil)
+        } else {
+            self.performSegue(withIdentifier: "ShowAddPostSegue", sender: sender)
         }
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowAddPostSegue" {
+            if let vc = segue.destination as? AddPostViewController {
+                vc.delegate = self
+            }
+        }
     }
-    */
     
     // MARK: - UITableViewDataSource
     
@@ -119,7 +127,10 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         return 90.0
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.01
+    // MARK: - AddPostViewDelegate
+    
+    func didAdded(post: Post) {
+        posts.insert(post, at: 0)
+        tableView.insertRows(at: [IndexPath(row: 0, section: 1)], with: UITableViewRowAnimation.top)
     }
 }

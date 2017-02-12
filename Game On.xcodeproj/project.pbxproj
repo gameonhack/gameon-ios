@@ -37,6 +37,7 @@
 		F96E582A1E4BCA4000C44B17 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E58291E4BCA4000C44B17 /* Group.swift */; };
 		F96E58341E4D758C00C44B17 /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E58331E4D758C00C44B17 /* EditTableViewCell.swift */; };
 		F96E58361E4D766F00C44B17 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E58351E4D766F00C44B17 /* EditProfileViewController.swift */; };
+		F974CEC61E504F0B00DE8F3A /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F974CEC51E504F0B00DE8F3A /* AddPostViewController.swift */; };
 		F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; };
 		F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA081E2FE95600FA06A2 /* RootViewController.swift */; };
@@ -78,7 +79,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7AD68FEE1E4B7C8200D3FCB7 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		F907447E1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		F90BDFC51E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		F90BDFC91E4FAD8700132DC2 /* ProfileGroupsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileGroupsTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,6 +116,7 @@
 		F96E58291E4BCA4000C44B17 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		F96E58331E4D758C00C44B17 /* EditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
 		F96E58351E4D766F00C44B17 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		F974CEC51E504F0B00DE8F3A /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		F98FCA041E2F503700FA06A2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = ../Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		F98FCA081E2FE95600FA06A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -202,7 +203,6 @@
 		F92D7CAB1E2CA9E700D65BB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7AD68FEE1E4B7C8200D3FCB7 /* Group.swift */,
 				F94F6F901E318F360086A727 /* User.swift */,
 				F94F6F891E3099CB0086A727 /* Post.swift */,
 				F9ED68361E31FC58001B7C45 /* Event.swift */,
@@ -320,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */,
+				F974CEC51E504F0B00DE8F3A /* AddPostViewController.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -443,6 +444,7 @@
 				F94F6F8A1E3099CB0086A727 /* Post.swift in Sources */,
 				F994801E1E47FE1F008481EF /* TabBarViewController.swift in Sources */,
 				F93D63C31E4FC71D007BAAE1 /* PFFacebookUtils.m in Sources */,
+				F974CEC61E504F0B00DE8F3A /* AddPostViewController.swift in Sources */,
 				F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */,
 				F93D63C21E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.m in Sources */,
 				F92D7C8E1E2CA91D00D65BB8 /* AppDelegate.swift in Sources */,
