@@ -107,7 +107,12 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
             if user.hasGroups {
                 if cell.groups == nil {
                     user.getGroups { (groups) in
-                        cell.groups = groups
+                        if groups.count > 0 {
+                            cell.groups = groups
+                        } else {
+                            cell.groups = nil
+                            
+                        }
                     }
                 }
             }  else {

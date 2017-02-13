@@ -51,6 +51,7 @@
 		F99482411E486F2D008481EF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99482401E486F2D008481EF /* UserViewController.swift */; };
 		F9A7981A1E31F03600D37C32 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; };
 		F9A7981B1E31F03600D37C32 /* DateTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9E45BCB1E50EEC300E97C11 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E45BCA1E50EEC300E97C11 /* PostViewController.swift */; };
 		F9ED68351E31F845001B7C45 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68341E31F845001B7C45 /* EventsViewController.swift */; };
 		F9ED68371E31FC58001B7C45 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68361E31FC58001B7C45 /* Event.swift */; };
 		F9ED683A1E32A669001B7C45 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68391E32A669001B7C45 /* ImageTableViewCell.swift */; };
@@ -127,6 +128,7 @@
 		F994823D1E485B2B008481EF /* Game On-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Game On-Bridging-Header.h"; sourceTree = "<group>"; };
 		F99482401E486F2D008481EF /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F9A798191E31F03600D37C32 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = ../Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
+		F9E45BCA1E50EEC300E97C11 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		F9ED68341E31F845001B7C45 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		F9ED68361E31FC58001B7C45 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		F9ED68391E32A669001B7C45 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			children = (
 				F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */,
 				F974CEC51E504F0B00DE8F3A /* AddPostViewController.swift */,
+				F9E45BCA1E50EEC300E97C11 /* PostViewController.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E45BCB1E50EEC300E97C11 /* PostViewController.swift in Sources */,
 				F98FCA0D1E2FE9A600FA06A2 /* PostsViewController.swift in Sources */,
 				F92D7CB21E2CAB6A00D65BB8 /* ParseKeys.swift in Sources */,
 				F96E58361E4D766F00C44B17 /* EditProfileViewController.swift in Sources */,
