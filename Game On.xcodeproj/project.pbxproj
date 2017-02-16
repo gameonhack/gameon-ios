@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F907447F1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907447E1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift */; };
+		F90AECD81E5624F600D850DD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90AECD71E5624F600D850DD /* PhotoViewController.swift */; };
 		F90BDFC61E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90BDFC51E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift */; };
 		F90BDFCA1E4FAD8700132DC2 /* ProfileGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90BDFC91E4FAD8700132DC2 /* ProfileGroupsTableViewCell.swift */; };
 		F90BDFCC1E4FB37400132DC2 /* ProfileGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90BDFCB1E4FB37400132DC2 /* ProfileGroupCollectionViewCell.swift */; };
@@ -81,6 +82,7 @@
 
 /* Begin PBXFileReference section */
 		F907447E1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		F90AECD71E5624F600D850DD /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		F90BDFC51E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		F90BDFC91E4FAD8700132DC2 /* ProfileGroupsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileGroupsTableViewCell.swift; sourceTree = "<group>"; };
 		F90BDFCB1E4FB37400132DC2 /* ProfileGroupCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileGroupCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				F994801D1E47FE1F008481EF /* TabBarViewController.swift */,
 				F98FCA081E2FE95600FA06A2 /* RootViewController.swift */,
 				F994801F1E480132008481EF /* LoginViewController.swift */,
+				F90AECD71E5624F600D850DD /* PhotoViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				F974CEC61E504F0B00DE8F3A /* AddPostViewController.swift in Sources */,
 				F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */,
 				F93D63C21E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.m in Sources */,
+				F90AECD81E5624F600D850DD /* PhotoViewController.swift in Sources */,
 				F92D7C8E1E2CA91D00D65BB8 /* AppDelegate.swift in Sources */,
 				F93D63BF1E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider.m in Sources */,
 				F907447F1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift in Sources */,
