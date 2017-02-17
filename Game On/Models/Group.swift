@@ -18,6 +18,7 @@ class Group: PFObject, PFSubclassing {
     @NSManaged var name:String!
     @NSManaged var bio:String!
     @NSManaged var status:String!
+    @NSManaged var membersCount:NSNumber!
     @NSManaged var icon:PFFile!
     
 }

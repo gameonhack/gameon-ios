@@ -1031,26 +1031,53 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Groups"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Sd-mD-gdB">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Sd-mD-gdB">
                                 <rect key="frame" x="0.0" y="110" width="375" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GroupCell" textLabel="sfN-gP-qYU" style="IBUITableViewCellStyleDefault" id="krZ-ck-NWE">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GroupCell" id="krZ-ck-NWE" customClass="GroupTableViewCell" customModule="Game_On" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="krZ-ck-NWE" id="PIt-kO-7vZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sfN-gP-qYU">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JIZ-O6-qbF">
+                                                    <rect key="frame" x="16" y="7.5" width="54.5" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="55" id="079-DY-cjL"/>
+                                                        <constraint firstAttribute="height" constant="55" id="jNj-ox-jsT"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMj-UJ-Uqu">
+                                                    <rect key="frame" x="78.5" y="15.5" width="247.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXz-Da-eTK">
+                                                    <rect key="frame" x="78.5" y="41.5" width="247.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JIZ-O6-qbF" firstAttribute="centerY" secondItem="PIt-kO-7vZ" secondAttribute="centerY" id="2r6-lv-cRz"/>
+                                                <constraint firstItem="NMj-UJ-Uqu" firstAttribute="leading" secondItem="JIZ-O6-qbF" secondAttribute="trailing" constant="8" id="4EC-yb-SP9"/>
+                                                <constraint firstItem="JIZ-O6-qbF" firstAttribute="leading" secondItem="PIt-kO-7vZ" secondAttribute="leadingMargin" constant="8" id="Iol-0M-MZe"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pXz-Da-eTK" secondAttribute="trailing" constant="8" id="QQ4-Cb-lWg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NMj-UJ-Uqu" secondAttribute="trailing" constant="8" id="Sla-2l-zBK"/>
+                                                <constraint firstItem="pXz-Da-eTK" firstAttribute="leading" secondItem="JIZ-O6-qbF" secondAttribute="trailing" constant="8" id="jfY-oB-Xjf"/>
+                                                <constraint firstItem="NMj-UJ-Uqu" firstAttribute="top" secondItem="JIZ-O6-qbF" secondAttribute="top" constant="8" id="k2z-S1-yh1"/>
+                                                <constraint firstItem="pXz-Da-eTK" firstAttribute="bottom" secondItem="JIZ-O6-qbF" secondAttribute="bottom" constant="-4" id="y0j-h1-oeh"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="groupNameLabel" destination="NMj-UJ-Uqu" id="C4L-Tu-GYS"/>
+                                            <outlet property="iconGroupImageView" destination="JIZ-O6-qbF" id="KXh-kE-ydg"/>
+                                            <outlet property="membersLabel" destination="pXz-Da-eTK" id="Lqm-uc-jxV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1077,7 +1104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XxJ-zu-YzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="890" y="727"/>
+            <point key="canvasLocation" x="888.79999999999995" y="726.38680659670172"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="h1g-RP-NqR">

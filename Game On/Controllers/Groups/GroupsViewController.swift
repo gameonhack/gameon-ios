@@ -52,17 +52,20 @@ class GroupsViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell") as! GroupTableViewCell
+        cell.backgroundColor = UIColor.clear
+        
         let group = self.groups[indexPath.row]
-        cell.textLabel?.text = group.name
-        cell.imageView?.image = #imageLiteral(resourceName: "Logo")
+        cell.groupNameLabel.text = group.name
+        cell.membersLabel.text = group.membersCount.stringValue + " Members"
+        cell.iconGroupImageView.image = #imageLiteral(resourceName: "Logo")
         group.getFile(forKey: #keyPath(Group.icon)) { (data) in
             if let data = data {
-                cell.imageView?.image = UIImage(data: data)
+                cell.iconGroupImageView.image = UIImage(data: data)
                 cell.layoutIfNeeded()
             }
         }
-        
+        cell.selectionStyle = .none
         return cell
     }
     

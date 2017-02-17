@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A481AE11E56D60100428767 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A481AE01E56D60100428767 /* GroupTableViewCell.swift */; };
 		7AC7FC701E4FD15800926760 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7FC6F1E4FD15800926760 /* GroupsViewController.swift */; };
 		F907447F1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907447E1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift */; };
 		F90AECD81E5624F600D850DD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90AECD71E5624F600D850DD /* PhotoViewController.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A481AE01E56D60100428767 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		7AC7FC6F1E4FD15800926760 /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		F907447E1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		F90AECD71E5624F600D850DD /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A481ADF1E56D5B500428767 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				7A481AE01E56D60100428767 /* GroupTableViewCell.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
 		7AC7FC6E1E4FD11400926760 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +242,7 @@
 				F9ED68381E32A653001B7C45 /* General */,
 				F94F6F8D1E318C240086A727 /* Posts */,
 				F9ED683D1E32A724001B7C45 /* Events */,
+				7A481ADF1E56D5B500428767 /* Groups */,
 				F96967CE1E499F4500C84D00 /* Profile */,
 			);
 			path = Views;
@@ -240,10 +251,10 @@
 		F92D7CAD1E2CA9FD00D65BB8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7AC7FC6E1E4FD11400926760 /* Groups */,
 				F98FCA071E2FE94500FA06A2 /* General */,
 				F98FCA0B1E2FE99000FA06A2 /* Posts */,
 				F9ED68331E31F82E001B7C45 /* Events */,
+				7AC7FC6E1E4FD11400926760 /* Groups */,
 				F994823F1E486EE4008481EF /* Profile */,
 			);
 			path = Controllers;
@@ -479,6 +490,7 @@
 				F94F6F931E3190380086A727 /* Extensions.swift in Sources */,
 				F96967D01E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift in Sources */,
 				F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */,
+				7A481AE11E56D60100428767 /* GroupTableViewCell.swift in Sources */,
 				F90BDFC61E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift in Sources */,
 				F99482411E486F2D008481EF /* UserViewController.swift in Sources */,
 				F94F6F8C1E3136070086A727 /* DataManager.swift in Sources */,
