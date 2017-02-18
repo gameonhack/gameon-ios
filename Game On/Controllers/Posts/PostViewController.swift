@@ -11,6 +11,7 @@ import UIKit
 class PostViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var post: Post!
+    var postImage : UIImage?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,15 +29,19 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "ShowPictureSegue" {
+            if let vc = segue.destination as? PhotoViewController {
+                vc.photo = postImage!
+            }
+        }
     }
-    */
 
     // MARK: - UITableViewDataSource
     
@@ -76,6 +81,7 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
             post.getFile(forKey: #keyPath(Post.image), withBlock: { (data) in
                 if let data = data {
                     if let image = UIImage(data: data) {
+                        self.postImage = image
                         postCell.postImageView.image = image
                     }
                 }

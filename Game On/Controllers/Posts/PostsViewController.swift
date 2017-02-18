@@ -68,7 +68,7 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "ShowAddPostSegue" {
-            if let vc = segue.destination as? AddPostViewController {
+            if let vc = (segue.destination as! UINavigationController).topViewController as? AddPostViewController {
                 vc.delegate = self
             }
         }
