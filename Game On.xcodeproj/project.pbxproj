@@ -30,11 +30,17 @@
 		F93D63C01E4FC71D007BAAE1 /* PFFacebookAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D63B51E4FC71D007BAAE1 /* PFFacebookAuthenticationProvider.m */; };
 		F93D63C21E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D63BA1E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.m */; };
 		F93D63C31E4FC71D007BAAE1 /* PFFacebookUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D63BE1E4FC71D007BAAE1 /* PFFacebookUtils.m */; };
+		F93EBAE51E6B8CFF00FF2E5F /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93EBAE31E6B8CFF00FF2E5F /* Posts.storyboard */; };
+		F93EBAE81E6B8D5200FF2E5F /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93EBAE61E6B8D5200FF2E5F /* Events.storyboard */; };
+		F93EBAEB1E6B8EB700FF2E5F /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93EBAE91E6B8EB700FF2E5F /* Games.storyboard */; };
+		F93EBAEE1E6B8F8200FF2E5F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93EBAEC1E6B8F8200FF2E5F /* Profile.storyboard */; };
+		F93EBAF11E6B8FFA00FF2E5F /* Groups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93EBAEF1E6B8FFA00FF2E5F /* Groups.storyboard */; };
 		F94F6F8A1E3099CB0086A727 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F891E3099CB0086A727 /* Post.swift */; };
 		F94F6F8C1E3136070086A727 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F8B1E3136070086A727 /* DataManager.swift */; };
 		F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */; };
 		F94F6F911E318F360086A727 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F901E318F360086A727 /* User.swift */; };
 		F94F6F931E3190380086A727 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F921E3190380086A727 /* Extensions.swift */; };
+		F9505A7D1E6BC4000021C5CC /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505A7C1E6BC4000021C5CC /* ContactViewController.swift */; };
 		F96967D01E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96967CF1E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift */; };
 		F96967D21E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96967D11E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift */; };
 		F96E582A1E4BCA4000C44B17 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E58291E4BCA4000C44B17 /* Group.swift */; };
@@ -113,11 +119,17 @@
 		F93D63BC1E4FC71D007BAAE1 /* ParseFacebookUtilsV4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseFacebookUtilsV4.h; sourceTree = "<group>"; };
 		F93D63BD1E4FC71D007BAAE1 /* PFFacebookUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookUtils.h; sourceTree = "<group>"; };
 		F93D63BE1E4FC71D007BAAE1 /* PFFacebookUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFFacebookUtils.m; sourceTree = "<group>"; };
+		F93EBAE41E6B8CFF00FF2E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Posts.storyboard; sourceTree = "<group>"; };
+		F93EBAE71E6B8D5200FF2E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Events.storyboard; sourceTree = "<group>"; };
+		F93EBAEA1E6B8EB700FF2E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Games.storyboard; sourceTree = "<group>"; };
+		F93EBAED1E6B8F8200FF2E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		F93EBAF01E6B8FFA00FF2E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Groups.storyboard; sourceTree = "<group>"; };
 		F94F6F891E3099CB0086A727 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F94F6F8B1E3136070086A727 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F94F6F901E318F360086A727 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F94F6F921E3190380086A727 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F9505A7C1E6BC4000021C5CC /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		F96967CF1E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F96967D11E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAboutTableViewCell.swift; sourceTree = "<group>"; };
 		F96E58291E4BCA4000C44B17 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
@@ -201,9 +213,8 @@
 				F92D7CAC1E2CA9F100D65BB8 /* Views */,
 				F92D7CAD1E2CA9FD00D65BB8 /* Controllers */,
 				F92D7CAE1E2CAA0900D65BB8 /* Helpers */,
-				F92D7C931E2CA91D00D65BB8 /* Main.storyboard */,
+				F9505A7B1E6BA2EB0021C5CC /* Storyboards */,
 				F92D7C961E2CA91D00D65BB8 /* Assets.xcassets */,
-				F92D7C981E2CA91D00D65BB8 /* LaunchScreen.storyboard */,
 				F92D7C9B1E2CA91D00D65BB8 /* Info.plist */,
 				F994823D1E485B2B008481EF /* Game On-Bridging-Header.h */,
 			);
@@ -320,6 +331,20 @@
 			path = Posts;
 			sourceTree = "<group>";
 		};
+		F9505A7B1E6BA2EB0021C5CC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F92D7C931E2CA91D00D65BB8 /* Main.storyboard */,
+				F93EBAE31E6B8CFF00FF2E5F /* Posts.storyboard */,
+				F93EBAE61E6B8D5200FF2E5F /* Events.storyboard */,
+				F93EBAE91E6B8EB700FF2E5F /* Games.storyboard */,
+				F93EBAEF1E6B8FFA00FF2E5F /* Groups.storyboard */,
+				F93EBAEC1E6B8F8200FF2E5F /* Profile.storyboard */,
+				F92D7C981E2CA91D00D65BB8 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		F96967CE1E499F4500C84D00 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +383,7 @@
 			children = (
 				F99482401E486F2D008481EF /* UserViewController.swift */,
 				F96E58351E4D766F00C44B17 /* EditProfileViewController.swift */,
+				F9505A7C1E6BC4000021C5CC /* ContactViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -453,9 +479,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93EBAF11E6B8FFA00FF2E5F /* Groups.storyboard in Resources */,
+				F93EBAEB1E6B8EB700FF2E5F /* Games.storyboard in Resources */,
+				F93EBAE51E6B8CFF00FF2E5F /* Posts.storyboard in Resources */,
 				F92D7C9A1E2CA91D00D65BB8 /* LaunchScreen.storyboard in Resources */,
 				F92D7C971E2CA91D00D65BB8 /* Assets.xcassets in Resources */,
 				F92D7C951E2CA91D00D65BB8 /* Main.storyboard in Resources */,
+				F93EBAEE1E6B8F8200FF2E5F /* Profile.storyboard in Resources */,
+				F93EBAE81E6B8D5200FF2E5F /* Events.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +506,7 @@
 				F93D63C31E4FC71D007BAAE1 /* PFFacebookUtils.m in Sources */,
 				F974CEC61E504F0B00DE8F3A /* AddPostViewController.swift in Sources */,
 				F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */,
+				F9505A7D1E6BC4000021C5CC /* ContactViewController.swift in Sources */,
 				F93D63C21E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.m in Sources */,
 				F90AECD81E5624F600D850DD /* PhotoViewController.swift in Sources */,
 				F92D7C8E1E2CA91D00D65BB8 /* AppDelegate.swift in Sources */,
@@ -525,6 +557,46 @@
 				F92D7C991E2CA91D00D65BB8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F93EBAE31E6B8CFF00FF2E5F /* Posts.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F93EBAE41E6B8CFF00FF2E5F /* Base */,
+			);
+			name = Posts.storyboard;
+			sourceTree = "<group>";
+		};
+		F93EBAE61E6B8D5200FF2E5F /* Events.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F93EBAE71E6B8D5200FF2E5F /* Base */,
+			);
+			name = Events.storyboard;
+			sourceTree = "<group>";
+		};
+		F93EBAE91E6B8EB700FF2E5F /* Games.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F93EBAEA1E6B8EB700FF2E5F /* Base */,
+			);
+			name = Games.storyboard;
+			sourceTree = "<group>";
+		};
+		F93EBAEC1E6B8F8200FF2E5F /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F93EBAED1E6B8F8200FF2E5F /* Base */,
+			);
+			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
+		F93EBAEF1E6B8FFA00FF2E5F /* Groups.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F93EBAF01E6B8FFA00FF2E5F /* Base */,
+			);
+			name = Groups.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
