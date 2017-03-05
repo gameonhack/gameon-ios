@@ -22,7 +22,6 @@
 		F92D7CA61E2CA9BD00D65BB8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D7CA31E2CA98500D65BB8 /* Parse.framework */; };
 		F92D7CA71E2CA9BD00D65BB8 /* Parse.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F92D7CA31E2CA98500D65BB8 /* Parse.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F92D7CAA1E2CA9C300D65BB8 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F92D7CA21E2CA98500D65BB8 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F92D7CB21E2CAB6A00D65BB8 /* ParseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92D7CB11E2CAB6A00D65BB8 /* ParseKeys.swift */; };
 		F93A2A8C1E3A89840097CE90 /* EventAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93A2A8B1E3A89840097CE90 /* EventAboutTableViewCell.swift */; };
 		F93A2A901E3ACEA10097CE90 /* EventDayHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93A2A8F1E3ACEA10097CE90 /* EventDayHeaderTableViewCell.swift */; };
 		F93D63BF1E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F93D63B21E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider.m */; };
@@ -34,15 +33,16 @@
 		F93EBAEB1E6B8EB700FF2E5F /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93EBAE91E6B8EB700FF2E5F /* Games.storyboard */; };
 		F93EBAEE1E6B8F8200FF2E5F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93EBAEC1E6B8F8200FF2E5F /* Profile.storyboard */; };
 		F93EBAF11E6B8FFA00FF2E5F /* Groups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93EBAEF1E6B8FFA00FF2E5F /* Groups.storyboard */; };
-		F94F6F8C1E3136070086A727 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F8B1E3136070086A727 /* DataManager.swift */; };
 		F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */; };
-		F94F6F931E3190380086A727 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F921E3190380086A727 /* Extensions.swift */; };
 		F9505A7D1E6BC4000021C5CC /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505A7C1E6BC4000021C5CC /* ContactViewController.swift */; };
 		F9505AB31E6BED8A0021C5CC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AAE1E6BED8A0021C5CC /* Event.swift */; };
 		F9505AB41E6BED8A0021C5CC /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AAF1E6BED8A0021C5CC /* Group.swift */; };
 		F9505AB51E6BED8A0021C5CC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AB01E6BED8A0021C5CC /* Post.swift */; };
 		F9505AB61E6BED8A0021C5CC /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AB11E6BED8A0021C5CC /* Schedule.swift */; };
 		F9505AB71E6BED8A0021C5CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AB21E6BED8A0021C5CC /* User.swift */; };
+		F9505ABD1E6BF3500021C5CC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505ABA1E6BF3500021C5CC /* DataManager.swift */; };
+		F9505ABE1E6BF3500021C5CC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505ABB1E6BF3500021C5CC /* Extensions.swift */; };
+		F9505ABF1E6BF3500021C5CC /* ParseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505ABC1E6BF3500021C5CC /* ParseKeys.swift */; };
 		F96967D01E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96967CF1E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift */; };
 		F96967D21E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96967D11E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift */; };
 		F96E58341E4D758C00C44B17 /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E58331E4D758C00C44B17 /* EditTableViewCell.swift */; };
@@ -96,7 +96,7 @@
 		F90BDFC51E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		F90BDFC91E4FAD8700132DC2 /* ProfileGroupsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileGroupsTableViewCell.swift; sourceTree = "<group>"; };
 		F90BDFCB1E4FB37400132DC2 /* ProfileGroupCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileGroupCollectionViewCell.swift; sourceTree = "<group>"; };
-		F92D7C8A1E2CA91D00D65BB8 /* Game On iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game On iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F92D7C8A1E2CA91D00D65BB8 /* Game On.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game On.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92D7C8D1E2CA91D00D65BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F92D7C941E2CA91D00D65BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F92D7C961E2CA91D00D65BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,7 +104,6 @@
 		F92D7C9B1E2CA91D00D65BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F92D7CA21E2CA98500D65BB8 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = SOURCE_ROOT; };
 		F92D7CA31E2CA98500D65BB8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Carthage/Build/iOS/Parse.framework; sourceTree = SOURCE_ROOT; };
-		F92D7CB11E2CAB6A00D65BB8 /* ParseKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseKeys.swift; sourceTree = "<group>"; };
 		F93A2A8B1E3A89840097CE90 /* EventAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAboutTableViewCell.swift; sourceTree = "<group>"; };
 		F93A2A8F1E3ACEA10097CE90 /* EventDayHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDayHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F93D63B11E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFFacebookMobileAuthenticationProvider.h; sourceTree = "<group>"; };
@@ -123,15 +122,17 @@
 		F93EBAEA1E6B8EB700FF2E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Games.storyboard; sourceTree = "<group>"; };
 		F93EBAED1E6B8F8200FF2E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		F93EBAF01E6B8FFA00FF2E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Groups.storyboard; sourceTree = "<group>"; };
-		F94F6F8B1E3136070086A727 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
-		F94F6F921E3190380086A727 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F9505A7C1E6BC4000021C5CC /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		F9505AAE1E6BED8A0021C5CC /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		F9505AAF1E6BED8A0021C5CC /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		F9505AB01E6BED8A0021C5CC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F9505AB11E6BED8A0021C5CC /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		F9505AB21E6BED8A0021C5CC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F9505AB81E6BF1640021C5CC /* Game On.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Game On.entitlements"; sourceTree = "<group>"; };
+		F9505ABA1E6BF3500021C5CC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F9505ABB1E6BF3500021C5CC /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F9505ABC1E6BF3500021C5CC /* ParseKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseKeys.swift; sourceTree = "<group>"; };
 		F96967CF1E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F96967D11E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAboutTableViewCell.swift; sourceTree = "<group>"; };
 		F96E58331E4D758C00C44B17 /* EditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
@@ -201,7 +202,7 @@
 		F92D7C8B1E2CA91D00D65BB8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F92D7C8A1E2CA91D00D65BB8 /* Game On iOS.app */,
+				F92D7C8A1E2CA91D00D65BB8 /* Game On.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,7 +213,6 @@
 				F92D7C8D1E2CA91D00D65BB8 /* AppDelegate.swift */,
 				F92D7CAC1E2CA9F100D65BB8 /* Views */,
 				F92D7CAD1E2CA9FD00D65BB8 /* Controllers */,
-				F92D7CAE1E2CAA0900D65BB8 /* Helpers */,
 				F9505A7B1E6BA2EB0021C5CC /* Storyboards */,
 				F92D7C961E2CA91D00D65BB8 /* Assets.xcassets */,
 				F92D7C9B1E2CA91D00D65BB8 /* Info.plist */,
@@ -257,16 +257,6 @@
 				F994823F1E486EE4008481EF /* Profile */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		F92D7CAE1E2CAA0900D65BB8 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				F94F6F8B1E3136070086A727 /* DataManager.swift */,
-				F94F6F921E3190380086A727 /* Extensions.swift */,
-				F92D7CB11E2CAB6A00D65BB8 /* ParseKeys.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F93D63AD1E4FC71D007BAAE1 /* ParseFacebookUtils */ = {
@@ -336,7 +326,9 @@
 		F9505AAC1E6BECDC0021C5CC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F9505AB81E6BF1640021C5CC /* Game On.entitlements */,
 				F9505AAD1E6BED8A0021C5CC /* Models */,
+				F9505AB91E6BF3500021C5CC /* Helpers */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -351,6 +343,16 @@
 				F9505AB21E6BED8A0021C5CC /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F9505AB91E6BF3500021C5CC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F9505ABA1E6BF3500021C5CC /* DataManager.swift */,
+				F9505ABB1E6BF3500021C5CC /* Extensions.swift */,
+				F9505ABC1E6BF3500021C5CC /* ParseKeys.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F96967CE1E499F4500C84D00 /* Profile */ = {
@@ -444,7 +446,7 @@
 			);
 			name = "Game On iOS";
 			productName = "Game On";
-			productReference = F92D7C8A1E2CA91D00D65BB8 /* Game On iOS.app */;
+			productReference = F92D7C8A1E2CA91D00D65BB8 /* Game On.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -461,6 +463,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = KDY2FY8979;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -508,15 +515,16 @@
 				F9E45BCB1E50EEC300E97C11 /* PostViewController.swift in Sources */,
 				F98FCA0D1E2FE9A600FA06A2 /* PostsViewController.swift in Sources */,
 				F9505AB61E6BED8A0021C5CC /* Schedule.swift in Sources */,
-				F92D7CB21E2CAB6A00D65BB8 /* ParseKeys.swift in Sources */,
 				F96E58361E4D766F00C44B17 /* EditProfileViewController.swift in Sources */,
 				F994801E1E47FE1F008481EF /* TabBarViewController.swift in Sources */,
+				F9505ABD1E6BF3500021C5CC /* DataManager.swift in Sources */,
 				F9505AB51E6BED8A0021C5CC /* Post.swift in Sources */,
 				F93D63C31E4FC71D007BAAE1 /* PFFacebookUtils.m in Sources */,
 				F974CEC61E504F0B00DE8F3A /* AddPostViewController.swift in Sources */,
 				F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */,
 				F9505A7D1E6BC4000021C5CC /* ContactViewController.swift in Sources */,
 				F93D63C21E4FC71D007BAAE1 /* PFFacebookPrivateUtilities.m in Sources */,
+				F9505ABE1E6BF3500021C5CC /* Extensions.swift in Sources */,
 				F90AECD81E5624F600D850DD /* PhotoViewController.swift in Sources */,
 				F92D7C8E1E2CA91D00D65BB8 /* AppDelegate.swift in Sources */,
 				F93D63BF1E4FC71D007BAAE1 /* PFFacebookMobileAuthenticationProvider.m in Sources */,
@@ -526,17 +534,16 @@
 				F9ED683F1E32A72E001B7C45 /* EventTableViewCell.swift in Sources */,
 				7AC7FC701E4FD15800926760 /* GroupsViewController.swift in Sources */,
 				F90BDFCA1E4FAD8700132DC2 /* ProfileGroupsTableViewCell.swift in Sources */,
+				F9505ABF1E6BF3500021C5CC /* ParseKeys.swift in Sources */,
 				F99480201E480132008481EF /* LoginViewController.swift in Sources */,
 				F9505AB71E6BED8A0021C5CC /* User.swift in Sources */,
 				F9505AB41E6BED8A0021C5CC /* Group.swift in Sources */,
 				F90BDFCC1E4FB37400132DC2 /* ProfileGroupCollectionViewCell.swift in Sources */,
-				F94F6F931E3190380086A727 /* Extensions.swift in Sources */,
 				F96967D01E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift in Sources */,
 				F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */,
 				7A481AE11E56D60100428767 /* GroupTableViewCell.swift in Sources */,
 				F90BDFC61E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift in Sources */,
 				F99482411E486F2D008481EF /* UserViewController.swift in Sources */,
-				F94F6F8C1E3136070086A727 /* DataManager.swift in Sources */,
 				F9505AB31E6BED8A0021C5CC /* Event.swift in Sources */,
 				F93A2A8C1E3A89840097CE90 /* EventAboutTableViewCell.swift in Sources */,
 				F93A2A901E3ACEA10097CE90 /* EventDayHeaderTableViewCell.swift in Sources */,
@@ -707,6 +714,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Common/Game On.entitlements";
 				DEVELOPMENT_TEAM = KDY2FY8979;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -716,9 +724,10 @@
 				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gameonhack.Game-On";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Game On";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS/Game On-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -726,6 +735,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Common/Game On.entitlements";
 				DEVELOPMENT_TEAM = KDY2FY8979;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -735,9 +745,10 @@
 				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gameonhack.Game-On";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Game On";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOS/Game On-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

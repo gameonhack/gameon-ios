@@ -27,6 +27,23 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>So you can share your photos </string>
+	<key>NSCameraUsageDescription</key>
+	<string>So you can share your photos </string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>So you can share your photos </string>
 	<key>FacebookAppID</key>
 	<string>268551873519887</string>
 	<key>FacebookDisplayName</key>
@@ -39,23 +56,6 @@
 		<string>fbshareextension</string>
 		<string>fb-messenger</string>
 	</array>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>So you can share your photos </string>
-	<key>NSCameraUsageDescription</key>
-	<string>So you can share your photos </string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>So you can share your photos </string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
