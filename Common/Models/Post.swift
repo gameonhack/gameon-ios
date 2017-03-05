@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class Post: PFObject, PFSubclassing {
+class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
 
     static func parseClassName() -> String {
         return "Post"

@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class User: PFUser {
+class User: PFUser, PFSubclassingSkipAutomaticRegistration {
     
     @NSManaged var name : String!
     @NSManaged var bio : String!

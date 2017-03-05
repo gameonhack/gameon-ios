@@ -18,11 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        Parse.enableLocalDatastore()
+        Parse.enableDataSharing(withApplicationGroupIdentifier: "group.com.gameonhack.Game-On")
         Parse.initialize(with: ParseClientConfiguration(block: { (ParseClientConfiguration) in
             ParseClientConfiguration.applicationId = ParseKeys.applicationId
             ParseClientConfiguration.clientKey = ParseKeys.clientKey
             ParseClientConfiguration.server = ParseKeys.server
         }))
+        
+        // Warning: - Registering subclasses could lead to potencial bugs
+        
+        Post.registerSubclass()
+        Event.registerSubclass()
+        Schedule.registerSubclass()
+        Group.registerSubclass()
+        User.registerSubclass()
         
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)

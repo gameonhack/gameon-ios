@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class Event: PFObject, PFSubclassing {
+class Event: PFObject, PFSubclassingSkipAutomaticRegistration {
     
     static func parseClassName() -> String {
         return "Event"

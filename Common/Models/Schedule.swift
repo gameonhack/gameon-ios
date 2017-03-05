@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class Schedule: PFObject, PFSubclassing {
+class Schedule: PFObject, PFSubclassingSkipAutomaticRegistration {
 
     static func parseClassName() -> String {
         return "Schedule"

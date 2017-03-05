@@ -48,6 +48,16 @@
 		F96E58341E4D758C00C44B17 /* EditTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E58331E4D758C00C44B17 /* EditTableViewCell.swift */; };
 		F96E58361E4D766F00C44B17 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96E58351E4D766F00C44B17 /* EditProfileViewController.swift */; };
 		F974CEC61E504F0B00DE8F3A /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F974CEC51E504F0B00DE8F3A /* AddPostViewController.swift */; };
+		F9875FC51E6BF5A300D75347 /* iOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9875FC41E6BF5A300D75347 /* iOS_Tests.swift */; };
+		F9875FCC1E6BF5CB00D75347 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D7CA31E2CA98500D65BB8 /* Parse.framework */; };
+		F9875FD81E6BF8B800D75347 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505ABB1E6BF3500021C5CC /* Extensions.swift */; };
+		F9875FD91E6BF8B800D75347 /* ParseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505ABC1E6BF3500021C5CC /* ParseKeys.swift */; };
+		F9875FDC1E6BFC4C00D75347 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AB11E6BED8A0021C5CC /* Schedule.swift */; };
+		F9875FDD1E6BFD5300D75347 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AB01E6BED8A0021C5CC /* Post.swift */; };
+		F9875FDE1E6BFD5300D75347 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AAE1E6BED8A0021C5CC /* Event.swift */; };
+		F9875FDF1E6BFD5300D75347 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AAF1E6BED8A0021C5CC /* Group.swift */; };
+		F9875FE01E6BFD5300D75347 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AB21E6BED8A0021C5CC /* User.swift */; };
+		F9875FE11E6BFD5700D75347 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505ABA1E6BF3500021C5CC /* DataManager.swift */; };
 		F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; };
 		F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA081E2FE95600FA06A2 /* RootViewController.swift */; };
@@ -68,6 +78,16 @@
 		F9ED683F1E32A72E001B7C45 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED683E1E32A72E001B7C45 /* EventTableViewCell.swift */; };
 		F9ED68411E32AF45001B7C45 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68401E32AF45001B7C45 /* EventViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9875FC71E6BF5A300D75347 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F92D7C821E2CA91D00D65BB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F92D7C891E2CA91D00D65BB8;
+			remoteInfo = "Game On iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		F92D7CA81E2CA9BD00D65BB8 /* Embed Frameworks */ = {
@@ -138,6 +158,9 @@
 		F96E58331E4D758C00C44B17 /* EditTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewCell.swift; sourceTree = "<group>"; };
 		F96E58351E4D766F00C44B17 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		F974CEC51E504F0B00DE8F3A /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		F9875FC21E6BF5A300D75347 /* Game On iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Game On iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9875FC41E6BF5A300D75347 /* iOS_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Tests.swift; sourceTree = "<group>"; };
+		F9875FC61E6BF5A300D75347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F98FCA041E2F503700FA06A2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = ../Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		F98FCA081E2FE95600FA06A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +193,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9875FBF1E6BF5A300D75347 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9875FCC1E6BF5CB00D75347 /* Parse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -194,6 +225,7 @@
 			children = (
 				F9505AAC1E6BECDC0021C5CC /* Common */,
 				F92D7C8C1E2CA91D00D65BB8 /* iOS */,
+				F9875FC31E6BF5A300D75347 /* iOS Tests */,
 				F92D7CA11E2CA97100D65BB8 /* Frameworks */,
 				F92D7C8B1E2CA91D00D65BB8 /* Products */,
 			);
@@ -203,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				F92D7C8A1E2CA91D00D65BB8 /* Game On.app */,
+				F9875FC21E6BF5A300D75347 /* Game On iOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -336,10 +369,10 @@
 		F9505AAD1E6BED8A0021C5CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F9505AAE1E6BED8A0021C5CC /* Event.swift */,
-				F9505AAF1E6BED8A0021C5CC /* Group.swift */,
 				F9505AB01E6BED8A0021C5CC /* Post.swift */,
+				F9505AAE1E6BED8A0021C5CC /* Event.swift */,
 				F9505AB11E6BED8A0021C5CC /* Schedule.swift */,
+				F9505AAF1E6BED8A0021C5CC /* Group.swift */,
 				F9505AB21E6BED8A0021C5CC /* User.swift */,
 			);
 			path = Models;
@@ -365,6 +398,15 @@
 				F90BDFCB1E4FB37400132DC2 /* ProfileGroupCollectionViewCell.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F9875FC31E6BF5A300D75347 /* iOS Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F9875FC41E6BF5A300D75347 /* iOS_Tests.swift */,
+				F9875FC61E6BF5A300D75347 /* Info.plist */,
+			);
+			path = "iOS Tests";
 			sourceTree = "<group>";
 		};
 		F98FCA071E2FE94500FA06A2 /* General */ = {
@@ -449,6 +491,24 @@
 			productReference = F92D7C8A1E2CA91D00D65BB8 /* Game On.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F9875FC11E6BF5A300D75347 /* Game On iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9875FCB1E6BF5A300D75347 /* Build configuration list for PBXNativeTarget "Game On iOS Tests" */;
+			buildPhases = (
+				F9875FBE1E6BF5A300D75347 /* Sources */,
+				F9875FBF1E6BF5A300D75347 /* Frameworks */,
+				F9875FC01E6BF5A300D75347 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9875FC81E6BF5A300D75347 /* PBXTargetDependency */,
+			);
+			name = "Game On iOS Tests";
+			productName = "iOS Tests";
+			productReference = F9875FC21E6BF5A300D75347 /* Game On iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -469,6 +529,12 @@
 							};
 						};
 					};
+					F9875FC11E6BF5A300D75347 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KDY2FY8979;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F92D7C891E2CA91D00D65BB8;
+					};
 				};
 			};
 			buildConfigurationList = F92D7C851E2CA91D00D65BB8 /* Build configuration list for PBXProject "Game On" */;
@@ -485,6 +551,7 @@
 			projectRoot = "";
 			targets = (
 				F92D7C891E2CA91D00D65BB8 /* Game On iOS */,
+				F9875FC11E6BF5A300D75347 /* Game On iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -502,6 +569,13 @@
 				F92D7C951E2CA91D00D65BB8 /* Main.storyboard in Resources */,
 				F93EBAEE1E6B8F8200FF2E5F /* Profile.storyboard in Resources */,
 				F93EBAE81E6B8D5200FF2E5F /* Events.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9875FC01E6BF5A300D75347 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +629,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9875FBE1E6BF5A300D75347 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9875FDF1E6BFD5300D75347 /* Group.swift in Sources */,
+				F9875FC51E6BF5A300D75347 /* iOS_Tests.swift in Sources */,
+				F9875FD91E6BF8B800D75347 /* ParseKeys.swift in Sources */,
+				F9875FDC1E6BFC4C00D75347 /* Schedule.swift in Sources */,
+				F9875FE01E6BFD5300D75347 /* User.swift in Sources */,
+				F9875FD81E6BF8B800D75347 /* Extensions.swift in Sources */,
+				F9875FDE1E6BFD5300D75347 /* Event.swift in Sources */,
+				F9875FE11E6BFD5700D75347 /* DataManager.swift in Sources */,
+				F9875FDD1E6BFD5300D75347 /* Post.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9875FC81E6BF5A300D75347 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F92D7C891E2CA91D00D65BB8 /* Game On iOS */;
+			targetProxy = F9875FC71E6BF5A300D75347 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F92D7C931E2CA91D00D65BB8 /* Main.storyboard */ = {
@@ -752,6 +850,42 @@
 			};
 			name = Release;
 		};
+		F9875FC91E6BF5A300D75347 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KDY2FY8979;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "iOS Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gameon.iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Game On.app/Game On";
+			};
+			name = Debug;
+		};
+		F9875FCA1E6BF5A300D75347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KDY2FY8979;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "iOS Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gameon.iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Game On.app/Game On";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -772,6 +906,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F9875FCB1E6BF5A300D75347 /* Build configuration list for PBXNativeTarget "Game On iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9875FC91E6BF5A300D75347 /* Debug */,
+				F9875FCA1E6BF5A300D75347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
