@@ -15,9 +15,13 @@ class Schedule: PFObject, PFSubclassingSkipAutomaticRegistration {
         return "Schedule"
     }
     
+    /// The schedule's name
     @NSManaged var name : String!
+    /// The schedule's details
     @NSManaged var details : String!
+    /// The schedule's workshop flag
     @NSManaged var isWorkshop : NSNumber!
+    /// The schedule's date
     @NSManaged var date : Date!
     
 }

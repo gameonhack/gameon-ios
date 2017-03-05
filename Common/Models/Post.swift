@@ -15,9 +15,11 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
         return "Post"
     }
     
+    /// The post's user. This is the user that created the Post.
     @NSManaged var user : User!
+    /// The post's content
     @NSManaged var content : String!
+    /// The pot's image file. **Default** is nil. Use getFile function to get the image.
     @NSManaged var image : PFFile?
-    
     
 }

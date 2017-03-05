@@ -11,26 +11,31 @@ import Parse
 
 class User: PFUser, PFSubclassingSkipAutomaticRegistration {
     
+    /// The user's name
     @NSManaged var name : String!
+    /// The user's bio or description
     @NSManaged var bio : String!
+    /// The user's image
     @NSManaged var image : PFFile!
+    /// The user's groups relation
     @NSManaged var groups : PFRelation<Group>?
     
+    /// The user's flag to verify if the user belongs to at least at 1 group.
     var hasGroups : Bool {
         get {
             return groups != nil
         }
     }
     
+    /**
+     
+     Get all group from the user. The request is ordered in ascending way by the user's name.
+     
+     - Parameter block: A block returning the requested array of Groups or an error
+     - Parameter groups: The requested array of groups
+     
+     */
     func getGroups(block : @escaping ([Group]) -> Void ) {
-        if let groups = groups {
-            let query = groups.query()
-            query.order(byAscending: #keyPath(Group.name))
-            query.findObjectsInBackground { (groups, error) in
-                if let groups = groups {
-                    block(groups)
-                }
-            }
-        }
+        DataManager.getGroupsFrom(user: self, block: block)
     }
 }
