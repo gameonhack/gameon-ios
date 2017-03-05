@@ -56,7 +56,7 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
     */
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return User.current() == nil ? 0 : 4
+        return User.current() == nil ? 0 : 5
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,6 +72,8 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
         case 2:
             return "GroupsCell"
         case 3:
+            return "ContactCell"
+        case 4:
             return "LogOutCell"
         default:
             return ""
@@ -126,7 +128,8 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 3 {
+       
+        if indexPath.section == 4 {
             guard let user = User.current() else {
                 return
             }
@@ -145,6 +148,7 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
             
             self.present(alertController, animated: true, completion: nil)
         }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
