@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GroupsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class GroupsViewController: RootViewController, UITableViewDataSource, UITableViewDelegate {
     
     var groups = [Group](){
         didSet{

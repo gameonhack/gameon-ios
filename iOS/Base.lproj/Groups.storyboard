@@ -52,7 +52,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="krZ-ck-NWE" id="PIt-kO-7vZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JIZ-O6-qbF">
@@ -165,7 +165,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="215"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R1I-p9-UCF" id="FtH-bm-xMt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="214.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E0P-fj-mC3">
@@ -187,6 +187,34 @@
                                             <outlet property="bottomSpaceConstraint" destination="vAR-hw-Qmv" id="hY0-Gx-efM"/>
                                             <outlet property="imageImageView" destination="E0P-fj-mC3" id="zhl-Qd-UgH"/>
                                             <outlet property="topSpaceConstraint" destination="4RY-8H-1Fm" id="PQL-2u-VXA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupHeaderCell" rowHeight="100" id="epE-ip-I1K" customClass="GroupTitleTableViewCell" customModule="Game_On" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="243" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="epE-ip-I1K" id="IrL-CO-TMJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWj-Y6-sfM" customClass="TitleView" customModule="Game_On" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="-20" width="375" height="90"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="xci-Lt-PDI"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Group Name"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nWj-Y6-sfM" firstAttribute="top" secondItem="IrL-CO-TMJ" secondAttribute="top" constant="-20" id="JQf-Ia-ZSt"/>
+                                                <constraint firstItem="nWj-Y6-sfM" firstAttribute="leading" secondItem="IrL-CO-TMJ" secondAttribute="leading" id="ooK-zI-EEz"/>
+                                                <constraint firstAttribute="trailing" secondItem="nWj-Y6-sfM" secondAttribute="trailing" id="wiJ-hl-aOe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="nWj-Y6-sfM" id="gfN-5S-3KU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

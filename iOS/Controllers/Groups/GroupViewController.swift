@@ -18,7 +18,6 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableview.tableFooterView = UIView(frame: CGRect.zero)
-        print("Salsa")
         // Do any additional setup after loading the view.
     }
 
@@ -53,21 +52,19 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: - UITableViewDataSource (Delegated)
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        print("Cristal")
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("mantequilla")
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("cocacola")
         let identifier = getCellIdentifier(index: indexPath.section)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
         cell.selectionStyle = .none
+        
         if let cell = cell as? ImageTableViewCell {
             cell.imageImageView.image = #imageLiteral(resourceName: "Logo")
             group.getFile(forKey: #keyPath(Group.icon), withBlock: { (data) in
@@ -76,6 +73,11 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     cell.layoutIfNeeded()
                 }
             })
+        }
+        
+        if let cell = cell as? GroupTitleTableViewCell {
+            print("Entro")
+            cell.titleLabel.text = group.name
         }
         
         return cell
@@ -93,7 +95,14 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: - UITableViewDataSource (Custom)
     
     func getCellIdentifier(index : Int) -> String {
-        return "GroupHeaderDecorationCell"
+        switch index {
+            case 0:
+                return "GroupHeaderDecorationCell"
+            case 1:
+                return "GroupHeaderCell"
+            default:
+                return ""
+        }
     }
     
     // MARK: - Scroll view delegate
