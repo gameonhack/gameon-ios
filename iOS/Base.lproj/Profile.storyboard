@@ -149,7 +149,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Tb-zf-eOH">
-                                                    <rect key="frame" x="16" y="28" width="643" height="24"/>
+                                                    <rect key="frame" x="16" y="28" width="351" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="Z3z-RA-bxJ"/>
                                                     </constraints>
@@ -158,16 +158,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCG-d2-qCF">
-                                                    <rect key="frame" x="0.0" y="68" width="667" height="131"/>
+                                                    <rect key="frame" x="0.0" y="68" width="375" height="131"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cebollita Sad" translatesAutoresizingMaskIntoConstraints="NO" id="NqW-AD-c4z">
-                                                            <rect key="frame" x="293" y="8" width="81" height="81"/>
+                                                            <rect key="frame" x="147" y="8" width="81" height="81"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="NqW-AD-c4z" secondAttribute="height" multiplier="1:1" id="qdk-E8-Vlo"/>
                                                             </constraints>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ef-Vh-g5G">
-                                                            <rect key="frame" x="281" y="93" width="104" height="30"/>
+                                                            <rect key="frame" x="135" y="93" width="104" height="30"/>
                                                             <state key="normal" title="Create a Group"/>
                                                         </button>
                                                     </subviews>
@@ -181,7 +181,7 @@
                                                     </constraints>
                                                 </view>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9tp-FH-s9T">
-                                                    <rect key="frame" x="0.0" y="68" width="667" height="131"/>
+                                                    <rect key="frame" x="0.0" y="68" width="375" height="131"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FLz-ER-sP1">
                                                         <size key="itemSize" width="130" height="130"/>
@@ -191,7 +191,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GroupCell" id="IeT-85-88S" customClass="ProfileGroupCollectionViewCell" customModule="Game_On" customModuleProvider="target">
-                                                            <rect key="frame" x="20" y="1" width="130" height="130"/>
+                                                            <rect key="frame" x="20" y="0.5" width="130" height="130"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
@@ -228,6 +228,7 @@
                                                             <connections>
                                                                 <outlet property="nameLabel" destination="KV4-8g-SzJ" id="vFv-Bk-0qS"/>
                                                                 <outlet property="photoImageView" destination="8gB-o0-BMr" id="wPl-1d-Tyx"/>
+                                                                <segue destination="Fln-s5-m7e" kind="show" identifier="ShowGroupSegue" id="ddP-Sk-1XC"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -460,7 +461,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zh-fS-3il">
-                                                    <rect key="frame" x="16" y="28" width="643" height="24"/>
+                                                    <rect key="frame" x="16" y="28" width="351" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="ina-XC-aeD"/>
                                                     </constraints>
@@ -469,7 +470,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="About the user" translatesAutoresizingMaskIntoConstraints="NO" id="CoB-be-15h">
-                                                    <rect key="frame" x="12" y="72" width="639" height="115"/>
+                                                    <rect key="frame" x="12" y="72" width="347" height="115"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -518,6 +519,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k06-Qz-zDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2508" y="1432"/>
+        </scene>
+        <!--GroupViewController-->
+        <scene sceneID="Qov-UX-c3W">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Groups" referencedIdentifier="GroupViewController" id="Fln-s5-m7e" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ga3-7E-1es" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1670" y="1957"/>
         </scene>
         <!--Contact View Controller-->
         <scene sceneID="kfi-Dx-O5r">

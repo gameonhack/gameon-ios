@@ -45,15 +45,21 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier ==  "ShowGroupSegue" {
+            if let vc = segue.destination as? GroupViewController, let cell = (tableView.cellForRow(at: IndexPath(row: 0, section: 2) ) as? ProfileGroupsTableViewCell) {
+                
+                if let index = cell.collectionView.indexPathsForSelectedItems?.first {
+                    vc.group = cell.groups?[index.row]
+                }
+            }
+        }
     }
-    */
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return User.current() == nil ? 0 : 5
