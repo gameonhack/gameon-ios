@@ -33,6 +33,28 @@ class DataManager: NSObject {
         }
     }
     
+    /**
+     
+     Get all Posts filtered by the options paramenter. If the options paramenter is nil the function will query all the posts. The request includes the posts's user.
+     
+     - Parameter options: A dictionary to filter the posts request
+     - Parameter block: A block returning the requested array of posts or an error
+     - Parameter posts: The requested array of Posts
+     - Parameter error: Error if it fails to get the posts
+     
+     */
+    static func getLikesFrom(post : Post, block: @escaping (_  posts : [User]?, _ error : Error?) -> Void) {
+        guard let likes = post.likes else  {
+            block(nil, nil )
+            return
+        }
+        let query = likes.query()
+        query.order(byDescending: #keyPath(Post.createdAt))
+        query.findObjectsInBackground { (objects, error) in
+            block(objects, error)
+        }
+    }
+    
     // MARK: - Events
     
     /**

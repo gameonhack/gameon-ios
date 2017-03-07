@@ -8,8 +8,14 @@
 
 import UIKit
 
-class PostViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol PostViewDelegate {
+    func didliked(post : Post, indexPath: IndexPath)
+}
+class PostViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PostTableViewCellDelegate {
 
+    var delegate : PostViewDelegate!
+    var indexPath : IndexPath!
+    
     var post: Post!
     var postImage : UIImage?
     
@@ -63,6 +69,8 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
             return cell
         }
         
+        postCell.delegate = self
+        
         postCell.timeLabel.text = post.createdAt!.shortTimeAgo()
         postCell.contentTextView.text = post.content
         
@@ -90,6 +98,12 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
             postCell.hideImage()
         }
         
+        if let user = User.current() {
+            if post.isLikedBy(user: user) {
+                postCell.likeButton.setImage(UIImage(named: "Heart Filled"), for: UIControlState.normal)
+            }
+        }
+        
         return postCell
     }
     
@@ -101,5 +115,30 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return  contentHeight + (post.image != nil ? 332 : 156)
     }
+    
+    // MARK: - PostTableViewCellDelegate
+    
+    func didLikePost(atIndexPath indexPath: IndexPath) {
+        guard let user =  User.current() else {
+            return
+        }
+        
+        let cell = tableView.cellForRow(at: indexPath) as! PostTableViewCell
+        
+        if !post.isLikedBy(user: user) {
+            post.addLikeFrom(user: user) { (success, error) in
+                self.delegate.didliked(post: self.post, indexPath: self.indexPath)
+            }
+            cell.likeButton.setImage(UIImage(named: "Heart Filled"), for: UIControlState.normal)
+        } else {
+            post.removeLikeFrom(user: user, block: { (success, error) in
+                self.delegate.didliked(post: self.post, indexPath: self.indexPath)
+            })
+            cell.likeButton.setImage(UIImage(named: "Heart"), for: UIControlState.normal)
+        }
+
+        
+    }
+    
 }
 

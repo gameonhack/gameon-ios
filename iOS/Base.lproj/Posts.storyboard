@@ -53,7 +53,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yDa-V9-3kv" id="FXK-qC-pPe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nO-Ka-hdR" customClass="TitleView" customModule="Game_On" customModuleProvider="target">
@@ -89,7 +89,7 @@
                                         <rect key="frame" x="0.0" y="118" width="375" height="366"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EqP-qy-sSE" id="OXU-aw-4x2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="365.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="365"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kso-Mx-ESh">
@@ -141,6 +141,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title=" Like" image="Heart"/>
+                                                    <connections>
+                                                        <action selector="likeAction:" destination="EqP-qy-sSE" eventType="touchUpInside" id="fHj-fQ-NIz"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EI0-YR-7rS">
                                                     <rect key="frame" x="139" y="311" width="97" height="30"/>
@@ -149,6 +152,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title=" Comment" image="Comments"/>
+                                                    <connections>
+                                                        <action selector="commentAction:" destination="EqP-qy-sSE" eventType="touchUpInside" id="YC4-l6-2f9"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gF-V2-5KG">
                                                     <rect key="frame" x="292" y="311" width="67" height="30"/>
@@ -157,6 +163,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title=" More" image="More"/>
+                                                    <connections>
+                                                        <action selector="moreAction:" destination="EqP-qy-sSE" eventType="touchUpInside" id="GT3-h7-c0M"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -183,9 +192,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="commentButton" destination="EI0-YR-7rS" id="ML9-Nl-Ikx"/>
                                             <outlet property="contentTextView" destination="NzU-sF-KRq" id="CKB-b3-NT1"/>
                                             <outlet property="imageBottomConstraint" destination="LVl-qL-1oz" id="Wxg-ai-igr"/>
                                             <outlet property="imageHeightConstraint" destination="ATV-xS-MrY" id="Q9q-am-jwO"/>
+                                            <outlet property="likeButton" destination="3JU-Sc-bk8" id="kGw-wa-HOY"/>
+                                            <outlet property="moreButton" destination="4gF-V2-5KG" id="nkh-gi-amR"/>
                                             <outlet property="postImageView" destination="diU-JT-NZl" id="6Zq-Sg-Py6"/>
                                             <outlet property="timeLabel" destination="iaT-Ng-tPD" id="YNU-6I-Ao8"/>
                                             <outlet property="userImageView" destination="kso-Mx-ESh" id="mcM-ma-YOj"/>
@@ -444,7 +456,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="406"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R4B-z3-9ob" id="vQz-Ut-u2s">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="405.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="405"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User Default" translatesAutoresizingMaskIntoConstraints="NO" id="PQX-Zg-umI">
@@ -492,6 +504,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" title=" " image="More"/>
+                                                    <connections>
+                                                        <action selector="moreAction:" destination="R4B-z3-9ob" eventType="touchUpInside" id="vzL-US-btT"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvE-97-AQ9">
                                                     <rect key="frame" x="74" y="45" width="79" height="21"/>
@@ -513,6 +528,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <state key="normal" image="Heart"/>
+                                                    <connections>
+                                                        <action selector="likeAction:" destination="R4B-z3-9ob" eventType="touchUpInside" id="58s-6e-iY9"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -542,6 +560,8 @@
                                             <outlet property="contentTextView" destination="RXb-ZJ-dwi" id="8aa-6c-aLQ"/>
                                             <outlet property="imageBottomConstraint" destination="qPm-Nm-8kp" id="Phb-Wh-Og7"/>
                                             <outlet property="imageHeightConstraint" destination="amR-1h-q5w" id="7gs-NG-Grp"/>
+                                            <outlet property="likeButton" destination="F0c-he-hfy" id="eOo-ff-4Ui"/>
+                                            <outlet property="moreButton" destination="c1r-kR-1UX" id="QsD-gl-2c5"/>
                                             <outlet property="postImageView" destination="P1Z-iO-6hT" id="yNX-oa-yEh"/>
                                             <outlet property="timeLabel" destination="ajA-6h-MDW" id="4YJ-sb-JWb"/>
                                             <outlet property="userImageView" destination="PQX-Zg-umI" id="2Qu-jJ-Ucx"/>
@@ -635,7 +655,7 @@
         <image name="User Default" width="178" height="201"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FfJ-8u-Wzj"/>
+        <segue reference="yGT-u8-B0f"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.91764705882352937" green="0.12941176470588234" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
 </document>

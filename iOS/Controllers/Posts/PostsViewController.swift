@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostsViewController: RootViewController, UITableViewDelegate, UITableViewDataSource, AddPostViewDelegate {
+class PostsViewController: RootViewController, UITableViewDelegate, UITableViewDataSource, PostTableViewCellDelegate, PostViewDelegate, AddPostViewDelegate {
 
     var posts = [Post]() {
         didSet {
@@ -76,6 +76,8 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         if segue.identifier == "ShowPostDetailSegue" {
             if let vc = segue.destination as? PostViewController, let indexPath = tableView.indexPathForSelectedRow {
                 vc.post = posts[indexPath.row]
+                vc.delegate = self
+                vc.indexPath = indexPath
             }
         }
         
@@ -101,6 +103,12 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         guard  let postCell = cell as? PostTableViewCell else  {
             return cell
         }
+        
+        return configure(postCell: postCell, ForRowAt: indexPath)
+    }
+
+    @discardableResult func configure(postCell : PostTableViewCell, ForRowAt indexPath: IndexPath) -> UITableViewCell {
+        postCell.delegate = self
         
         let post = posts[indexPath.row]
         
@@ -130,9 +138,27 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
             postCell.hideImage()
         }
         
+        let postLikes = post.likesCount?.intValue ?? 0
+        postCell.likeButton.setTitle(" Likes \(postLikes)", for: UIControlState.normal)
+        postCell.likeButton.setImage(UIImage(named: "Heart"), for: UIControlState.normal)
+        
+        post.getLikes { (users, error) in
+            
+            if let _ = error {
+                return
+            }
+            
+            if let user = User.current() {
+                if post.isLikedBy(user: user) {
+                    postCell.likeButton.setImage(UIImage(named: "Heart Filled"), for: UIControlState.normal)
+                }
+            }
+            
+        }
+        
         return postCell
     }
-
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         // Dequeue with the reuse identifier
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostHeaderCell")
@@ -150,6 +176,47 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         let contentHeight = post.content.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 17) ], context: nil).height
         
         return  contentHeight + (post.image != nil ? 332 : 156)
+    }
+    
+    // MARK: - PostTableViewCellDelegate
+    
+    func didLikePost(atIndexPath indexPath: IndexPath) {
+        guard let user =  User.current() else {
+            return
+        }
+        
+        let cell = tableView.cellForRow(at: indexPath) as! PostTableViewCell
+        
+        let post = posts[indexPath.row]
+        if !post.isLikedBy(user: user) {
+            post.addLikeFrom(user: user) { (success, error) in
+                
+            }
+            cell.likeButton.setImage(UIImage(named: "Heart Filled"), for: UIControlState.normal)
+        } else {
+            post.removeLikeFrom(user: user, block: { (success, error) in
+                
+            })
+            cell.likeButton.setImage(UIImage(named: "Heart"), for: UIControlState.normal)
+        }
+        
+        configure(postCell: cell, ForRowAt: indexPath)
+    }
+    
+    func didCommentPost(atIndexPath indexPath: IndexPath) {
+        
+    }
+    
+    func didToggleMorePost(atIndexPath indexPath: IndexPath) {
+        
+    }
+    
+    // MARK: - PostViewDelegate
+    
+    func didliked(post: Post, indexPath: IndexPath) {
+        posts[indexPath.row] = post
+        let cell = tableView.cellForRow(at: indexPath) as! PostTableViewCell
+        configure(postCell: cell, ForRowAt: indexPath)
     }
     
     // MARK: - AddPostViewDelegate

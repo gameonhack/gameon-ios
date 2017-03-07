@@ -8,13 +8,29 @@
 
 import UIKit
 
+@objc protocol PostTableViewCellDelegate {
+    @objc optional func didLikePost(atIndexPath indexPath: IndexPath)
+    @objc optional func didCommentPost(atIndexPath indexPath: IndexPath)
+    @objc optional func didToggleMorePost(atIndexPath indexPath: IndexPath)
+}
+
 class PostTableViewCell: UITableViewCell {
 
+    weak var delegate : PostTableViewCellDelegate?
+    
+    var indexPath: IndexPath? {
+        return (superview?.superview as? UITableView)?.indexPath(for: self)
+    }
+    
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var postImageView: UIImageView!
+    
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var moreButton: UIButton!
     
     @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var imageBottomConstraint: NSLayoutConstraint!
@@ -39,4 +55,25 @@ class PostTableViewCell: UITableViewCell {
         imageHeightConstraint.constant = height
         imageBottomConstraint.constant = 16
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func likeAction(_ sender: Any) {
+        if let didLikePost = delegate?.didLikePost {
+            didLikePost(self.indexPath!)
+        }
+    }
+    
+    @IBAction func commentAction(_ sender: Any) {
+        if let didCommentPost = delegate?.didCommentPost {
+            didCommentPost(self.indexPath!)
+        }
+    }
+    
+    @IBAction func moreAction(_ sender: Any) {
+        if let didToggleMorePost = delegate?.didToggleMorePost {
+            didToggleMorePost(self.indexPath!)
+        }
+    }
+    
 }
