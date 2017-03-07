@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A0769581E6D646500A6EB7C /* GroupTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0769571E6D646500A6EB7C /* GroupTitleTableViewCell.swift */; };
 		7A481AE11E56D60100428767 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A481AE01E56D60100428767 /* GroupTableViewCell.swift */; };
+		7ABF1C7B1E6CAA3200A64767 /* AddGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF1C791E6CAA3200A64767 /* AddGroupViewController.swift */; };
+		7ABF1C7C1E6CAA3200A64767 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF1C7A1E6CAA3200A64767 /* GroupViewController.swift */; };
 		7AC7FC701E4FD15800926760 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7FC6F1E4FD15800926760 /* GroupsViewController.swift */; };
 		F907447F1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907447E1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift */; };
 		F90AECD81E5624F600D850DD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90AECD71E5624F600D850DD /* PhotoViewController.swift */; };
@@ -109,7 +112,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A0769571E6D646500A6EB7C /* GroupTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTitleTableViewCell.swift; sourceTree = "<group>"; };
 		7A481AE01E56D60100428767 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		7ABF1C791E6CAA3200A64767 /* AddGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupViewController.swift; sourceTree = "<group>"; };
+		7ABF1C7A1E6CAA3200A64767 /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		7AC7FC6F1E4FD15800926760 /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		F907447E1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		F90AECD71E5624F600D850DD /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				7A481AE01E56D60100428767 /* GroupTableViewCell.swift */,
+				7A0769571E6D646500A6EB7C /* GroupTitleTableViewCell.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -215,6 +222,8 @@
 		7AC7FC6E1E4FD11400926760 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
+				7ABF1C791E6CAA3200A64767 /* AddGroupViewController.swift */,
+				7ABF1C7A1E6CAA3200A64767 /* GroupViewController.swift */,
 				7AC7FC6F1E4FD15800926760 /* GroupsViewController.swift */,
 			);
 			path = Groups;
@@ -592,6 +601,7 @@
 				F96E58361E4D766F00C44B17 /* EditProfileViewController.swift in Sources */,
 				F994801E1E47FE1F008481EF /* TabBarViewController.swift in Sources */,
 				F9505ABD1E6BF3500021C5CC /* DataManager.swift in Sources */,
+				7ABF1C7C1E6CAA3200A64767 /* GroupViewController.swift in Sources */,
 				F9505AB51E6BED8A0021C5CC /* Post.swift in Sources */,
 				F93D63C31E4FC71D007BAAE1 /* PFFacebookUtils.m in Sources */,
 				F974CEC61E504F0B00DE8F3A /* AddPostViewController.swift in Sources */,
@@ -612,6 +622,7 @@
 				F99480201E480132008481EF /* LoginViewController.swift in Sources */,
 				F9505AB71E6BED8A0021C5CC /* User.swift in Sources */,
 				F9505AB41E6BED8A0021C5CC /* Group.swift in Sources */,
+				7A0769581E6D646500A6EB7C /* GroupTitleTableViewCell.swift in Sources */,
 				F90BDFCC1E4FB37400132DC2 /* ProfileGroupCollectionViewCell.swift in Sources */,
 				F96967D01E499F5E00C84D00 /* ProfileHeaderTableViewCell.swift in Sources */,
 				F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */,
@@ -622,6 +633,7 @@
 				F93A2A8C1E3A89840097CE90 /* EventAboutTableViewCell.swift in Sources */,
 				F93A2A901E3ACEA10097CE90 /* EventDayHeaderTableViewCell.swift in Sources */,
 				F93D63C01E4FC71D007BAAE1 /* PFFacebookAuthenticationProvider.m in Sources */,
+				7ABF1C7B1E6CAA3200A64767 /* AddGroupViewController.swift in Sources */,
 				F9ED683A1E32A669001B7C45 /* ImageTableViewCell.swift in Sources */,
 				F96967D21E49A6BC00C84D00 /* ProfileAboutTableViewCell.swift in Sources */,
 				F9ED683C1E32A681001B7C45 /* TitleView.swift in Sources */,
@@ -914,6 +926,7 @@
 				F9875FCA1E6BF5A300D75347 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
