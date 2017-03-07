@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,7 +52,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="krZ-ck-NWE" id="PIt-kO-7vZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JIZ-O6-qbF">
@@ -147,7 +148,7 @@
         <!--Group View Controller-->
         <scene sceneID="AfN-8X-of5">
             <objects>
-                <viewController id="9fg-15-Yye" customClass="GroupViewController" customModule="Game_On" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="9fg-15-Yye" customClass="GroupViewController" customModule="Game_On" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R1J-nN-YS0"/>
                         <viewControllerLayoutGuide type="bottom" id="AaE-i0-PDe"/>
@@ -155,8 +156,85 @@
                     <view key="view" contentMode="scaleToFill" id="n9P-8n-A2N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pbz-gh-joM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupHeaderDecorationCell" rowHeight="215" id="R1I-p9-UCF" customClass="ImageTableViewCell" customModule="Game_On" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="215"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R1I-p9-UCF" id="FtH-bm-xMt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="214.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E0P-fj-mC3">
+                                                    <rect key="frame" x="0.0" y="0.5" width="375" height="215"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="E0P-fj-mC3" secondAttribute="height" multiplier="75:43" id="B22-tn-AKQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="E0P-fj-mC3" firstAttribute="top" secondItem="FtH-bm-xMt" secondAttribute="top" id="4RY-8H-1Fm"/>
+                                                <constraint firstItem="E0P-fj-mC3" firstAttribute="centerX" secondItem="FtH-bm-xMt" secondAttribute="centerX" id="Bht-NT-eAs"/>
+                                                <constraint firstItem="E0P-fj-mC3" firstAttribute="leading" secondItem="FtH-bm-xMt" secondAttribute="leading" id="rGH-Wt-wF4"/>
+                                                <constraint firstAttribute="trailing" secondItem="E0P-fj-mC3" secondAttribute="trailing" id="s5L-UB-qhy"/>
+                                                <constraint firstAttribute="bottom" secondItem="E0P-fj-mC3" secondAttribute="bottom" id="vAR-hw-Qmv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bottomSpaceConstraint" destination="vAR-hw-Qmv" id="hY0-Gx-efM"/>
+                                            <outlet property="imageImageView" destination="E0P-fj-mC3" id="zhl-Qd-UgH"/>
+                                            <outlet property="topSpaceConstraint" destination="4RY-8H-1Fm" id="PQL-2u-VXA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupHeaderCell" rowHeight="100" id="epE-ip-I1K" customClass="GroupTitleTableViewCell" customModule="Game_On" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="243" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="epE-ip-I1K" id="IrL-CO-TMJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWj-Y6-sfM" customClass="TitleView" customModule="Game_On" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="-20" width="375" height="90"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="xci-Lt-PDI"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="Group Name"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nWj-Y6-sfM" firstAttribute="top" secondItem="IrL-CO-TMJ" secondAttribute="top" constant="-20" id="JQf-Ia-ZSt"/>
+                                                <constraint firstItem="nWj-Y6-sfM" firstAttribute="leading" secondItem="IrL-CO-TMJ" secondAttribute="leading" id="ooK-zI-EEz"/>
+                                                <constraint firstAttribute="trailing" secondItem="nWj-Y6-sfM" secondAttribute="trailing" id="wiJ-hl-aOe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="nWj-Y6-sfM" id="gfN-5S-3KU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9fg-15-Yye" id="lT9-hw-leF"/>
+                                    <outlet property="delegate" destination="9fg-15-Yye" id="nWm-7H-1Sw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pbz-gh-joM" secondAttribute="trailing" id="JLJ-2I-zAN"/>
+                            <constraint firstItem="pbz-gh-joM" firstAttribute="top" secondItem="n9P-8n-A2N" secondAttribute="top" id="VyD-rx-IRU"/>
+                            <constraint firstItem="pbz-gh-joM" firstAttribute="leading" secondItem="n9P-8n-A2N" secondAttribute="leading" id="gbh-hX-EVz"/>
+                            <constraint firstItem="AaE-i0-PDe" firstAttribute="top" secondItem="pbz-gh-joM" secondAttribute="bottom" id="ykc-0g-h94"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="pbz-gh-joM" id="FEB-g3-aij"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZI-Wc-JMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
