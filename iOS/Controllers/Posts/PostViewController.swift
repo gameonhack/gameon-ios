@@ -84,7 +84,7 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         })
         
         if post.image != nil {
-            postCell.showImage()
+            postCell.showImage(withHeight: self.view.frame.width - 40.0 )
             
             post.getFile(forKey: #keyPath(Post.image), withBlock: { (data) in
                 if let data = data {
@@ -113,7 +113,7 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         let constraintRect = CGSize(width: self.view.frame.width - 32, height: self.view.frame.height)
         let contentHeight = post.content.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 17) ], context: nil).height
         
-        return  contentHeight + (post.image != nil ? 332 : 156)
+        return  contentHeight + (post.image != nil ? 505 : 156)
     }
     
     // MARK: - PostTableViewCellDelegate

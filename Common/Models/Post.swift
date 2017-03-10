@@ -122,7 +122,7 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
     func getLikes(block : @escaping ([User]?, Error?) -> Void ) {
         guard let cachedLikes = cachedLikes else {
             DataManager.getLikesFrom(post: self, block: { (users, error) in
-                self.cachedLikes = users
+                self.cachedLikes = users ?? []
                 block(self.cachedLikes, nil)
             })
             return

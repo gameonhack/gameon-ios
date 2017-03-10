@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -53,7 +54,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yDa-V9-3kv" id="FXK-qC-pPe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nO-Ka-hdR" customClass="TitleView" customModule="Game_On" customModuleProvider="target">
@@ -89,7 +90,7 @@
                                         <rect key="frame" x="0.0" y="118" width="375" height="366"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EqP-qy-sSE" id="OXU-aw-4x2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="365"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="365.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kso-Mx-ESh">
@@ -135,12 +136,12 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JU-Sc-bk8">
-                                                    <rect key="frame" x="16" y="311" width="50" height="30"/>
+                                                    <rect key="frame" x="16" y="311" width="33" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="bLm-Y7-oig"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <state key="normal" title=" Like" image="Heart"/>
+                                                    <state key="normal" title=" 0" image="Heart"/>
                                                     <connections>
                                                         <action selector="likeAction:" destination="EqP-qy-sSE" eventType="touchUpInside" id="fHj-fQ-NIz"/>
                                                     </connections>
@@ -157,12 +158,12 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gF-V2-5KG">
-                                                    <rect key="frame" x="292" y="311" width="67" height="30"/>
+                                                    <rect key="frame" x="329" y="311" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="qQp-bz-LDR"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <state key="normal" title=" More" image="More"/>
+                                                    <state key="normal" image="More"/>
                                                     <connections>
                                                         <action selector="moreAction:" destination="EqP-qy-sSE" eventType="touchUpInside" id="GT3-h7-c0M"/>
                                                     </connections>
@@ -202,7 +203,10 @@
                                             <outlet property="timeLabel" destination="iaT-Ng-tPD" id="YNU-6I-Ao8"/>
                                             <outlet property="userImageView" destination="kso-Mx-ESh" id="mcM-ma-YOj"/>
                                             <outlet property="usernameLabel" destination="AWQ-cQ-suP" id="Drb-AF-qbR"/>
-                                            <segue destination="5kU-WU-V09" kind="show" identifier="ShowPostDetailSegue" id="thm-33-ttP"/>
+                                            <segue destination="5kU-WU-V09" kind="show" identifier="ShowPostDetailSegue" id="thm-33-ttP">
+                                                <segue key="commit" inheritsFrom="parent" id="o3c-HK-q3E"/>
+                                                <segue key="preview" inheritsFrom="commit" id="bDs-0c-Myt"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -439,7 +443,7 @@
         <!--Post-->
         <scene sceneID="i8w-O9-ZJC">
             <objects>
-                <viewController id="5kU-WU-V09" customClass="PostViewController" customModule="Game_On" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="5kU-WU-V09" customClass="PostViewController" customModule="Game_On" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="quT-uK-D4V"/>
                         <viewControllerLayoutGuide type="bottom" id="cFM-VT-PMV"/>
@@ -456,7 +460,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="406"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R4B-z3-9ob" id="vQz-Ut-u2s">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="405"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="405.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User Default" translatesAutoresizingMaskIntoConstraints="NO" id="PQX-Zg-umI">
@@ -656,6 +660,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yGT-u8-B0f"/>
+        <segue reference="thm-33-ttP"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.91764705882352937" green="0.12941176470588234" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
 </document>

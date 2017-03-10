@@ -74,7 +74,7 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         }
         
         if segue.identifier == "ShowPostDetailSegue" {
-            if let vc = segue.destination as? PostViewController, let indexPath = tableView.indexPathForSelectedRow {
+            if let vc = segue.destination as? PostViewController, let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
                 vc.post = posts[indexPath.row]
                 vc.delegate = self
                 vc.indexPath = indexPath
@@ -139,7 +139,7 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         }
         
         let postLikes = post.likesCount?.intValue ?? 0
-        postCell.likeButton.setTitle(" Likes \(postLikes)", for: UIControlState.normal)
+        postCell.likeButton.setTitle(" \(postLikes)", for: UIControlState.normal)
         postCell.likeButton.setImage(UIImage(named: "Heart"), for: UIControlState.normal)
         
         post.getLikes { (users, error) in
