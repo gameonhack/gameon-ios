@@ -21,8 +21,8 @@ class Group: PFObject, PFSubclassingSkipAutomaticRegistration {
     @NSManaged var bio:String!
     /// The group's current status
     @NSManaged var status:String!
-    /// The group's users count. Should we change the name?
-    @NSManaged var membersCount:NSNumber!
+    /// The group's users count.
+    @NSManaged var usersCount:NSNumber?
     /// The group's icon file. Use getFile function to get the image.
     @NSManaged var icon:PFFile!
     

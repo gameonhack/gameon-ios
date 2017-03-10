@@ -16,7 +16,7 @@ class User: PFUser, PFSubclassingSkipAutomaticRegistration {
     /// The user's bio or description
     @NSManaged var bio : String!
     /// The user's image
-    @NSManaged var image : PFFile!
+    @NSManaged var image : PFFile?
     /// The user's groups relation
     @NSManaged var groups : PFRelation<Group>?
     

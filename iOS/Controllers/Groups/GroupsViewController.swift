@@ -59,7 +59,7 @@ class GroupsViewController: RootViewController, UITableViewDataSource, UITableVi
         
         let group = self.groups[indexPath.row]
         cell.groupNameLabel.text = group.name
-        cell.membersLabel.text = group.membersCount.stringValue + " Members"
+        cell.membersLabel.text = (group.usersCount?.stringValue ?? "0") + " Members"
         cell.iconGroupImageView.image = #imageLiteral(resourceName: "Logo")
         group.getFile(forKey: #keyPath(Group.icon)) { (data) in
             if let data = data {
