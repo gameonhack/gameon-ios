@@ -74,6 +74,8 @@
 		F99482411E486F2D008481EF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99482401E486F2D008481EF /* UserViewController.swift */; };
 		F9A7981A1E31F03600D37C32 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; };
 		F9A7981B1E31F03600D37C32 /* DateTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9ABBFBE1E73740C00EDA1FC /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABBFBD1E73740C00EDA1FC /* PostComment.swift */; };
+		F9ABBFBF1E73751000EDA1FC /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABBFBD1E73740C00EDA1FC /* PostComment.swift */; };
 		F9E45BCB1E50EEC300E97C11 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E45BCA1E50EEC300E97C11 /* PostViewController.swift */; };
 		F9ED68351E31F845001B7C45 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68341E31F845001B7C45 /* EventsViewController.swift */; };
 		F9ED683A1E32A669001B7C45 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68391E32A669001B7C45 /* ImageTableViewCell.swift */; };
@@ -177,6 +179,7 @@
 		F994823D1E485B2B008481EF /* Game On-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Game On-Bridging-Header.h"; sourceTree = "<group>"; };
 		F99482401E486F2D008481EF /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F9A798191E31F03600D37C32 /* DateTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DateTools.framework; path = ../Carthage/Build/iOS/DateTools.framework; sourceTree = "<group>"; };
+		F9ABBFBD1E73740C00EDA1FC /* PostComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
 		F9E45BCA1E50EEC300E97C11 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		F9ED68341E31F845001B7C45 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		F9ED68391E32A669001B7C45 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -379,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				F9505AB01E6BED8A0021C5CC /* Post.swift */,
+				F9ABBFBD1E73740C00EDA1FC /* PostComment.swift */,
 				F9505AAE1E6BED8A0021C5CC /* Event.swift */,
 				F9505AB11E6BED8A0021C5CC /* Schedule.swift */,
 				F9505AAF1E6BED8A0021C5CC /* Group.swift */,
@@ -632,6 +636,7 @@
 				F9505AB31E6BED8A0021C5CC /* Event.swift in Sources */,
 				F93A2A8C1E3A89840097CE90 /* EventAboutTableViewCell.swift in Sources */,
 				F93A2A901E3ACEA10097CE90 /* EventDayHeaderTableViewCell.swift in Sources */,
+				F9ABBFBE1E73740C00EDA1FC /* PostComment.swift in Sources */,
 				F93D63C01E4FC71D007BAAE1 /* PFFacebookAuthenticationProvider.m in Sources */,
 				7ABF1C7B1E6CAA3200A64767 /* AddGroupViewController.swift in Sources */,
 				F9ED683A1E32A669001B7C45 /* ImageTableViewCell.swift in Sources */,
@@ -652,6 +657,7 @@
 				F9875FE01E6BFD5300D75347 /* User.swift in Sources */,
 				F9875FD81E6BF8B800D75347 /* Extensions.swift in Sources */,
 				F9875FDE1E6BFD5300D75347 /* Event.swift in Sources */,
+				F9ABBFBF1E73751000EDA1FC /* PostComment.swift in Sources */,
 				F9875FE11E6BFD5700D75347 /* DataManager.swift in Sources */,
 				F9875FDD1E6BFD5300D75347 /* Post.swift in Sources */,
 			);

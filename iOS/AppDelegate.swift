@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Warning: - Registering subclasses could lead to potencial bugs
         
         Post.registerSubclass()
+        PostComment.registerSubclass()
         Event.registerSubclass()
         Schedule.registerSubclass()
         Group.registerSubclass()

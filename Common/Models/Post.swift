@@ -25,9 +25,13 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
     @NSManaged var likes : PFRelation<User>?
     /// The pot's likes count
     @NSManaged var likesCount : NSNumber?
+    /// The pot's likes Relation
+    @NSManaged var comments : PFRelation<PostComment>?
+    /// The pot's likes count
+    @NSManaged var commentsCount : NSNumber?
     
     fileprivate var cachedLikes : [User]? = nil
-    
+    fileprivate var cachedPostComment : [PostComment]? = nil
     
     /**
      
@@ -128,5 +132,24 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
             return
         }
         block(cachedLikes, nil)
+    }
+    
+    /**
+     
+     Get all the Likes from the Post.
+     
+     - Parameter block: A block returning the requested array of schedules or an error
+     - Parameter schedules: The requested array of Schedule
+     
+     */
+    func getComments(block : @escaping ([PostComment]?, Error?) -> Void ) {
+        guard let cachedPostComment = cachedPostComment else {
+            DataManager.getCommentsFrom(post: self, block: { (comments, error) in
+                self.cachedPostComment = comments ?? []
+                block(self.cachedPostComment, nil)
+            })
+            return
+        }
+        block(cachedPostComment, nil)
     }
 }
