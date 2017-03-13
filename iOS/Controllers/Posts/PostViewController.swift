@@ -11,7 +11,7 @@ import UIKit
 protocol PostViewDelegate {
     func didliked(post : Post, indexPath: IndexPath)
 }
-class PostViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, PostTableViewCellDelegate {
+class PostViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, PostTableViewCellDelegate {
 
     var delegate : PostViewDelegate!
     var indexPath : IndexPath!
@@ -26,7 +26,10 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         // Do any additional setup after loading the view.
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-
+        tableView.contentInset.bottom = 46
+        
+        self.addHideKeyboardWithTapGesture()
+        self.addKeyboardNotifications()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +37,13 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
+    override func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
 
     // MARK: - Navigation
 
@@ -52,68 +62,102 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return section == 0 ? 1 : post.commentsCount?.intValue ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let identifier = "PostCell"
+        let identifier = indexPath.section == 0 ? "PostCell" : "PostComment"
         
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier)!
         cell.selectionStyle = .none
         
-        guard  let postCell = cell as? PostTableViewCell else  {
-            return cell
-        }
-        
-        postCell.delegate = self
-        
-        postCell.timeLabel.text = post.createdAt!.shortTimeAgo()
-        postCell.contentTextView.text = post.content
-        
-        postCell.usernameLabel.text = post.user.name
-        post.user.getFile(forKey: #keyPath(User.image), withBlock: { (data) in
-            if let data = data {
-                if let image = UIImage(data: data) {
-                    postCell.userImageView.image = image
-                }
-            }
-        })
-        
-        if post.image != nil {
-            postCell.showImage(withHeight: self.view.frame.width - 40.0 )
+        if let postCell = cell as? PostTableViewCell {
             
-            post.getFile(forKey: #keyPath(Post.image), withBlock: { (data) in
+            postCell.delegate = self
+            
+            postCell.timeLabel.text = post.createdAt!.shortTimeAgo()
+            postCell.contentTextView.text = post.content
+            
+            postCell.usernameLabel.text = post.user.name
+            post.user.getFile(forKey: #keyPath(User.image), withBlock: { (data) in
                 if let data = data {
                     if let image = UIImage(data: data) {
-                        self.postImage = image
-                        postCell.postImageView.image = image
+                        postCell.userImageView.image = image
                     }
                 }
             })
-        } else {
-            postCell.hideImage()
-        }
-        
-        if let user = User.current() {
-            if post.isLikedBy(user: user) {
-                postCell.likeButton.setImage(UIImage(named: "Heart Filled"), for: UIControlState.normal)
+            
+            if post.image != nil {
+                postCell.showImage(withHeight: self.view.frame.width - 40.0 )
+                
+                post.getFile(forKey: #keyPath(Post.image), withBlock: { (data) in
+                    if let data = data {
+                        if let image = UIImage(data: data) {
+                            self.postImage = image
+                            postCell.postImageView.image = image
+                        }
+                    }
+                })
+            } else {
+                postCell.hideImage()
             }
+            
+            if let user = User.current() {
+                if post.isLikedBy(user: user) {
+                    postCell.likeButton.setImage(UIImage(named: "Heart Filled"), for: UIControlState.normal)
+                }
+            }
+        } else {
+            post.getComments(block: { (postComments, error) in
+                if let postComments = postComments {
+                    let postComment = postComments[indexPath.row]
+                    cell.textLabel?.text = postComment.comment
+                }
+            })
         }
         
-        return postCell
+        return cell
     }
     
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let constraintRect = CGSize(width: self.view.frame.width - 32, height: self.view.frame.height)
-        let contentHeight = post.content.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 17) ], context: nil).height
+        if indexPath.section == 0 {
+            let constraintRect = CGSize(width: self.view.frame.width - 32, height: self.view.frame.height)
+            let contentHeight = post.content.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 17) ], context: nil).height
+            
+            return  contentHeight + (post.image != nil ? 505 : 156)
+        }
+        return 60
+    }
+    
+    // MARK: - UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         
-        return  contentHeight + (post.image != nil ? 505 : 156)
+        guard let user = User.current() else {
+            return true
+        }
+        
+        if textField.text == "" {
+            return true
+        }
+        
+        post.add(comment: textField.text!, fromUser: user) { (success, error) in
+            
+        }
+        
+        textField.text = ""
+        tableView.reloadData()
+        
+        tableView.scrollToRow(at: IndexPath(row: (self.post.commentsCount?.intValue ?? 1) - 1 , section: 1), at: UITableViewScrollPosition.bottom, animated: true)
+        
+        return true
     }
     
     // MARK: - PostTableViewCellDelegate

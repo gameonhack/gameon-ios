@@ -572,19 +572,60 @@
                                             <outlet property="usernameLabel" destination="8gW-Ac-Xdk" id="KgG-yb-NTr"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostComment" textLabel="D9P-pF-lGg" style="IBUITableViewCellStyleDefault" id="umX-mh-ouJ">
+                                        <rect key="frame" x="0.0" y="434" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="umX-mh-ouJ" id="76O-ef-UTx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D9P-pF-lGg">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="79.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="5kU-WU-V09" id="4GX-Ys-vz0"/>
                                     <outlet property="delegate" destination="5kU-WU-V09" id="GZ3-yp-d4Z"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAe-Ta-kfM">
+                                <rect key="frame" x="0.0" y="621" width="375" height="46"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Leave a comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w8k-Ko-G4O">
+                                        <rect key="frame" x="8" y="8" width="359" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="5kU-WU-V09" id="iS9-nh-aHG"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="w8k-Ko-G4O" secondAttribute="trailing" constant="8" id="R2l-Q7-3KO"/>
+                                    <constraint firstItem="w8k-Ko-G4O" firstAttribute="centerY" secondItem="lAe-Ta-kfM" secondAttribute="centerY" id="WCA-h7-duQ"/>
+                                    <constraint firstItem="w8k-Ko-G4O" firstAttribute="leading" secondItem="lAe-Ta-kfM" secondAttribute="leading" constant="8" id="brR-ui-pmJ"/>
+                                    <constraint firstAttribute="height" constant="46" id="gjB-nU-sjo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lAe-Ta-kfM" secondAttribute="trailing" id="6w4-iK-mJq"/>
+                            <constraint firstItem="lAe-Ta-kfM" firstAttribute="leading" secondItem="QcJ-We-oNa" secondAttribute="leading" id="8pb-NP-dqK"/>
                             <constraint firstItem="hjR-UD-Tfr" firstAttribute="leading" secondItem="QcJ-We-oNa" secondAttribute="leading" id="bIF-UU-7vr"/>
                             <constraint firstAttribute="bottom" secondItem="hjR-UD-Tfr" secondAttribute="bottom" id="d1v-xX-1mQ"/>
                             <constraint firstAttribute="trailing" secondItem="hjR-UD-Tfr" secondAttribute="trailing" id="evt-Ac-NbI"/>
                             <constraint firstItem="hjR-UD-Tfr" firstAttribute="top" secondItem="QcJ-We-oNa" secondAttribute="top" id="jYb-Qn-Vee"/>
+                            <constraint firstAttribute="bottom" secondItem="lAe-Ta-kfM" secondAttribute="bottom" id="nqg-Q2-iyd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Post" id="TSu-gv-poc"/>

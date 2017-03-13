@@ -78,6 +78,38 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
         }
     }
     
+    
+    /**
+     
+     Add's a user that likes the post.
+     
+     - Parameter block: A block returning the requested array of schedules or an error
+     - Parameter schedules: The requested array of Schedule
+     
+     */
+    func add(comment : String, fromUser user: User, block : @escaping (Bool, Error?) -> Void ) {
+        if cachedPostComment == nil {
+            cachedPostComment = [PostComment]()
+        }
+        if comments == nil {
+            comments = PFRelation()
+        }
+        
+        let postComment = PostComment()
+        postComment.comment = comment
+        postComment.user = user
+        
+        cachedPostComment?.append(postComment)
+        self.incrementKey(#keyPath(Post.commentsCount))
+        
+        postComment.saveInBackground{ (success, error) in
+            self.relation(forKey: #keyPath(Post.comments)).add(postComment)
+            self.saveInBackground { (success, error) in
+                block(success, error)
+            }
+        }
+    }
+    
    
     /**
      
