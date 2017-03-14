@@ -32,6 +32,22 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.addKeyboardNotifications()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        //UINavigationBar.appearance().barTintColor = UIColor.white
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
+        
+        statusBar.backgroundColor = UIColor.white
+
+        self.navigationController?.navigationBar.backgroundColor = UIColor.white
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
+        
+        statusBar.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -79,10 +95,12 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             postCell.delegate = self
             
-            postCell.timeLabel.text = post.createdAt!.shortTimeAgo()
+            postCell.timeLabel.text = post.createdAt!.shortTimeAgo() + " Ago"
             postCell.contentTextView.text = post.content
             
             postCell.usernameLabel.text = post.user.name
+            postCell.userUsernameLabel.text = post.user.username
+            
             post.user.getFile(forKey: #keyPath(User.image), withBlock: { (data) in
                 if let data = data {
                     if let image = UIImage(data: data) {
@@ -111,11 +129,19 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
                     postCell.likeButton.setImage(UIImage(named: "Heart Filled"), for: UIControlState.normal)
                 }
             }
-        } else {
+        }
+        
+        if let postCommentCell = cell as? PostCommentTableViewCell {
             post.getComments(block: { (postComments, error) in
                 if let postComments = postComments {
                     let postComment = postComments[indexPath.row]
-                    cell.textLabel?.text = postComment.comment
+                    postCommentCell.dateLabel.text = (postComment.createdAt?.shortTimeAgo() ?? "0m") + " Ago"
+                    postCommentCell.commentLabel.text = postComment.comment
+                    postCommentCell.userNameLabel.text = postComment.user.name
+                    postComment.user.getFile(forKey: #keyPath(User.image), withBlock: { (data) in
+                        postCommentCell.userImageView.image = UIImage(data: data!)
+                        cell.layoutIfNeeded()
+                    })
                 }
             })
         }
@@ -131,6 +157,15 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
             let contentHeight = post.content.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 17) ], context: nil).height
             
             return  contentHeight + (post.image != nil ? 505 : 156)
+        } else if indexPath.section == 1 {
+            if let cachedPostComment = post.cachedPostComment {
+                let postComment = cachedPostComment[indexPath.row]
+                
+                let constraintRect = CGSize(width: self.view.frame.width - 32, height: self.view.frame.height)
+                let contentHeight = postComment.comment.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 17) ], context: nil).height
+                
+                return  contentHeight + 60
+            }
         }
         return 60
     }
@@ -153,7 +188,7 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         textField.text = ""
-        tableView.reloadData()
+        tableView.insertRows(at: [IndexPath(row: (self.post.commentsCount?.intValue ?? 1) - 1 , section: 1)], with: UITableViewRowAnimation.bottom)
         
         tableView.scrollToRow(at: IndexPath(row: (self.post.commentsCount?.intValue ?? 1) - 1 , section: 1), at: UITableViewScrollPosition.bottom, animated: true)
         

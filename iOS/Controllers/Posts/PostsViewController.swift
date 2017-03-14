@@ -114,6 +114,7 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         
         postCell.timeLabel.text = post.createdAt!.shortTimeAgo()
         postCell.contentTextView.text = post.content
+        postCell.contentTextView.isUserInteractionEnabled = false
         
         postCell.usernameLabel.text = post.user.name
         post.user.getFile(forKey: #keyPath(User.image), withBlock: { (data) in

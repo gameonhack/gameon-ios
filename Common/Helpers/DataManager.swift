@@ -72,6 +72,7 @@ class DataManager: NSObject {
         }
         let query = comments.query()
         query.order(byAscending: #keyPath(PostComment.createdAt))
+        query.includeKey(#keyPath(PostComment.user))
         query.findObjectsInBackground { (objects, error) in
             block(objects, error)
         }

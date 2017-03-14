@@ -24,6 +24,8 @@ class PostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var userUsernameLabel: UILabel!
+    
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var postImageView: UIImageView!

@@ -31,7 +31,7 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
     @NSManaged var commentsCount : NSNumber?
     
     fileprivate var cachedLikes : [User]? = nil
-    fileprivate var cachedPostComment : [PostComment]? = nil
+    var cachedPostComment : [PostComment]? = nil
     
     /**
      

@@ -54,7 +54,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yDa-V9-3kv" id="FXK-qC-pPe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nO-Ka-hdR" customClass="TitleView" customModule="Game_On" customModuleProvider="target">
@@ -90,7 +90,7 @@
                                         <rect key="frame" x="0.0" y="118" width="375" height="366"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EqP-qy-sSE" id="OXU-aw-4x2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="365.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="365"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kso-Mx-ESh">
@@ -108,7 +108,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-cQ-suP">
                                                     <rect key="frame" x="54" y="21" width="257" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.16862745098039217" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaT-Ng-tPD">
@@ -124,7 +124,7 @@
                                                     <rect key="frame" x="8" y="62" width="359" height="57"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
@@ -146,7 +146,7 @@
                                                         <action selector="likeAction:" destination="EqP-qy-sSE" eventType="touchUpInside" id="fHj-fQ-NIz"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EI0-YR-7rS">
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EI0-YR-7rS">
                                                     <rect key="frame" x="139" y="311" width="97" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="eHC-Sy-XC1"/>
@@ -460,7 +460,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="406"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R4B-z3-9ob" id="vQz-Ut-u2s">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="405.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="405"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User Default" translatesAutoresizingMaskIntoConstraints="NO" id="PQX-Zg-umI">
@@ -569,25 +569,67 @@
                                             <outlet property="postImageView" destination="P1Z-iO-6hT" id="yNX-oa-yEh"/>
                                             <outlet property="timeLabel" destination="ajA-6h-MDW" id="4YJ-sb-JWb"/>
                                             <outlet property="userImageView" destination="PQX-Zg-umI" id="2Qu-jJ-Ucx"/>
+                                            <outlet property="userUsernameLabel" destination="KvE-97-AQ9" id="KuE-UI-NIN"/>
                                             <outlet property="usernameLabel" destination="8gW-Ac-Xdk" id="KgG-yb-NTr"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostComment" textLabel="D9P-pF-lGg" style="IBUITableViewCellStyleDefault" id="umX-mh-ouJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostComment" id="umX-mh-ouJ" customClass="PostCommentTableViewCell" customModule="Game_On" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="434" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="umX-mh-ouJ" id="76O-ef-UTx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D9P-pF-lGg">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="79.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cebollita Sad" translatesAutoresizingMaskIntoConstraints="NO" id="dZ9-1b-Ulv">
+                                                    <rect key="frame" x="8" y="10" width="35" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="KXR-o0-eC4"/>
+                                                        <constraint firstAttribute="width" constant="35" id="o2F-Oy-7ds"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKu-cX-tX2">
+                                                    <rect key="frame" x="51" y="8" width="308" height="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1O-2f-4vu">
+                                                    <rect key="frame" x="51" y="33" width="308" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Mins Ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jer-p3-zF9">
+                                                    <rect key="frame" x="51" y="56.5" width="63.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="r1O-2f-4vu" secondAttribute="trailing" constant="8" id="0Bd-Kw-lpZ"/>
+                                                <constraint firstItem="jer-p3-zF9" firstAttribute="leading" secondItem="r1O-2f-4vu" secondAttribute="leading" id="0WO-hZ-6FO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SKu-cX-tX2" secondAttribute="trailing" constant="8" id="AhS-Hh-9cD"/>
+                                                <constraint firstItem="dZ9-1b-Ulv" firstAttribute="leading" secondItem="76O-ef-UTx" secondAttribute="leadingMargin" id="J4Z-zw-pcA"/>
+                                                <constraint firstItem="dZ9-1b-Ulv" firstAttribute="top" secondItem="76O-ef-UTx" secondAttribute="topMargin" constant="2" id="Lj0-GK-sK8"/>
+                                                <constraint firstItem="jer-p3-zF9" firstAttribute="bottom" secondItem="76O-ef-UTx" secondAttribute="bottomMargin" id="R8L-IM-6Fb"/>
+                                                <constraint firstItem="r1O-2f-4vu" firstAttribute="top" secondItem="SKu-cX-tX2" secondAttribute="bottom" constant="8" id="SwC-rP-2AZ"/>
+                                                <constraint firstItem="SKu-cX-tX2" firstAttribute="leading" secondItem="dZ9-1b-Ulv" secondAttribute="trailing" constant="8" id="bfg-Uz-gc7"/>
+                                                <constraint firstItem="SKu-cX-tX2" firstAttribute="top" secondItem="76O-ef-UTx" secondAttribute="topMargin" id="pBQ-S9-HkO"/>
+                                                <constraint firstItem="r1O-2f-4vu" firstAttribute="leading" secondItem="dZ9-1b-Ulv" secondAttribute="trailing" constant="8" id="rEy-PV-E9m"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="r1O-2f-4vu" id="wsd-MQ-arY"/>
+                                            <outlet property="dateLabel" destination="jer-p3-zF9" id="rsP-E8-yK8"/>
+                                            <outlet property="userImageView" destination="dZ9-1b-Ulv" id="5qb-IB-xYQ"/>
+                                            <outlet property="userNameLabel" destination="SKu-cX-tX2" id="mcg-9c-NlZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -640,7 +682,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2596" y="-2140"/>
+            <point key="canvasLocation" x="2596" y="-2140.4797601199402"/>
         </scene>
         <!--Posts-->
         <scene sceneID="pAA-uW-YLi">
@@ -691,6 +733,7 @@
     <resources>
         <image name="Add" width="18" height="18"/>
         <image name="Camera" width="30" height="30"/>
+        <image name="Cebollita Sad" width="380" height="388"/>
         <image name="Comments" width="30" height="30"/>
         <image name="Heart" width="20" height="20"/>
         <image name="Monsters Group" width="392" height="159"/>
