@@ -67,7 +67,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if let cell = cell as? ImageTableViewCell {
             cell.imageImageView.image = #imageLiteral(resourceName: "Logo")
-            group.getFile(forKey: #keyPath(Group.icon), withBlock: { (data) in
+            group.getFile(forKey: #keyPath(Group.cover), withBlock: { (data) in
                 if let data = data {
                     cell.imageImageView.image = UIImage(data: data)
                     cell.layoutIfNeeded()
@@ -76,7 +76,6 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
         if let cell = cell as? GroupTitleTableViewCell {
-            print("Entro")
             cell.titleLabel.text = group.name
         }
         

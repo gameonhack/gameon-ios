@@ -25,6 +25,8 @@ class Group: PFObject, PFSubclassingSkipAutomaticRegistration {
     @NSManaged var usersCount:NSNumber?
     /// The group's icon file. Use getFile function to get the image.
     @NSManaged var icon:PFFile!
+    /// The group's cover file. Use getFile function to get the image.
+    @NSManaged var cover:PFFile!
     
     /**
      
