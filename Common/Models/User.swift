@@ -38,4 +38,12 @@ class User: PFUser, PFSubclassingSkipAutomaticRegistration {
     func getGroups(block : @escaping ([Group]) -> Void ) {
         DataManager.getGroupsFrom(user: self, block: block)
     }
+    
+    func getImage(block : @escaping (_ image : UIImage) -> Void) {
+        self.getFile(forKey: #keyPath(User.image)) { (data) in
+            if let data = data {
+                block(UIImage(data: data)!)
+            }
+        }
+    }
 }

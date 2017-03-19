@@ -12,6 +12,7 @@ import UIKit
     @objc optional func didLikePost(atIndexPath indexPath: IndexPath)
     @objc optional func didCommentPost(atIndexPath indexPath: IndexPath)
     @objc optional func didToggleMorePost(atIndexPath indexPath: IndexPath)
+    @objc optional func shouldShowUserProfile(atIndexPath indexPath: IndexPath)
 }
 
 class PostTableViewCell: UITableViewCell {
@@ -40,6 +41,10 @@ class PostTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(PostTableViewCell.showUserAction) )
+        userImageView.addGestureRecognizer(gesture)
+        
+        userImageView.isUserInteractionEnabled = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -59,6 +64,12 @@ class PostTableViewCell: UITableViewCell {
     }
     
     // MARK: - Actions
+    
+    func showUserAction() {
+        if let shouldShowUserProfile = delegate?.shouldShowUserProfile {
+            shouldShowUserProfile(self.indexPath!)
+        }
+    }
     
     @IBAction func likeAction(_ sender: Any) {
         if let didLikePost = delegate?.didLikePost {

@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Zr-0a-D6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-100" y="1431"/>
+            <point key="canvasLocation" x="948" y="963"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -130,7 +130,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEI-Mh-xHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1046" y="1431"/>
+            <point key="canvasLocation" x="-1" y="963"/>
         </scene>
         <!--Posts-->
         <scene sceneID="uic-4l-fM0">
@@ -140,7 +140,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRw-Gi-ZmI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888.79999999999995" y="-1371.3643178410796"/>
+            <point key="canvasLocation" x="881" y="-287"/>
         </scene>
         <!--Events-->
         <scene sceneID="Vdv-YO-z62">
@@ -150,7 +150,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVZ-ii-Wfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888.79999999999995" y="-691.304347826087"/>
+            <point key="canvasLocation" x="888" y="-165"/>
         </scene>
         <!--Games-->
         <scene sceneID="c4f-Mr-UfG">
@@ -168,7 +168,7 @@
                 <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="UIViewController-y3w-Ai-0Dw" id="FwZ-mN-03v" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22k-bL-m6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="1431"/>
+            <point key="canvasLocation" x="1845" y="963"/>
         </scene>
         <!--UINavigationController-mVK-mW-Fwe-->
         <scene sceneID="7Ip-gz-ppF">
@@ -178,7 +178,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dH6-ZY-Lgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="1431"/>
+            <point key="canvasLocation" x="1021" y="255"/>
         </scene>
         <!--Groups-->
         <scene sceneID="SRz-U3-hCe">
@@ -188,7 +188,54 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jrv-em-bvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889" y="702"/>
+            <point key="canvasLocation" x="873" y="126"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="2Lq-dq-4Az">
+            <objects>
+                <viewController storyboardIdentifier="PhotoViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="zLR-HL-6yN" customClass="PhotoViewController" customModule="Game_On" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uFG-ev-M8b"/>
+                        <viewControllerLayoutGuide type="bottom" id="COg-hI-pUc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="op2-Bk-Y5A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gi0-Dr-7Zw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IWv-ac-DyN">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IWv-ac-DyN" firstAttribute="leading" secondItem="Gi0-Dr-7Zw" secondAttribute="leading" id="OAM-mO-nD2"/>
+                                    <constraint firstItem="IWv-ac-DyN" firstAttribute="top" secondItem="Gi0-Dr-7Zw" secondAttribute="top" id="PoZ-d5-7Qe"/>
+                                    <constraint firstAttribute="trailing" secondItem="IWv-ac-DyN" secondAttribute="trailing" id="fQg-BB-vdv"/>
+                                    <constraint firstAttribute="bottom" secondItem="IWv-ac-DyN" secondAttribute="bottom" id="kZ1-C5-NKs"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gi0-Dr-7Zw" firstAttribute="top" secondItem="op2-Bk-Y5A" secondAttribute="top" id="1gR-Vs-Ra3"/>
+                            <constraint firstItem="COg-hI-pUc" firstAttribute="top" secondItem="Gi0-Dr-7Zw" secondAttribute="bottom" id="5Zz-LS-iyR"/>
+                            <constraint firstItem="IWv-ac-DyN" firstAttribute="width" secondItem="op2-Bk-Y5A" secondAttribute="width" id="Gcb-fr-aw6"/>
+                            <constraint firstItem="IWv-ac-DyN" firstAttribute="height" secondItem="op2-Bk-Y5A" secondAttribute="height" id="hfD-c4-qCK"/>
+                            <constraint firstAttribute="trailing" secondItem="Gi0-Dr-7Zw" secondAttribute="trailing" id="mdH-Wd-XPv"/>
+                            <constraint firstItem="Gi0-Dr-7Zw" firstAttribute="leading" secondItem="op2-Bk-Y5A" secondAttribute="leading" id="wDq-Ov-W5j"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="IWv-ac-DyN" id="QXA-24-qfb"/>
+                        <outlet property="scrollView" destination="Gi0-Dr-7Zw" id="uT2-UJ-FvX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qhi-uy-Gwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1970" y="0.0"/>
         </scene>
     </scenes>
     <resources>

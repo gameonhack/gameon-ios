@@ -181,4 +181,10 @@ extension UIViewController {
         
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    func showPhotoViewController(image : UIImage) {
+        let photoViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoViewController") as! PhotoViewController
+        photoViewController.photo = image
+        self.navigationController?.pushViewController(photoViewController, animated: true)
+    }
 }

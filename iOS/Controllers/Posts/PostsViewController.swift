@@ -81,6 +81,11 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
             }
         }
         
+        if segue.identifier == "ShowProfileSegue" {
+            if let vc = segue.destination as? ProfileViewController , let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+                vc.user = posts[indexPath.row].user
+            }
+        }
     }
     
     // MARK: - UITableViewDataSource
@@ -210,6 +215,11 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
     
     func didToggleMorePost(atIndexPath indexPath: IndexPath) {
         
+    }
+    
+    func shouldShowUserProfile(atIndexPath indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        self.performSegue(withIdentifier: "ShowProfileSegue", sender: cell)
     }
     
     // MARK: - PostViewDelegate
