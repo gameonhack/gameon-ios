@@ -195,6 +195,28 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func presentActionSheetAlertController(title : String? = nil, message : String? = nil, actions : [UIAlertAction]) {
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        
+        for action in actions {
+            alertController.addAction(action)
+        }
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func presentShareActivyController(content : [Any]) {
+        let activityViewController = UIActivityViewController(activityItems: content, applicationActivities: nil)
+        
+        activityViewController.popoverPresentationController?.sourceView = self.view
+
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
     func feedbackSuccess() {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)

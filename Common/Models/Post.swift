@@ -15,6 +15,18 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
         return "Post"
     }
     
+    /*
+    override init() {
+        super.init()
+        
+        likes = PFRelation()
+        comments = PFRelation()
+        
+        likesCount = 0
+        commentsCount = 0
+    }
+    */
+    
     /// The post's user. This is the user that created the Post.
     @NSManaged var user : User!
     /// The post's content
@@ -66,9 +78,7 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
         if cachedLikes == nil {
             cachedLikes = [User]()
         }
-        if likes == nil {
-            likes = PFRelation()
-        }
+        
         cachedLikes?.append(user)
         
         self.relation(forKey: #keyPath(Post.likes)).add(user)
@@ -90,9 +100,6 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
     func add(comment : String, fromUser user: User, block : @escaping (Bool, Error?) -> Void ) {
         if cachedPostComment == nil {
             cachedPostComment = [PostComment]()
-        }
-        if comments == nil {
-            comments = PFRelation()
         }
         
         let postComment = PostComment()
@@ -147,6 +154,13 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
     }
     
     
+    func getImage(block : @escaping (_ image : UIImage) -> Void) {
+        self.getFile(forKey: #keyPath(Post.image)) { (data) in
+            if let data = data {
+                block(UIImage(data: data)!)
+            }
+        }
+    }
     /**
      
      Get all the Likes from the Post.

@@ -10,6 +10,7 @@ import UIKit
 
 protocol PostViewDelegate {
     func didliked(post : Post, indexPath: IndexPath)
+    func didDeleted(post : Post, indexPath: IndexPath)
 }
 class PostViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, PostTableViewCellDelegate {
 
@@ -192,10 +193,17 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.scrollToRow(at: IndexPath(row: (self.post.commentsCount?.intValue ?? 1) - 1 , section: 1), at: UITableViewScrollPosition.bottom, animated: true)
         
+        self.feedbackSuccess()
+        
         return true
     }
     
     // MARK: - PostTableViewCellDelegate
+    
+    func shouldShowUserProfile(atIndexPath indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        self.performSegue(withIdentifier: "ShowProfileSegue", sender: cell)
+    }
     
     func didLikePost(atIndexPath indexPath: IndexPath) {
         guard let user =  User.current() else {
@@ -218,6 +226,46 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.likeButton.addSpringAnimation()
         
+    }
+    
+    func didToggleMorePost(atIndexPath indexPath: IndexPath) {
+        guard let user =  User.current() else {
+            return
+        }
+        
+        var actions = [UIAlertAction]()
+        
+        if user.objectId == post.user.objectId {
+            
+            let deleteAction = UIAlertAction(title: "Delete", style: UIAlertActionStyle.destructive, handler: { (action) in
+                self.delegate.didDeleted(post: self.post, indexPath: self.indexPath)
+                let _ = self.navigationController?.popViewController(animated: true)
+            })
+            actions.append(deleteAction)
+            
+        } else {
+            
+            let reportAction = UIAlertAction(title: "Report", style: UIAlertActionStyle.destructive, handler: { (action) in
+                let _ = self.navigationController?.popViewController(animated: true)
+            })
+            actions.append(reportAction)
+            
+        }
+        
+        let shareAction = UIAlertAction(title: "Share", style: UIAlertActionStyle.default, handler: { (action) in
+            
+            if self.post.image != nil {
+                self.post.getImage(block: { (image) in
+                    self.presentShareActivyController(content: [self.post.content, image])
+                })
+            } else {
+                self.presentShareActivyController(content: [self.post.content])
+            }
+            
+        })
+        actions.append(shareAction)
+        
+        self.presentActionSheetAlertController(actions: actions)
     }
     
 }

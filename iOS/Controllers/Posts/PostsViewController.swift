@@ -46,6 +46,13 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    func delete(post : Post) {
+        post.deleteInBackground(block: { (success, error) in
+            
+        })
+        self.feedbackSuccess()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -215,7 +222,45 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
     }
     
     func didToggleMorePost(atIndexPath indexPath: IndexPath) {
+        guard let user =  User.current() else {
+            return
+        }
         
+        let post = posts[indexPath.row]
+        
+        
+        var actions = [UIAlertAction]()
+        
+        if user.objectId == post.user.objectId {
+            
+            let deleteAction = UIAlertAction(title: "Delete", style: UIAlertActionStyle.destructive, handler: { (action) in
+                self.didDeleted(post: post, indexPath: indexPath)
+            })
+            actions.append(deleteAction)
+            
+        } else {
+            
+            let reportAction = UIAlertAction(title: "Report", style: UIAlertActionStyle.destructive, handler: { (action) in
+                
+            })
+            actions.append(reportAction)
+            
+        }
+        
+        let shareAction = UIAlertAction(title: "Share", style: UIAlertActionStyle.default, handler: { (action) in
+            
+            if post.image != nil {
+                post.getImage(block: { (image) in
+                    self.presentShareActivyController(content: [post.content, image])
+                })
+            } else {
+                self.presentShareActivyController(content: [post.content])
+            }
+
+        })
+        actions.append(shareAction)
+        
+        self.presentActionSheetAlertController(actions: actions)
     }
     
     func shouldShowUserProfile(atIndexPath indexPath: IndexPath) {
@@ -229,6 +274,12 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         posts[indexPath.row] = post
         let cell = tableView.cellForRow(at: indexPath) as! PostTableViewCell
         configure(postCell: cell, ForRowAt: indexPath)
+    }
+    
+    func didDeleted(post : Post, indexPath: IndexPath) {
+        self.delete(post: post)
+        self.posts.remove(at: indexPath.row)
+        self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.bottom)
     }
     
     // MARK: - AddPostViewDelegate
