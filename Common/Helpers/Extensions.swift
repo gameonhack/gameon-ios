@@ -135,6 +135,19 @@ extension UIView {
         }
     }
     
+    
+    func addSpringAnimation() {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.25, initialSpringVelocity: 0, options: [UIViewAnimationOptions.curveEaseIn ], animations: { () -> Void in
+            self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        }) { (didEnd : Bool) -> Void in
+            UIView.animate(withDuration: 0.1, animations: { () -> Void in
+                self.transform = CGAffineTransform.identity
+            })
+        }
+        
+        let generator = UISelectionFeedbackGenerator()
+        generator.selectionChanged()
+    }
    
 }
 
@@ -180,6 +193,11 @@ extension UIViewController {
         alertController.addAction(defaultAction)
         
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func feedbackSuccess() {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
     }
     
     func showPhotoViewController(image : UIImage) {

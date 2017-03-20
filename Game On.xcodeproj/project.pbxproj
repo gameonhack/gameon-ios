@@ -78,6 +78,7 @@
 		F9A7981B1E31F03600D37C32 /* DateTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F9ABBFBE1E73740C00EDA1FC /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABBFBD1E73740C00EDA1FC /* PostComment.swift */; };
 		F9ABBFBF1E73751000EDA1FC /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABBFBD1E73740C00EDA1FC /* PostComment.swift */; };
+		F9D1CE761E7F82340009D60F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90AECD71E5624F600D850DD /* PhotoViewController.swift */; };
 		F9E45BCB1E50EEC300E97C11 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E45BCA1E50EEC300E97C11 /* PostViewController.swift */; };
 		F9ED68351E31F845001B7C45 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68341E31F845001B7C45 /* EventsViewController.swift */; };
 		F9ED683A1E32A669001B7C45 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68391E32A669001B7C45 /* ImageTableViewCell.swift */; };
@@ -442,8 +443,8 @@
 			isa = PBXGroup;
 			children = (
 				F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */,
-				F974CEC51E504F0B00DE8F3A /* AddPostViewController.swift */,
 				F9E45BCA1E50EEC300E97C11 /* PostViewController.swift */,
+				F974CEC51E504F0B00DE8F3A /* AddPostViewController.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -668,6 +669,7 @@
 				F9ABBFBF1E73751000EDA1FC /* PostComment.swift in Sources */,
 				F9875FE11E6BFD5700D75347 /* DataManager.swift in Sources */,
 				F9875FDD1E6BFD5300D75347 /* Post.swift in Sources */,
+				F9D1CE761E7F82340009D60F /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

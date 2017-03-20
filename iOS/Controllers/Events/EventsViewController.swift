@@ -55,7 +55,7 @@ class EventsViewController: RootViewController, UITableViewDelegate, UITableView
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "ShowEventSegue" {
-            if let vc = segue.destination as? EventViewController, let indexPath = tableView.indexPathForSelectedRow  {
+            if let vc = segue.destination as? EventViewController, let indexPath = tableView.indexPath(for: sender as! UITableViewCell)  {
                 vc.event = events[indexPath.row]
             }
         }

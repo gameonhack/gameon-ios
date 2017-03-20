@@ -215,7 +215,8 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
             cell.likeButton.setImage(UIImage(named: "Heart"), for: UIControlState.normal)
         }
-
+        
+        cell.likeButton.addSpringAnimation()
         
     }
     

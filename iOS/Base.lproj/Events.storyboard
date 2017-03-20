@@ -9,6 +9,7 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -119,7 +120,10 @@
                                         <connections>
                                             <outlet property="iconImageView" destination="piX-gR-KgB" id="4pb-xF-iNz"/>
                                             <outlet property="nameLabel" destination="zOS-H3-zkM" id="8tw-Fv-PiE"/>
-                                            <segue destination="r4H-2u-9NY" kind="show" identifier="ShowEventSegue" id="8cl-of-oMb"/>
+                                            <segue destination="r4H-2u-9NY" kind="show" identifier="ShowEventSegue" id="8cl-of-oMb">
+                                                <segue key="commit" inheritsFrom="parent" id="3lc-9v-1jp"/>
+                                                <segue key="preview" inheritsFrom="commit" id="xMq-Zg-Vqb"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -419,5 +423,8 @@
         <image name="Events-On" width="30" height="30"/>
         <image name="Top Banner" width="375" height="215"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8cl-of-oMb"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.91764705882352937" green="0.12941176470588234" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
 </document>

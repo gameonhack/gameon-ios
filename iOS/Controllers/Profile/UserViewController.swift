@@ -34,6 +34,9 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
             return
         }
         if User.current() == nil && !didShowLogin {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.error)
+
             didShowLogin = true
             NotificationCenter.default.post(name: NSNotification.Name.GOShowLogin, object: nil)
         }

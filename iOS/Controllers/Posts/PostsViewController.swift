@@ -207,6 +207,7 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         }
         
         configure(postCell: cell, ForRowAt: indexPath)
+        cell.likeButton.addSpringAnimation()
     }
     
     func didCommentPost(atIndexPath indexPath: IndexPath) {

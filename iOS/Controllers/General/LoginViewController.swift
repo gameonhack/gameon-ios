@@ -49,6 +49,9 @@ class LoginViewController: UIViewController {
         } else {
             PFFacebookUtils.logInInBackground(withReadPermissions: ["public_profile", "email", "user_friends"]) { (user, error) in
                 if let user = user {
+                    
+                    self.feedbackSuccess()
+                    
                     if user.isNew {
                         // User signed up and logged in through Facebook!
                         
