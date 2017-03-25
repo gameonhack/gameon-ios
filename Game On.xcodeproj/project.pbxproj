@@ -53,14 +53,6 @@
 		F974CEC61E504F0B00DE8F3A /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F974CEC51E504F0B00DE8F3A /* AddPostViewController.swift */; };
 		F9875FC51E6BF5A300D75347 /* iOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9875FC41E6BF5A300D75347 /* iOS_Tests.swift */; };
 		F9875FCC1E6BF5CB00D75347 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D7CA31E2CA98500D65BB8 /* Parse.framework */; };
-		F9875FD81E6BF8B800D75347 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505ABB1E6BF3500021C5CC /* Extensions.swift */; };
-		F9875FD91E6BF8B800D75347 /* ParseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505ABC1E6BF3500021C5CC /* ParseKeys.swift */; };
-		F9875FDC1E6BFC4C00D75347 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AB11E6BED8A0021C5CC /* Schedule.swift */; };
-		F9875FDD1E6BFD5300D75347 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AB01E6BED8A0021C5CC /* Post.swift */; };
-		F9875FDE1E6BFD5300D75347 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AAE1E6BED8A0021C5CC /* Event.swift */; };
-		F9875FDF1E6BFD5300D75347 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AAF1E6BED8A0021C5CC /* Group.swift */; };
-		F9875FE01E6BFD5300D75347 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AB21E6BED8A0021C5CC /* User.swift */; };
-		F9875FE11E6BFD5700D75347 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505ABA1E6BF3500021C5CC /* DataManager.swift */; };
 		F98EED671E77602B004B3AA7 /* PostCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EED661E77602B004B3AA7 /* PostCommentTableViewCell.swift */; };
 		F98EED6A1E7776FD004B3AA7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EED691E7776FD004B3AA7 /* ProfileViewController.swift */; };
 		F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; };
@@ -77,7 +69,6 @@
 		F9A7981A1E31F03600D37C32 /* DateTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; };
 		F9A7981B1E31F03600D37C32 /* DateTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9A798191E31F03600D37C32 /* DateTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F9ABBFBE1E73740C00EDA1FC /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABBFBD1E73740C00EDA1FC /* PostComment.swift */; };
-		F9ABBFBF1E73751000EDA1FC /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABBFBD1E73740C00EDA1FC /* PostComment.swift */; };
 		F9D1CE761E7F82340009D60F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90AECD71E5624F600D850DD /* PhotoViewController.swift */; };
 		F9E45BCB1E50EEC300E97C11 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E45BCA1E50EEC300E97C11 /* PostViewController.swift */; };
 		F9ED68351E31F845001B7C45 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED68341E31F845001B7C45 /* EventsViewController.swift */; };
@@ -659,16 +650,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9875FDF1E6BFD5300D75347 /* Group.swift in Sources */,
 				F9875FC51E6BF5A300D75347 /* iOS_Tests.swift in Sources */,
-				F9875FD91E6BF8B800D75347 /* ParseKeys.swift in Sources */,
-				F9875FDC1E6BFC4C00D75347 /* Schedule.swift in Sources */,
-				F9875FE01E6BFD5300D75347 /* User.swift in Sources */,
-				F9875FD81E6BF8B800D75347 /* Extensions.swift in Sources */,
-				F9875FDE1E6BFD5300D75347 /* Event.swift in Sources */,
-				F9ABBFBF1E73751000EDA1FC /* PostComment.swift in Sources */,
-				F9875FE11E6BFD5700D75347 /* DataManager.swift in Sources */,
-				F9875FDD1E6BFD5300D75347 /* Post.swift in Sources */,
 				F9D1CE761E7F82340009D60F /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

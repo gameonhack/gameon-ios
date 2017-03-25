@@ -62,7 +62,7 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func postAction(_ sender: Any) {
         if User.current() == nil {
-            NotificationCenter.default.post(name: NSNotification.Name.GOShowLogin, object: nil)
+            self.presentLoginViewController()
         } else {
             self.performSegue(withIdentifier: "ShowAddPostSegue", sender: sender)
         }
@@ -88,11 +88,6 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
             }
         }
         
-        if segue.identifier == "ShowProfileSegue" {
-            if let vc = segue.destination as? ProfileViewController , let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
-                vc.user = posts[indexPath.row].user
-            }
-        }
     }
     
     // MARK: - UITableViewDataSource
@@ -195,6 +190,7 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
     
     func didLikePost(atIndexPath indexPath: IndexPath) {
         guard let user =  User.current() else {
+            self.presentLoginViewController()
             return
         }
         
@@ -222,16 +218,13 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
     }
     
     func didToggleMorePost(atIndexPath indexPath: IndexPath) {
-        guard let user =  User.current() else {
-            return
-        }
+        let user =  User.current()
         
         let post = posts[indexPath.row]
         
-        
         var actions = [UIAlertAction]()
         
-        if user.objectId == post.user.objectId {
+        if user?.objectId == post.user.objectId {
             
             let deleteAction = UIAlertAction(title: "Delete", style: UIAlertActionStyle.destructive, handler: { (action) in
                 self.didDeleted(post: post, indexPath: indexPath)
@@ -264,8 +257,8 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
     }
     
     func shouldShowUserProfile(atIndexPath indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        self.performSegue(withIdentifier: "ShowProfileSegue", sender: cell)
+        let user = posts[indexPath.row].user!
+        showUserProfileViewController(user: user)
     }
     
     // MARK: - PostViewDelegate

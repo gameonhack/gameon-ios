@@ -15,18 +15,6 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
         return "Post"
     }
     
-    /*
-    override init() {
-        super.init()
-        
-        likes = PFRelation()
-        comments = PFRelation()
-        
-        likesCount = 0
-        commentsCount = 0
-    }
-    */
-    
     /// The post's user. This is the user that created the Post.
     @NSManaged var user : User!
     /// The post's content
@@ -130,9 +118,6 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
         if cachedLikes == nil {
             cachedLikes = [User]()
         }
-        if likes == nil {
-            likes = PFRelation()
-        }
         
         var indexOfUser : Int? = nil
         for (index, cachedUser) in cachedLikes!.enumerated() {
@@ -150,6 +135,32 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
         self.incrementKey(#keyPath(Post.likesCount), byAmount: -1)
         self.saveInBackground { (success, error) in
             block(success, error)
+        }
+    }
+    
+    
+    /**
+     
+     Add's a user that likes the post.
+     
+     - Parameter block: A block returning the requested array of schedules or an error
+     - Parameter schedules: The requested array of Schedule
+     
+     */
+    func removeCommentFrom(user: User, atIndex index: Int, block : @escaping (Bool, Error?) -> Void ) {
+        if cachedPostComment == nil {
+            cachedPostComment = [PostComment]()
+        }
+        
+        let postComment = cachedPostComment?[index]
+        
+        cachedPostComment?.remove(at: index)
+        
+        self.relation(forKey: #keyPath(Post.comments)).remove(postComment!)
+        self.incrementKey(#keyPath(Post.commentsCount), byAmount: -1)
+        self.saveInBackground { (success, error) in
+            block(success, error)
+            postComment?.deleteInBackground()
         }
     }
     

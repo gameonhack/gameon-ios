@@ -38,7 +38,7 @@ class UserViewController: RootViewController, UITableViewDelegate, UITableViewDa
             generator.notificationOccurred(.error)
 
             didShowLogin = true
-            NotificationCenter.default.post(name: NSNotification.Name.GOShowLogin, object: nil)
+            self.presentLoginViewController()
         }
     }
     

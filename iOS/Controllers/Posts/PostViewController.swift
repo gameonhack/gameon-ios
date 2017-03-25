@@ -31,6 +31,11 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.addHideKeyboardWithTapGesture()
         self.addKeyboardNotifications()
+        
+        post.getComments(block: { (postComments, error) in
+            self.tableView.reloadData()
+        })
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -133,6 +138,7 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         if let postCommentCell = cell as? PostCommentTableViewCell {
+            postCommentCell.delegate = self
             post.getComments(block: { (postComments, error) in
                 if let postComments = postComments {
                     let postComment = postComments[indexPath.row]
@@ -168,7 +174,36 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
                 return  contentHeight + 60
             }
         }
-        return 60
+        return 80
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return indexPath.section == 1
+    }
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        var ownsComment = false
+        
+        if let cachedPostComment = post.cachedPostComment {
+            let postComment = cachedPostComment[indexPath.row]
+
+            if User.current()?.objectId == postComment.user.objectId {
+                ownsComment = true
+            }
+        }
+        
+        
+        let deleteAction = UITableViewRowAction(style: .destructive, title: ownsComment ? "Delete" : "Report", handler: { (action, indexPath) in
+            
+            if ownsComment {
+                self.post.removeCommentFrom(user: User.current()!, atIndex: indexPath.row, block: { (success, error) in
+                    
+                })
+                self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.bottom)
+            }
+        })
+        
+        return [deleteAction]
     }
     
     // MARK: - UITextFieldDelegate
@@ -177,6 +212,7 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         textField.resignFirstResponder()
         
         guard let user = User.current() else {
+            self.presentLoginViewController()
             return true
         }
         
@@ -201,12 +237,19 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - PostTableViewCellDelegate
     
     func shouldShowUserProfile(atIndexPath indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        self.performSegue(withIdentifier: "ShowProfileSegue", sender: cell)
+        if indexPath.section == 0 {
+            self.showUserProfileViewController(user: post.user)
+        } else {
+            guard let user = post.cachedPostComment?[indexPath.row].user else {
+                return
+            }
+            self.showUserProfileViewController(user: user)
+        }
     }
     
     func didLikePost(atIndexPath indexPath: IndexPath) {
         guard let user =  User.current() else {
+            self.presentLoginViewController()
             return
         }
         
@@ -229,13 +272,11 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func didToggleMorePost(atIndexPath indexPath: IndexPath) {
-        guard let user =  User.current() else {
-            return
-        }
+        let user =  User.current()
         
         var actions = [UIAlertAction]()
         
-        if user.objectId == post.user.objectId {
+        if user?.objectId == post.user.objectId {
             
             let deleteAction = UIAlertAction(title: "Delete", style: UIAlertActionStyle.destructive, handler: { (action) in
                 self.delegate.didDeleted(post: self.post, indexPath: self.indexPath)

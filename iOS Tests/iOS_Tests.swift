@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Parse
+@testable import Game_On
 
 class iOS_Tests: XCTestCase {
     
@@ -29,6 +29,7 @@ class iOS_Tests: XCTestCase {
         let userOpExpectation: XCTestExpectation = expectation(description: "Got Posts")
         DataManager.getPosts { (posts, error) in
             XCTAssertNil(error)
+            XCTAssertGreaterThan(posts?.count ?? 0, 0)
             userOpExpectation.fulfill()
         }
         waitForExpectations(timeout: 5.0, handler: nil)
@@ -42,6 +43,7 @@ class iOS_Tests: XCTestCase {
         let userOpExpectation: XCTestExpectation = expectation(description: "Got Events")
         DataManager.getEvents { (events, error) in
             XCTAssertNil(error)
+            XCTAssertGreaterThan(events?.count ?? 0, 0)
             userOpExpectation.fulfill()
         }
         waitForExpectations(timeout: 5.0, handler: nil)
@@ -55,6 +57,7 @@ class iOS_Tests: XCTestCase {
         let userOpExpectation: XCTestExpectation = expectation(description: "Got Groups")
         DataManager.getGroups { (groups, error) in
             XCTAssertNil(error)
+            XCTAssertGreaterThan(groups?.count ?? 0, 0)
             userOpExpectation.fulfill()
         }
         waitForExpectations(timeout: 5.0, handler: nil)

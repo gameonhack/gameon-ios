@@ -184,6 +184,10 @@ extension UIViewController {
         }
     }
 
+    func feedbackSuccess() {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(.success)
+    }
     
     func showSimpleAlert(title : String, message : String, buttonTitle : String = "Ok") {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -217,9 +221,15 @@ extension UIViewController {
         self.present(activityViewController, animated: true, completion: nil)
     }
     
-    func feedbackSuccess() {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
+    
+    func presentLoginViewController () {
+        NotificationCenter.default.post(name: NSNotification.Name.GOShowLogin, object: nil)
+    }
+    
+    func showUserProfileViewController(user : User) {
+        let profileViewController = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        profileViewController.user = user
+        self.navigationController?.pushViewController(profileViewController, animated: true)
     }
     
     func showPhotoViewController(image : UIImage) {
