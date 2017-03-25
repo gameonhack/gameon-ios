@@ -221,9 +221,9 @@
 		7AC7FC6E1E4FD11400926760 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
-				7ABF1C791E6CAA3200A64767 /* AddGroupViewController.swift */,
-				7ABF1C7A1E6CAA3200A64767 /* GroupViewController.swift */,
 				7AC7FC6F1E4FD15800926760 /* GroupsViewController.swift */,
+				7ABF1C7A1E6CAA3200A64767 /* GroupViewController.swift */,
+				7ABF1C791E6CAA3200A64767 /* AddGroupViewController.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";

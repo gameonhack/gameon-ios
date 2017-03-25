@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,28 +25,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Crf-83-JmJ" customClass="TitleView" customModule="Game_On" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OEi-KO-mbp">
-                                        <rect key="frame" x="341" y="56" width="18" height="18"/>
+                                        <rect key="frame" x="341" y="46" width="18" height="18"/>
                                         <state key="normal" image="Add"/>
                                         <connections>
                                             <segue destination="WHm-4y-Db1" kind="presentation" identifier="ShowAddGroupSegue" id="UNK-jo-p3T"/>
                                         </connections>
                                     </button>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Group" translatesAutoresizingMaskIntoConstraints="NO" id="dd6-ut-a6d">
+                                        <rect key="frame" x="8" y="86" width="359" height="44"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="bp7-Aj-RYC" id="uWU-3q-HUb"/>
+                                        </connections>
+                                    </searchBar>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="aMX-vg-3UR"/>
+                                    <constraint firstAttribute="bottom" secondItem="dd6-ut-a6d" secondAttribute="bottom" id="5Cu-qs-4dw"/>
+                                    <constraint firstAttribute="trailing" secondItem="dd6-ut-a6d" secondAttribute="trailing" constant="8" id="JiN-PM-A5u"/>
+                                    <constraint firstAttribute="height" constant="130" id="aMX-vg-3UR"/>
                                     <constraint firstAttribute="trailing" secondItem="OEi-KO-mbp" secondAttribute="trailing" constant="16" id="cMu-LE-dPb"/>
-                                    <constraint firstAttribute="bottom" secondItem="OEi-KO-mbp" secondAttribute="bottom" constant="16" id="xcw-ra-1ed"/>
+                                    <constraint firstItem="dd6-ut-a6d" firstAttribute="leading" secondItem="Crf-83-JmJ" secondAttribute="leading" constant="8" id="tGc-vW-whX"/>
+                                    <constraint firstAttribute="bottom" secondItem="OEi-KO-mbp" secondAttribute="bottom" constant="66" id="xcw-ra-1ed"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Groups"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Sd-mD-gdB">
-                                <rect key="frame" x="0.0" y="154" width="375" height="464"/>
+                                <rect key="frame" x="0.0" y="194" width="375" height="424"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GroupCell" id="krZ-ck-NWE" customClass="GroupTableViewCell" customModule="Game_On" customModuleProvider="target">
@@ -90,7 +101,10 @@
                                             <outlet property="groupNameLabel" destination="NMj-UJ-Uqu" id="C4L-Tu-GYS"/>
                                             <outlet property="iconGroupImageView" destination="JIZ-O6-qbF" id="KXh-kE-ydg"/>
                                             <outlet property="membersLabel" destination="pXz-Da-eTK" id="Lqm-uc-jxV"/>
-                                            <segue destination="9fg-15-Yye" kind="show" identifier="ShowGroupDetailSegue" id="lrA-Gv-cLc"/>
+                                            <segue destination="9fg-15-Yye" kind="show" identifier="ShowGroupDetailSegue" id="lrA-Gv-cLc">
+                                                <segue key="commit" inheritsFrom="parent" id="0ob-0p-RmI"/>
+                                                <segue key="preview" inheritsFrom="commit" id="bsQ-wm-6dR"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -286,5 +300,8 @@
         <image name="Groups-Off" width="30" height="30"/>
         <image name="Groups-On" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lrA-Gv-cLc"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.91764705882352937" green="0.12941176470588234" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
 </document>
