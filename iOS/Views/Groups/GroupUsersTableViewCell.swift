@@ -8,8 +8,14 @@
 
 import UIKit
 
-class GroupUsersTableViewCell: UITableViewCell, UICollectionViewDataSource {
+@objc protocol GroupUserCollectionViewCellDelegate {
+    func shouldOpen(user: User)
+}
 
+class GroupUsersTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+
+    weak var delegate : GroupUserCollectionViewCellDelegate?
+    
     var users = [User]() {
         didSet {
             collectionView.reloadData()
@@ -44,5 +50,9 @@ class GroupUsersTableViewCell: UITableViewCell, UICollectionViewDataSource {
         }
         return cell
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        delegate?.shouldOpen(user: user)
+    }
 }

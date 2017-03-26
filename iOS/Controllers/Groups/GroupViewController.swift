@@ -8,10 +8,9 @@
 
 import UIKit
 
-class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, GroupUserCollectionViewCellDelegate {
 
     var group : Group!
-    
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -103,6 +102,7 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
         if let cell = cell as? GroupUsersTableViewCell {
+            cell.delegate = self
             group.getUsers { (users, error) in
                 cell.users = users!
             }
@@ -134,6 +134,11 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return 0.0
     }
     
+    // MARK: - GroupUserCollectionViewCellDelegate
+    
+    func shouldOpen(user: User) {
+        self.showUserProfileViewController(user: user)
+    }
     
     // MARK: - Scroll view delegate
     

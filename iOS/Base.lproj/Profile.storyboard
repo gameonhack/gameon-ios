@@ -203,6 +203,7 @@
                                                             <connections>
                                                                 <outlet property="nameLabel" destination="VA3-NW-GSJ" id="GiB-Yn-mRd"/>
                                                                 <outlet property="photoImageView" destination="jwR-4P-sVt" id="umR-mu-dZA"/>
+                                                                <segue destination="Fln-s5-m7e" kind="show" identifier="ShowGroupSegue" id="b2G-xS-EYS"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -887,6 +888,7 @@
         <image name="User-On" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="b2G-xS-EYS"/>
         <segue reference="Rr9-fQ-xfy"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.91764705882352937" green="0.12941176470588234" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>

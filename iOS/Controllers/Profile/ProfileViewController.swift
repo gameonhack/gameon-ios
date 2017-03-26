@@ -26,15 +26,19 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowGroupSegue" {
+            let cell =  (tableView.cellForRow(at: IndexPath(row: 0, section: 2) )) as! ProfileGroupsTableViewCell
+            if let vc = segue.destination as? GroupViewController, let indexPath = cell.collectionView.indexPath(for: sender as! UICollectionViewCell) {
+                vc.group = cell.groups?[indexPath.row]
+            }
+        }
     }
-    */
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
