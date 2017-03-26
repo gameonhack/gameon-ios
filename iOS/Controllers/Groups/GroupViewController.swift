@@ -17,8 +17,12 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableview.tableFooterView = UIView(frame: CGRect.zero)
+        
         // Do any additional setup after loading the view.
+        self.tableview.tableFooterView = UIView(frame: CGRect.zero)
+        group.getUsers { (users, error) in
+            self.tableview.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,11 +56,26 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: - UITableViewDataSource (Delegated)
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+    }
+    
+    func getCellIdentifier(index : Int) -> String {
+        switch index {
+        case 0:
+            return "GroupHeaderDecorationCell"
+        case 1:
+            return "GroupHeaderCell"
+        case 2:
+            return "AboutCell"
+        case 3:
+            return "UsersCell"
+        default:
+            return ""
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,30 +98,42 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.titleLabel.text = group.name
         }
         
+        if let cell = cell as? GroupAboutTableViewCell {
+            cell.aboutTextView.text = group.about
+        }
+        
+        if let cell = cell as? GroupUsersTableViewCell {
+            group.getUsers { (users, error) in
+                cell.users = users!
+            }
+        }
+        
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 215.0
+        switch indexPath.section {
+        case 0:
+            return 255
+        case 1:
+            return 140.0
+        case 2:
+            let aboutLabelHeight : CGFloat = 86.0
+            let frameSize = CGSize(width: self.view.frame.width - 40.0, height: 1000.0)
+            let aboutTextViewSize = group.about.boundingRect(with: frameSize, options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: 22)], context: nil)
+            return aboutLabelHeight + aboutTextViewSize.height
+        case 3:
+            return 150
+        default:
+            return 60
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.0
     }
     
-    // MARK: - UITableViewDataSource (Custom)
-    
-    func getCellIdentifier(index : Int) -> String {
-        switch index {
-            case 0:
-                return "GroupHeaderDecorationCell"
-            case 1:
-                return "GroupHeaderCell"
-            default:
-                return ""
-        }
-    }
     
     // MARK: - Scroll view delegate
     

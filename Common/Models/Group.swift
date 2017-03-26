@@ -17,8 +17,8 @@ class Group: PFObject, PFSubclassingSkipAutomaticRegistration {
     
     /// The group's name
     @NSManaged var name:String!
-    /// The group's bio or description
-    @NSManaged var bio:String!
+    /// The group's about or description
+    @NSManaged var about:String!
     /// The group's current status
     @NSManaged var status:String!
     /// The group's users count.

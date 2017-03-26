@@ -36,6 +36,9 @@
 		F93EBAEB1E6B8EB700FF2E5F /* Games.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93EBAE91E6B8EB700FF2E5F /* Games.storyboard */; };
 		F93EBAEE1E6B8F8200FF2E5F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93EBAEC1E6B8F8200FF2E5F /* Profile.storyboard */; };
 		F93EBAF11E6B8FFA00FF2E5F /* Groups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93EBAEF1E6B8FFA00FF2E5F /* Groups.storyboard */; };
+		F94AB2801E873D180005E0B4 /* GroupAboutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94AB27F1E873D180005E0B4 /* GroupAboutTableViewCell.swift */; };
+		F94AB2821E873D280005E0B4 /* GroupUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94AB2811E873D280005E0B4 /* GroupUsersTableViewCell.swift */; };
+		F94AB2841E8746530005E0B4 /* GroupUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94AB2831E8746530005E0B4 /* GroupUserCollectionViewCell.swift */; };
 		F94F6F8F1E318C500086A727 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */; };
 		F9505A7D1E6BC4000021C5CC /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505A7C1E6BC4000021C5CC /* ContactViewController.swift */; };
 		F9505AB31E6BED8A0021C5CC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9505AAE1E6BED8A0021C5CC /* Event.swift */; };
@@ -144,6 +147,9 @@
 		F93EBAEA1E6B8EB700FF2E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Games.storyboard; sourceTree = "<group>"; };
 		F93EBAED1E6B8F8200FF2E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		F93EBAF01E6B8FFA00FF2E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Groups.storyboard; sourceTree = "<group>"; };
+		F94AB27F1E873D180005E0B4 /* GroupAboutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupAboutTableViewCell.swift; sourceTree = "<group>"; };
+		F94AB2811E873D280005E0B4 /* GroupUsersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupUsersTableViewCell.swift; sourceTree = "<group>"; };
+		F94AB2831E8746530005E0B4 /* GroupUserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupUserCollectionViewCell.swift; sourceTree = "<group>"; };
 		F94F6F8E1E318C500086A727 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F9505A7C1E6BC4000021C5CC /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		F9505AAE1E6BED8A0021C5CC /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -214,6 +220,9 @@
 			children = (
 				7A481AE01E56D60100428767 /* GroupTableViewCell.swift */,
 				7A0769571E6D646500A6EB7C /* GroupTitleTableViewCell.swift */,
+				F94AB27F1E873D180005E0B4 /* GroupAboutTableViewCell.swift */,
+				F94AB2811E873D280005E0B4 /* GroupUsersTableViewCell.swift */,
+				F94AB2831E8746530005E0B4 /* GroupUserCollectionViewCell.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -601,10 +610,12 @@
 				F98FCA0D1E2FE9A600FA06A2 /* PostsViewController.swift in Sources */,
 				F9505AB61E6BED8A0021C5CC /* Schedule.swift in Sources */,
 				F96E58361E4D766F00C44B17 /* EditProfileViewController.swift in Sources */,
+				F94AB2841E8746530005E0B4 /* GroupUserCollectionViewCell.swift in Sources */,
 				F994801E1E47FE1F008481EF /* TabBarViewController.swift in Sources */,
 				F9505ABD1E6BF3500021C5CC /* DataManager.swift in Sources */,
 				7ABF1C7C1E6CAA3200A64767 /* GroupViewController.swift in Sources */,
 				F9505AB51E6BED8A0021C5CC /* Post.swift in Sources */,
+				F94AB2801E873D180005E0B4 /* GroupAboutTableViewCell.swift in Sources */,
 				F93D63C31E4FC71D007BAAE1 /* PFFacebookUtils.m in Sources */,
 				F974CEC61E504F0B00DE8F3A /* AddPostViewController.swift in Sources */,
 				F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */,
@@ -633,6 +644,7 @@
 				F90BDFC61E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift in Sources */,
 				F99482411E486F2D008481EF /* UserViewController.swift in Sources */,
 				F9505AB31E6BED8A0021C5CC /* Event.swift in Sources */,
+				F94AB2821E873D280005E0B4 /* GroupUsersTableViewCell.swift in Sources */,
 				F93A2A8C1E3A89840097CE90 /* EventAboutTableViewCell.swift in Sources */,
 				F93A2A901E3ACEA10097CE90 /* EventDayHeaderTableViewCell.swift in Sources */,
 				F98EED6A1E7776FD004B3AA7 /* ProfileViewController.swift in Sources */,
