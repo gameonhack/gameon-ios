@@ -42,6 +42,30 @@ class GroupsViewController: RootViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Actions
+    
+    @IBAction func addGroupAction(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: nil, message: "Would you like to join or create a new group?", preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let joinAction = UIAlertAction(title: "Join", style: UIAlertActionStyle.default) { (action) in
+            
+        }
+        let createAction = UIAlertAction(title: "Create", style: UIAlertActionStyle.default) { (action) in
+            self.performSegue(withIdentifier: "ShowAddGroupSegue", sender: action)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (action) in
+            
+        }
+        
+        alertController.addAction(joinAction)
+        alertController.addAction(createAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

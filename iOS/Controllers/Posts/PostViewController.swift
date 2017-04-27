@@ -228,7 +228,7 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.insertRows(at: [IndexPath(row: (self.post.commentsCount?.intValue ?? 1) - 1 , section: 1)], with: UITableViewRowAnimation.bottom)
         
         tableView.scrollToRow(at: IndexPath(row: (self.post.commentsCount?.intValue ?? 1) - 1 , section: 1), at: UITableViewScrollPosition.bottom, animated: true)
-        
+ 
         self.feedbackSuccess()
         
         return true

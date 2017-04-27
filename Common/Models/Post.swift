@@ -68,44 +68,18 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
         }
         
         cachedLikes?.append(user)
-        
-        self.relation(forKey: #keyPath(Post.likes)).add(user)
         self.incrementKey(#keyPath(Post.likesCount))
-        self.saveInBackground { (success, error) in
-            block(success, error)
-        }
-    }
-    
-    
-    /**
-     
-     Add's a user that likes the post.
-     
-     - Parameter block: A block returning the requested array of schedules or an error
-     - Parameter schedules: The requested array of Schedule
-     
-     */
-    func add(comment : String, fromUser user: User, block : @escaping (Bool, Error?) -> Void ) {
-        if cachedPostComment == nil {
-            cachedPostComment = [PostComment]()
-        }
         
-        let postComment = PostComment()
-        postComment.comment = comment
-        postComment.user = user
-        
-        cachedPostComment?.append(postComment)
-        self.incrementKey(#keyPath(Post.commentsCount))
-        
-        postComment.saveInBackground{ (success, error) in
-            self.relation(forKey: #keyPath(Post.comments)).add(postComment)
-            self.saveInBackground { (success, error) in
-                block(success, error)
+        PFCloud.callFunction(inBackground: "likePost", withParameters: ["postId" : self.objectId!]) { (response, error) in
+            if let likesCount = response as? Int {
+                self.likesCount = likesCount as NSNumber?
             }
+            block(error == nil, error)
         }
+      
     }
     
-   
+    
     /**
      
      Add's a user that likes the post.
@@ -130,14 +104,47 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
             return
         }
         cachedLikes?.remove(at: index)
-        
-        self.relation(forKey: #keyPath(Post.likes)).remove(user)
         self.incrementKey(#keyPath(Post.likesCount), byAmount: -1)
-        self.saveInBackground { (success, error) in
-            block(success, error)
+        
+        PFCloud.callFunction(inBackground: "likePost", withParameters: ["postId" : self.objectId!]) { (response, error) in
+            if let likesCount = response as? Int {
+                self.likesCount = likesCount as NSNumber?
+            }
+            block(error == nil, error)
         }
     }
     
+    
+    /**
+     
+     Add's a user that likes the post.
+     
+     - Parameter block: A block returning the requested array of schedules or an error
+     - Parameter schedules: The requested array of Schedule
+     
+     */
+    func add(comment : String, fromUser user: User, block : @escaping (Bool, Error?) -> Void ) {
+        if cachedPostComment == nil {
+            cachedPostComment = [PostComment]()
+        }
+        
+        let postComment = PostComment()
+        postComment.comment = comment
+        postComment.user = user
+        
+        cachedPostComment?.append(postComment)
+        self.incrementKey(#keyPath(Post.commentsCount))
+
+        
+        PFCloud.callFunction(inBackground: "addCommentToPost", withParameters: ["postId" : self.objectId!, "comment" : comment]) { (response, error) in
+            if let commentsCount = response as? Int {
+                self.commentsCount = commentsCount as NSNumber?
+            }
+            block(error == nil, error)
+        }
+    }
+    
+   
     
     /**
      
@@ -158,9 +165,13 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
         
         self.relation(forKey: #keyPath(Post.comments)).remove(postComment!)
         self.incrementKey(#keyPath(Post.commentsCount), byAmount: -1)
-        self.saveInBackground { (success, error) in
-            block(success, error)
-            postComment?.deleteInBackground()
+
+        
+        PFCloud.callFunction(inBackground: "deleteCommentToPost", withParameters: ["postId" : self.objectId!, "commentId" : postComment!.objectId!]) { (response, error) in
+            if let commentsCount = response as? Int {
+                self.commentsCount = commentsCount as NSNumber?
+            }
+            block(error == nil, error)
         }
     }
     

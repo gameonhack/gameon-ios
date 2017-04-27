@@ -199,12 +199,12 @@ class PostsViewController: RootViewController, UITableViewDelegate, UITableViewD
         let post = posts[indexPath.row]
         if !post.isLikedBy(user: user) {
             post.addLikeFrom(user: user) { (success, error) in
-                
+                self.configure(postCell: cell, ForRowAt: indexPath)
             }
             cell.likeButton.setImage(UIImage(named: "Heart Filled"), for: UIControlState.normal)
         } else {
             post.removeLikeFrom(user: user, block: { (success, error) in
-                
+                self.configure(postCell: cell, ForRowAt: indexPath)
             })
             cell.likeButton.setImage(UIImage(named: "Heart"), for: UIControlState.normal)
         }
