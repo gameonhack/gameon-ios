@@ -183,6 +183,22 @@ extension UIViewController {
             }
         }
     }
+    
+    func changeNavigationAndStatusBarToWhite() {
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
+
+        statusBar.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.backgroundColor = UIColor.white
+    }
+    
+    func changeNavigationAndStatusBarToClear() {
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
+        
+        statusBar.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+    }
+    
+    
 
     func feedbackSuccess() {
         let generator = UINotificationFeedbackGenerator()

@@ -27,15 +27,18 @@ class EditProfileViewController: UIViewController, UITableViewDelegate, UITableV
 
         // Do any additional setup after loading the view.
         
-        self.navigationController?.navigationBar.backgroundColor = UIColor.white
-        if isFromSignUp {
-            self.navigationItem.hidesBackButton = true
-        }
-        
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         
         self.addHideKeyboardWithTapGesture()
         self.addKeyboardNotifications()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        changeNavigationAndStatusBarToWhite()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        changeNavigationAndStatusBarToClear()
     }
     
     func dismiss() {

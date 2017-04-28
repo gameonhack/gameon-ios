@@ -39,19 +39,11 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        //UINavigationBar.appearance().barTintColor = UIColor.white
-        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
-        
-        statusBar.backgroundColor = UIColor.white
-
-        self.navigationController?.navigationBar.backgroundColor = UIColor.white
+        changeNavigationAndStatusBarToWhite()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
-        
-        statusBar.backgroundColor = UIColor.clear
-        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        changeNavigationAndStatusBarToClear()
     }
     
     override func didReceiveMemoryWarning() {

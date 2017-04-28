@@ -41,7 +41,7 @@ class TitleView: UIView {
         
         lineView.snp.makeConstraints { (make) -> Void in
             make.bottom.equalTo(0)
-            make.left.equalTo(16)
+            make.left.equalTo(20)
             make.right.equalTo(0)
             make.height.equalTo(1)
         }
@@ -52,7 +52,7 @@ class TitleView: UIView {
 
         titleLabel.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(28)
-            make.left.equalTo(16)
+            make.left.equalTo(20)
             make.right.equalTo(0)
         }
     }
