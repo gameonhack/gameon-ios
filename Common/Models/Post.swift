@@ -19,15 +19,15 @@ class Post: PFObject, PFSubclassingSkipAutomaticRegistration {
     @NSManaged var user : User!
     /// The post's content
     @NSManaged var content : String!
-    /// The pot's image file. **Default** is nil. Use getFile function to get the image.
+    /// The post's image file. **Default** is nil. Use getFile function to get the image.
     @NSManaged var image : PFFile?
-    /// The pot's likes Relation
+    /// The post's likes Relation
     @NSManaged var likes : PFRelation<User>?
-    /// The pot's likes count
+    /// The post's likes count
     @NSManaged var likesCount : NSNumber?
-    /// The pot's likes Relation
+    /// The post's likes Relation
     @NSManaged var comments : PFRelation<PostComment>?
-    /// The pot's likes count
+    /// The post's likes count
     @NSManaged var commentsCount : NSNumber?
     
     fileprivate var cachedLikes : [User]? = nil

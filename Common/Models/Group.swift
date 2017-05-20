@@ -40,4 +40,23 @@ class Group: PFObject, PFSubclassingSkipAutomaticRegistration {
     func getUsers(block : @escaping ([User]?, Error?) -> Void ) {
         DataManager.getUsersFrom(group: self, block: block)
     }
+    
+    /**
+     
+     Gets group's icon in a block
+     
+     - Parameter block: A block returning the requested icon
+     
+     */
+    func getIcon(block : @escaping (_ image : UIImage) -> Void) {
+        self.getFile(forKey: #keyPath(Group.icon)) { (data) in
+            if let data = data {
+                block(UIImage(data: data)!)
+            }
+        }
+    }
+    
+    func create(iconImage : UIImage) {
+        icon = PFFile(name: "icon.png", data: UIImagePNGRepresentation(iconImage)!)
+    }
 }

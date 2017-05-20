@@ -37,6 +37,12 @@ class GroupsViewController: RootViewController, UITableViewDataSource, UITableVi
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIApplication.shared.statusBarStyle = .default
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -45,6 +51,11 @@ class GroupsViewController: RootViewController, UITableViewDataSource, UITableVi
     // MARK: - Actions
     
     @IBAction func addGroupAction(_ sender: Any) {
+        
+        if User.current() == nil {
+            self.presentLoginViewController()
+            return
+        }
         
         let alertController = UIAlertController(title: nil, message: "Would you like to join or create a new group?", preferredStyle: UIAlertControllerStyle.actionSheet)
         
