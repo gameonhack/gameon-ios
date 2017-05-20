@@ -12,6 +12,9 @@
 		7ABF1C7B1E6CAA3200A64767 /* AddGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF1C791E6CAA3200A64767 /* AddGroupViewController.swift */; };
 		7ABF1C7C1E6CAA3200A64767 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF1C7A1E6CAA3200A64767 /* GroupViewController.swift */; };
 		7AC7FC701E4FD15800926760 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC7FC6F1E4FD15800926760 /* GroupsViewController.swift */; };
+		E8DD249B1ECFCE4500F30C20 /* StickerPackExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E8DD249A1ECFCE4500F30C20 /* StickerPackExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E8DD249F1ECFCE4500F30C20 /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = E8DD249E1ECFCE4500F30C20 /* Stickers.xcstickers */; };
+		E8DD24A01ECFCE4500F30C20 /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = E8DD249E1ECFCE4500F30C20 /* Stickers.xcstickers */; };
 		F907447F1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F907447E1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift */; };
 		F90AECD81E5624F600D850DD /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90AECD71E5624F600D850DD /* PhotoViewController.swift */; };
 		F90BDFC61E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90BDFC51E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift */; };
@@ -82,6 +85,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E8DD249C1ECFCE4500F30C20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F92D7C821E2CA91D00D65BB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8DD24991ECFCE4500F30C20;
+			remoteInfo = StickerPackExtension;
+		};
 		F9875FC71E6BF5A300D75347 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F92D7C821E2CA91D00D65BB8 /* Project object */;
@@ -92,6 +102,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		E8DD24A61ECFCE4500F30C20 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E8DD249B1ECFCE4500F30C20 /* StickerPackExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F92D7CA81E2CA9BD00D65BB8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,6 +137,9 @@
 		7ABF1C791E6CAA3200A64767 /* AddGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupViewController.swift; sourceTree = "<group>"; };
 		7ABF1C7A1E6CAA3200A64767 /* GroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		7AC7FC6F1E4FD15800926760 /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		E8DD24971ECFCE4500F30C20 /* Game On Stickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game On Stickers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8DD249A1ECFCE4500F30C20 /* StickerPackExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StickerPackExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8DD249E1ECFCE4500F30C20 /* Stickers.xcstickers */ = {isa = PBXFileReference; lastKnownFileType = folder.stickers; name = Stickers.xcstickers; path = StickerPackExtension/Stickers.xcstickers; sourceTree = "<group>"; };
 		F907447E1E3B28E800A5D1C4 /* EventScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		F90AECD71E5624F600D850DD /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		F90BDFC51E4D940000132DC2 /* ProfileEditPhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditPhotoTableViewCell.swift; sourceTree = "<group>"; };
@@ -240,6 +264,7 @@
 		F92D7C811E2CA91D00D65BB8 = {
 			isa = PBXGroup;
 			children = (
+				E8DD249E1ECFCE4500F30C20 /* Stickers.xcstickers */,
 				F9505AAC1E6BECDC0021C5CC /* Common */,
 				F92D7C8C1E2CA91D00D65BB8 /* iOS */,
 				F9875FC31E6BF5A300D75347 /* iOS Tests */,
@@ -253,6 +278,8 @@
 			children = (
 				F92D7C8A1E2CA91D00D65BB8 /* Game On.app */,
 				F9875FC21E6BF5A300D75347 /* Game On iOS Tests.xctest */,
+				E8DD24971ECFCE4500F30C20 /* Game On Stickers.app */,
+				E8DD249A1ECFCE4500F30C20 /* StickerPackExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -493,6 +520,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E8DD24961ECFCE4500F30C20 /* Game On Stickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8DD24A71ECFCE4500F30C20 /* Build configuration list for PBXNativeTarget "Game On Stickers" */;
+			buildPhases = (
+				E8DD24951ECFCE4500F30C20 /* Resources */,
+				E8DD24A61ECFCE4500F30C20 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8DD249D1ECFCE4500F30C20 /* PBXTargetDependency */,
+			);
+			name = "Game On Stickers";
+			productName = "Game On Stickers";
+			productReference = E8DD24971ECFCE4500F30C20 /* Game On Stickers.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		E8DD24991ECFCE4500F30C20 /* StickerPackExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8DD24A51ECFCE4500F30C20 /* Build configuration list for PBXNativeTarget "StickerPackExtension" */;
+			buildPhases = (
+				E8DD24981ECFCE4500F30C20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StickerPackExtension;
+			productName = StickerPackExtension;
+			productReference = E8DD249A1ECFCE4500F30C20 /* StickerPackExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 		F92D7C891E2CA91D00D65BB8 /* Game On iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F92D7C9E1E2CA91D00D65BB8 /* Build configuration list for PBXNativeTarget "Game On iOS" */;
@@ -539,6 +598,16 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Game On";
 				TargetAttributes = {
+					E8DD24961ECFCE4500F30C20 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = KDY2FY8979;
+						ProvisioningStyle = Automatic;
+					};
+					E8DD24991ECFCE4500F30C20 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = KDY2FY8979;
+						ProvisioningStyle = Automatic;
+					};
 					F92D7C891E2CA91D00D65BB8 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = KDY2FY8979;
@@ -572,11 +641,29 @@
 			targets = (
 				F92D7C891E2CA91D00D65BB8 /* Game On iOS */,
 				F9875FC11E6BF5A300D75347 /* Game On iOS Tests */,
+				E8DD24961ECFCE4500F30C20 /* Game On Stickers */,
+				E8DD24991ECFCE4500F30C20 /* StickerPackExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E8DD24951ECFCE4500F30C20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DD24A01ECFCE4500F30C20 /* Stickers.xcstickers in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8DD24981ECFCE4500F30C20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DD249F1ECFCE4500F30C20 /* Stickers.xcstickers in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F92D7C881E2CA91D00D65BB8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -670,6 +757,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E8DD249D1ECFCE4500F30C20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8DD24991ECFCE4500F30C20 /* StickerPackExtension */;
+			targetProxy = E8DD249C1ECFCE4500F30C20 /* PBXContainerItemProxy */;
+		};
 		F9875FC81E6BF5A300D75347 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F92D7C891E2CA91D00D65BB8 /* Game On iOS */;
@@ -737,6 +829,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E8DD24A11ECFCE4500F30C20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = KDY2FY8979;
+				INFOPLIST_FILE = "Game On Stickers/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gameonhack.Game-On-Stickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E8DD24A21ECFCE4500F30C20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = KDY2FY8979;
+				INFOPLIST_FILE = "Game On Stickers/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gameonhack.Game-On-Stickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E8DD24A31ECFCE4500F30C20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = KDY2FY8979;
+				INFOPLIST_FILE = StickerPackExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gameonhack.Game-On-Stickers.StickerPackExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E8DD24A41ECFCE4500F30C20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = KDY2FY8979;
+				INFOPLIST_FILE = StickerPackExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gameonhack.Game-On-Stickers.StickerPackExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		F92D7C9C1E2CA91D00D65BB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -911,6 +1057,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E8DD24A51ECFCE4500F30C20 /* Build configuration list for PBXNativeTarget "StickerPackExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8DD24A31ECFCE4500F30C20 /* Debug */,
+				E8DD24A41ECFCE4500F30C20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E8DD24A71ECFCE4500F30C20 /* Build configuration list for PBXNativeTarget "Game On Stickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8DD24A11ECFCE4500F30C20 /* Debug */,
+				E8DD24A21ECFCE4500F30C20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F92D7C851E2CA91D00D65BB8 /* Build configuration list for PBXProject "Game On" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
