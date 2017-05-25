@@ -2,13 +2,8 @@ language: objective-c
 osx_image: xcode8.3
 xcode_project: Game On.xcodeproj
 xcode_scheme: Game On iOS
-deploy:
-  provider: releases
-  api_key:
-    secure: Li8Q2scmbrJDXNAbTriKH84P3e0SS15mK8j5WDv8do98phfQpzluLkDGUu7xi2jg6gg9djIIXqPbXT74+Pj0md8UwjG9AMI1PSl1UU1r4OqjvR26KWpQfUSSxcHCo27q2rgfEUwXIeyz5sbTv0I91KKlugSXNup1ufDuRt3sT90eYKMZ9zbspOLirVz4YbHKBgWhDzWXW/TOptqwnb1IvewVb6lVQ0or7fV+ruuF0A7BAcslhn0FPn7TIXArfgBiyPvziF0ghRk3rWlQFJxVuFCUlf/TJEWwdpewkl8NcQViQlLKTfCNonbIRu/rhYGZD95+xkPtAWr+J0qzmtEYXDPSpNri1W5L46QGrctCja1ECfizmD94ggrtatSHWfagZR832818dBMcz994UHIHKxM3yE2GiktdXb1OCf0EtBqRkqdQDseYDbpOv5qEiiBVGMgvGdrRXwxM7r0wXqSms+p0L+a6FKxeeTogvjyBIQaX+QjRnLEgXeIwsa7guWtYn3JnLNB8ZpL4J1DwzizcCocEP41ORBrvtyZ+PGJom4F8x5eUN5XrhCumNb7u0HOuIln51bPi4sOT/4EiD8vcw1ePezY3LMT+Z+vcp52SJ3agxnooOONi9Xc0dDmjBLC+4cIhn56Ktja3C2JYRH6TyyLe9pPbNra73wQd0AX/WNc=
-  file:
-    - Common/Helpers/ParseKeys.swift
-    - Carthage/Build/iOS/*.framework
-  skip_cleanup: true
-  on:
-    repo: gameonhack/gameon-ios
+before_install:
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
+before_deploy:
+  - carthage update

@@ -1,5 +1,7 @@
 # Game On! iOS
 
+[![Build Status](https://travis-ci.org/gameonhack/gameon-ios.svg?branch=master)](https://travis-ci.org/gameonhack/gameon-ios)
+
 Game On! iOS App lets you interact with Game On's community.
 
 ![Icon](https://mir-s3-cdn-cf.behance.net/team/138/8edafc120645.588b08682581c.png)

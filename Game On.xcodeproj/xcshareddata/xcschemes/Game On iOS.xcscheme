@@ -71,6 +71,23 @@
             ReferencedContainer = "container:Game On.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "APP_ID"
+            value = "QCi6g6v8HEPYRlJ4rjt9eXbB26Rb870ZHuGDiCMc"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "CLIENT_KEY"
+            value = "2hvvWjK6sOPLSQoqKYEVq4FnRH5AiKTYkqGZhZxo"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SERVER_URL"
+            value = "http://api.gameonhack.com/gameondev"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
