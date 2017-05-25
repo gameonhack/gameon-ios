@@ -2,8 +2,8 @@ language: objective-c
 osx_image: xcode8.3
 xcode_project: Game On.xcodeproj
 xcode_scheme: Game On iOS
+xcode_sdk: iphonesimulator10.3
 before_install:
   - brew update
   - brew outdated carthage || brew upgrade carthage
-before_deploy:
   - carthage update
