@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class Group: PFObject {
+class Group: PFObject, PFSubclassing {
     
     static func parseClassName() -> String {
         return "Group"

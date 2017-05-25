@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class PostComment: PFObject {
+class PostComment: PFObject, PFSubclassing {
     
     static func parseClassName() -> String {
         return "PostComment"

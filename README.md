@@ -27,21 +27,16 @@ We are looking for Swift developers, aiming to make this community bigger. Your 
 
 ### Getting Started
 
-* Make a request of our development keys to info@gameonhack.com
-* Clone the repository
-* Open the project with Xcode
-* Inside the Helpers folder create a new file: ParseKeys.swift
-
+* Fork the repo and create your branch from master.
+* Download the repository
+* To download the frameworks run in your terminal:
 ```
- class ParseKeys: NSObject {
-
-    static let applicationId = ""
-    static let clientKey = ""
-    static let server = ""
-
-}
+carthage update
 ```
-* Replace with the data provided
+* To download the Facebook's frameworks run:
+```
+curl -O https://origincache.facebook.com/developers/resources/?id=facebook-ios-sdk-current.zip && unzip -o ?id=facebook-ios-sdk-current.zip -d Carthage/Build/iOS/ && rm ?id=facebook-ios-sdk-current.zip
+```
 
 ## Images
 

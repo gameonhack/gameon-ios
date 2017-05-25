@@ -51,7 +51,9 @@ class ProfileGroupsTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GroupCell", for: indexPath) as! ProfileGroupCollectionViewCell
         
-        let group = groups![indexPath.row]
+        guard let group = groups?[indexPath.row] else {
+            return cell
+        }
         
         cell.nameLabel.text = group.name
         
