@@ -47,8 +47,10 @@ https://xd.adobe.com/view/19b08e96-d35d-4647-9feb-93bad3f74275/
 
 ### Posts
 
-![Posts View](https://mir-s3-cdn-cf.behance.net/project_modules/disp/c2e01647992343.588b038bb406d.png)
+![Posts View](https://static1.squarespace.com/static/543c2e48e4b07dd5493ff4a1/58c8922bb8a79b83fe26a14f/58c8922b725e25ec86a1d029/1489539635276/Simulator+Screen+Shot+Feb+15%2C+2017%2C+6.24.46+PM.png?format=150w)
 
 ### Events
 
-![Event View](https://mir-s3-cdn-cf.behance.net/project_modules/disp/d4800447992343.588b038bb2300.png)
+![Events View](https://static1.squarespace.com/static/543c2e48e4b07dd5493ff4a1/58c8922bb8a79b83fe26a14f/58c8922fb3db2b0c3a8144d0/1489539660239/Simulator+Screen+Shot+Feb+15%2C+2017%2C+6.28.29+PM.png?format=150w)
+
+![Event View](https://static1.squarespace.com/static/543c2e48e4b07dd5493ff4a1/58c8922bb8a79b83fe26a14f/58c8922b5016e18d7054d77e/1489539636444/Simulator+Screen+Shot+Feb+15%2C+2017%2C+6.24.54+PM.png?format=150w)
