@@ -26,15 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ParseClientConfiguration.server = ParseKeys.server
         }))
         
-        // Warning: - Registering subclasses could lead to potencial bugs
-        
-        Post.registerSubclass()
-        PostComment.registerSubclass()
-        Event.registerSubclass()
-        Schedule.registerSubclass()
-        Group.registerSubclass()
-        User.registerSubclass()
-        
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
