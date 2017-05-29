@@ -15,6 +15,8 @@ class Post: PFObject, PFSubclassing {
         return "Post"
     }
     
+    // MARK: - Attributes
+    
     /// The post's user. This is the user that created the Post.
     @NSManaged var user : User!
     /// The post's content
@@ -30,8 +32,12 @@ class Post: PFObject, PFSubclassing {
     /// The post's likes count
     @NSManaged var commentsCount : NSNumber?
     
+    // MARK: - Private Attributes
+    
     fileprivate var cachedLikes : [User]? = nil
     var cachedPostComment : [PostComment]? = nil
+    
+    // MARK: - Functions
     
     /**
      
@@ -128,20 +134,16 @@ class Post: PFObject, PFSubclassing {
             cachedPostComment = [PostComment]()
         }
         
+        
         let postComment = PostComment()
+        postComment.setValue(self.objectId, forKey: "postId") 
         postComment.comment = comment
         postComment.user = user
         
         cachedPostComment?.append(postComment)
         self.incrementKey(#keyPath(Post.commentsCount))
-
         
-        PFCloud.callFunction(inBackground: "addCommentToPost", withParameters: ["postId" : self.objectId!, "comment" : comment]) { (response, error) in
-            if let commentsCount = response as? Int {
-                self.commentsCount = commentsCount as NSNumber?
-            }
-            block(error == nil, error)
-        }
+        postComment.saveInBackground(block: block)        
     }
     
    
@@ -166,13 +168,8 @@ class Post: PFObject, PFSubclassing {
         self.relation(forKey: #keyPath(Post.comments)).remove(postComment!)
         self.incrementKey(#keyPath(Post.commentsCount), byAmount: -1)
 
+        postComment?.deleteInBackground(block: block)
         
-        PFCloud.callFunction(inBackground: "deleteCommentToPost", withParameters: ["postId" : self.objectId!, "commentId" : postComment!.objectId!]) { (response, error) in
-            if let commentsCount = response as? Int {
-                self.commentsCount = commentsCount as NSNumber?
-            }
-            block(error == nil, error)
-        }
     }
     
     
