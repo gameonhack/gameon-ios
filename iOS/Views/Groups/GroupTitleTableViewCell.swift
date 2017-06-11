@@ -8,9 +8,17 @@
 
 import UIKit
 
+protocol GroupTitleTableViewCellDelegate {
+    func didPressJoinButton()
+}
 class GroupTitleTableViewCell: UITableViewCell {
 
+    var delegate : GroupTitleTableViewCellDelegate?
+    
     @IBOutlet weak var titleLabel: TitleView!
+    @IBOutlet weak var joinGroupButton: UIButton!
+    @IBOutlet weak var joinCodeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,5 +29,10 @@ class GroupTitleTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    // MARK: - Actions
+    
+    @IBAction func joinGroupAction(_ sender: Any) {
+        delegate?.didPressJoinButton()
+    }
 }

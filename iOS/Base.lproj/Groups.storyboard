@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DJO-ZR-YZ9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2104" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DJO-ZR-YZ9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
@@ -430,34 +430,53 @@
                                             <outlet property="topSpaceConstraint" destination="4RY-8H-1Fm" id="PQL-2u-VXA"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupHeaderCell" rowHeight="100" id="epE-ip-I1K" customClass="GroupTitleTableViewCell" customModule="Game_On" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="283" width="375" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupHeaderCell" rowHeight="140" id="epE-ip-I1K" customClass="GroupTitleTableViewCell" customModule="Game_On" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="283" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="epE-ip-I1K" id="IrL-CO-TMJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWj-Y6-sfM" customClass="TitleView" customModule="Game_On" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value="Group Name"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ae7-zU-QGn">
+                                                    <rect key="frame" x="24" y="93.5" width="75" height="30"/>
+                                                    <state key="normal" title="Join Group"/>
+                                                    <connections>
+                                                        <action selector="joinGroupAction:" destination="epE-ip-I1K" eventType="touchUpInside" id="hzc-2U-Jn9"/>
+                                                    </connections>
+                                                </button>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join code: 0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Uv-E6-hEH">
+                                                    <rect key="frame" x="24" y="98" width="125" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ae7-zU-QGn" secondAttribute="bottom" constant="8" id="2fG-MT-Bm8"/>
+                                                <constraint firstItem="4Uv-E6-hEH" firstAttribute="leading" secondItem="Ae7-zU-QGn" secondAttribute="leading" id="Heo-Hw-kPO"/>
                                                 <constraint firstAttribute="bottom" secondItem="nWj-Y6-sfM" secondAttribute="bottom" constant="-1" id="Plb-tj-3sw"/>
+                                                <constraint firstItem="Ae7-zU-QGn" firstAttribute="leading" secondItem="IrL-CO-TMJ" secondAttribute="leadingMargin" constant="16" id="aOj-Dp-Gzx"/>
+                                                <constraint firstItem="4Uv-E6-hEH" firstAttribute="centerY" secondItem="Ae7-zU-QGn" secondAttribute="centerY" id="aqn-Sp-5yW"/>
                                                 <constraint firstItem="nWj-Y6-sfM" firstAttribute="top" secondItem="IrL-CO-TMJ" secondAttribute="top" id="dkt-bb-eAy"/>
                                                 <constraint firstItem="nWj-Y6-sfM" firstAttribute="leading" secondItem="IrL-CO-TMJ" secondAttribute="leading" id="ooK-zI-EEz"/>
                                                 <constraint firstAttribute="trailing" secondItem="nWj-Y6-sfM" secondAttribute="trailing" id="wiJ-hl-aOe"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="joinCodeLabel" destination="4Uv-E6-hEH" id="N8x-KX-Vys"/>
+                                            <outlet property="joinGroupButton" destination="Ae7-zU-QGn" id="5p6-z0-krW"/>
                                             <outlet property="titleLabel" destination="nWj-Y6-sfM" id="gfN-5S-3KU"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AboutCell" rowHeight="156" id="G93-Ez-Ekl" customClass="GroupAboutTableViewCell" customModule="Game_On" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="383" width="375" height="156"/>
+                                        <rect key="frame" x="0.0" y="423" width="375" height="156"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G93-Ez-Ekl" id="0gc-Vy-Ity">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="155.5"/>
@@ -496,7 +515,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UsersCell" rowHeight="150" id="SHw-bh-SG8" customClass="GroupUsersTableViewCell" customModule="Game_On" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="539" width="375" height="150"/>
+                                        <rect key="frame" x="0.0" y="579" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SHw-bh-SG8" id="wGr-T6-LDu">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>

@@ -47,3 +47,8 @@ class User: PFUser {
         }
     }
 }
+
+func ==(lhs: User, rhs: User) -> Bool {
+    return lhs.objectId == rhs.objectId
+}
+

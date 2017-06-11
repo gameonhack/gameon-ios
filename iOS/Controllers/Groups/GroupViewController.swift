@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, GroupUserCollectionViewCellDelegate {
+class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, GroupUserCollectionViewCellDelegate, GroupTitleTableViewCellDelegate {
 
     var group : Group!
     
@@ -94,7 +94,26 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
         if let cell = cell as? GroupTitleTableViewCell {
+            cell.delegate = self
             cell.titleLabel.text = group.name
+            group.getUsers { (users, error) in
+                guard let user = User.current() else {
+                    return
+                }
+                if users?.contains(where: { (userL) -> Bool in
+                    userL.objectId == user.objectId
+                }) == true {
+                    
+                    cell.joinCodeLabel.text = "Join Code: " + (self.group.joinCode ?? "")
+                    
+                    cell.joinGroupButton.isHidden = true
+                    cell.joinCodeLabel.isHidden = false
+                    
+                } else {
+                    cell.joinGroupButton.isHidden = false
+                    cell.joinCodeLabel.isHidden = true
+                }
+            }
         }
         
         if let cell = cell as? GroupAboutTableViewCell {
@@ -138,6 +157,30 @@ class GroupViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func shouldOpen(user: User) {
         self.showUserProfileViewController(user: user)
+    }
+    
+    // MARK: - GroupTitleTableViewCellDelegate
+    
+    func didPressJoinButton() {
+        
+        let alertController = UIAlertController(title: "Join Group", message: "You are about to join \(group.name!)", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Group's join code"
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
+        
+        let joinAction = UIAlertAction(title: "Join", style: UIAlertActionStyle.default) { (alertAction) in
+            self.group.joinGroup(user: User.current()!, joinCode: alertController.textFields?.first?.text ?? "")
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(joinAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        //self.showSimpleAlert(title: "Will join", message: "The code should be \(group.joinCode)")
     }
     
     // MARK: - Scroll view delegate

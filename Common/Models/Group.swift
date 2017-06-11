@@ -16,17 +16,19 @@ class Group: PFObject, PFSubclassing {
     }
     
     /// The group's name
-    @NSManaged var name:String!
+    @NSManaged var name: String!
     /// The group's about or description
-    @NSManaged var about:String!
+    @NSManaged var about: String!
     /// The group's current status
-    @NSManaged var status:String!
+    @NSManaged var status: String!
+    /// The group's joinCode.
+    @NSManaged private(set) public var joinCode: String?
     /// The group's users count.
-    @NSManaged var usersCount:NSNumber?
+    @NSManaged var usersCount: NSNumber?
     /// The group's icon file. Use getFile function to get the image.
-    @NSManaged var icon:PFFile!
+    @NSManaged var icon: PFFile!
     /// The group's cover file. Use getFile function to get the image.
-    @NSManaged var cover:PFFile!
+    @NSManaged var cover: PFFile!
     
     /**
      
@@ -58,5 +60,18 @@ class Group: PFObject, PFSubclassing {
     
     func create(iconImage : UIImage) {
         icon = PFFile(name: "icon.png", data: UIImagePNGRepresentation(iconImage)!)
+    }
+    
+    /**
+     
+     Gets group's icon in a block
+     
+     - Parameter block: A block returning the requested icon
+     
+     */
+    func joinGroup(user: User, joinCode : String) {
+        PFCloud.callFunction(inBackground: "joinGroup", withParameters: ["groupId" : self.objectId!, "joinCode" : joinCode]) { (response, error) in
+            print(response as? String ?? "")
+        }
     }
 }
