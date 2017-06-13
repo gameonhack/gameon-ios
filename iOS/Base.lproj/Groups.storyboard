@@ -351,11 +351,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZwS-Uw-yqf">
-                                <rect key="frame" x="67" y="571" width="240" height="32"/>
+                                <rect key="frame" x="67" y="563" width="240" height="40"/>
                                 <color key="backgroundColor" red="0.91764705882352937" green="0.12941176470588234" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="EdH-eM-Bi1"/>
-                                    <constraint firstAttribute="height" constant="32" id="Rcj-aI-C3N"/>
+                                    <constraint firstAttribute="height" constant="40" id="Rcj-aI-C3N"/>
                                 </constraints>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -20,12 +20,12 @@ class RootViewController: UIViewController {
         topview.backgroundColor = UIColor.white
         self.view.addSubview(topview)
         
-        topview.snp.makeConstraints { (make) in
-            make.top.equalTo(0)
-            make.left.equalTo(0)
-            make.right.equalTo(0)
-            make.height.equalTo(20)
-        }
+        topview.translatesAutoresizingMaskIntoConstraints = false
+        topview.topAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
+        topview.leftAnchor.constraint(equalTo: self.view.layoutMarginsGuide.leftAnchor, constant: 0).isActive = true
+        topview.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0).isActive = true
+        topview.heightAnchor.constraint(equalToConstant: 2.0).isActive = true
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {

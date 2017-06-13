@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 @IBDesignable
 class TitleView: UIView {
@@ -18,6 +17,7 @@ class TitleView: UIView {
         }
     }
     
+    var lineView : UIView!
     var titleLabel : UILabel!
     
     override init(frame: CGRect) {
@@ -34,27 +34,25 @@ class TitleView: UIView {
     
     private func initView() {
         
-        let lineView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        lineView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         lineView.backgroundColor = UIColor.lightGray
         lineView.alpha = 0.5
         self.addSubview(lineView)
+       
+        lineView.translatesAutoresizingMaskIntoConstraints = false
+        lineView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+        lineView.leftAnchor.constraint(equalTo: self.layoutMarginsGuide.leftAnchor, constant: 0).isActive = true
+        lineView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0).isActive = true
+        lineView.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
         
-        lineView.snp.makeConstraints { (make) -> Void in
-            make.bottom.equalTo(0)
-            make.left.equalTo(20)
-            make.right.equalTo(0)
-            make.height.equalTo(1)
-        }
-        
-        titleLabel = UILabel(frame: CGRect(x: 0, y: 00, width: 0, height: 0))
+        titleLabel = UILabel(frame: CGRect(x: 0, y: 00, width: 0, height: 42))
         titleLabel.font = UIFont.systemFont(ofSize: 38, weight: UIFontWeightHeavy)
         self.addSubview(titleLabel)
-
-        titleLabel.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(28)
-            make.left.equalTo(20)
-            make.right.equalTo(0)
-        }
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor, constant: 20).isActive = true
+        titleLabel.leftAnchor.constraint(equalTo: self.layoutMarginsGuide.leftAnchor, constant: 0).isActive = true
+        titleLabel.rightAnchor.constraint(equalTo: self.layoutMarginsGuide.rightAnchor, constant: 0).isActive = true
     }
     
     

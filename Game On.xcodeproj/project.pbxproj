@@ -57,8 +57,6 @@
 		F9875FC51E6BF5A300D75347 /* iOS_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9875FC41E6BF5A300D75347 /* iOS_Tests.swift */; };
 		F98EED671E77602B004B3AA7 /* PostCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EED661E77602B004B3AA7 /* PostCommentTableViewCell.swift */; };
 		F98EED6A1E7776FD004B3AA7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98EED691E7776FD004B3AA7 /* ProfileViewController.swift */; };
-		F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; };
-		F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F98FCA041E2F503700FA06A2 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F98FCA091E2FE95600FA06A2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA081E2FE95600FA06A2 /* RootViewController.swift */; };
 		F98FCA0D1E2FE9A600FA06A2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */; };
 		F994801E1E47FE1F008481EF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F994801D1E47FE1F008481EF /* TabBarViewController.swift */; };
@@ -119,7 +117,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F9B3069B1ED7594B00749F16 /* Bolts.framework in Embed Frameworks */,
-				F98FCA061E2F503700FA06A2 /* SnapKit.framework in Embed Frameworks */,
 				F9B3069D1ED7594B00749F16 /* Parse.framework in Embed Frameworks */,
 				F9A7981B1E31F03600D37C32 /* DateTools.framework in Embed Frameworks */,
 			);
@@ -191,7 +188,6 @@
 		F9875FC61E6BF5A300D75347 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F98EED661E77602B004B3AA7 /* PostCommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCommentTableViewCell.swift; sourceTree = "<group>"; };
 		F98EED691E7776FD004B3AA7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		F98FCA041E2F503700FA06A2 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = ../Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		F98FCA081E2FE95600FA06A2 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F98FCA0C1E2FE9A600FA06A2 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		F994801D1E47FE1F008481EF /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -220,7 +216,6 @@
 			files = (
 				F9B306961ED74EE800749F16 /* FBSDKCoreKit.framework in Frameworks */,
 				F9B306971ED74EE800749F16 /* FBSDKLoginKit.framework in Frameworks */,
-				F98FCA051E2F503700FA06A2 /* SnapKit.framework in Frameworks */,
 				F9B3069A1ED7594B00749F16 /* Bolts.framework in Frameworks */,
 				F9B3069C1ED7594B00749F16 /* Parse.framework in Frameworks */,
 				F9A7981A1E31F03600D37C32 /* DateTools.framework in Frameworks */,
@@ -307,7 +302,6 @@
 				F9B306981ED7594B00749F16 /* Bolts.framework */,
 				F9B306991ED7594B00749F16 /* Parse.framework */,
 				F9A798191E31F03600D37C32 /* DateTools.framework */,
-				F98FCA041E2F503700FA06A2 /* SnapKit.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -610,7 +604,6 @@
 					};
 					F92D7C891E2CA91D00D65BB8 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = KDY2FY8979;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -983,7 +976,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Common/Game On.entitlements";
-				DEVELOPMENT_TEAM = KDY2FY8979;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1005,7 +998,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Common/Game On.entitlements";
-				DEVELOPMENT_TEAM = KDY2FY8979;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
