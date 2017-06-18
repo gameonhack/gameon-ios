@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GroupsViewController: RootViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class GroupsViewController: RootViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, AddGroupViewControllerDelegate {
     
     var groups = [Group]() {
         didSet{
@@ -84,9 +84,13 @@ class GroupsViewController: RootViewController, UITableViewDataSource, UITableVi
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "ShowGroupDetailSegue" {
-            if let vc = segue.destination as? GroupViewController, let indexPath = tableView.indexPath(for: sender as! UITableViewCell)  {
-                vc.group = !searchMode ? self.groups[indexPath.row] : filterdGroups[indexPath.row]
+            if let groupViewController = segue.destination as? GroupViewController, let indexPath = tableView.indexPath(for: sender as! UITableViewCell)  {
+                groupViewController.group = !searchMode ? self.groups[indexPath.row] : filterdGroups[indexPath.row]
             }
+        }
+        
+        if let addGroupViewController = (segue.destination as? UINavigationController)?.topViewController as? AddGroupViewController {
+            addGroupViewController.delegate = self
         }
     }
     // MARK: - UITableViewDataSource
@@ -140,6 +144,22 @@ class GroupsViewController: RootViewController, UITableViewDataSource, UITableVi
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+    }
+    
+    // MARK: - AddGroupViewControllerDelegate
+    
+    func didCreated(group: Group) {
+        self.groups.append(group)
+        self.groups.sort { (group1, group2) -> Bool in
+            return group1.name < group2.name
+        }
+        
+        guard let index = self.groups.index(of: group) else {
+            return
+        }
+        
+        let indexPath = tableView.cellForRow(at: IndexPath(row: index, section: 0 ))
+        self.performSegue(withIdentifier: "ShowGroupDetailSegue", sender: indexPath)
     }
     
 }

@@ -604,6 +604,7 @@
 					};
 					F92D7C891E2CA91D00D65BB8 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = KDY2FY8979;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -976,7 +977,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Common/Game On.entitlements";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KDY2FY8979;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -998,7 +999,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Common/Game On.entitlements";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = KDY2FY8979;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

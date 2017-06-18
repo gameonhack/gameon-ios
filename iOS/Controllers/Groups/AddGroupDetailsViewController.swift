@@ -10,6 +10,8 @@ import UIKit
 
 class AddGroupDetailsViewController: UIViewController, UITextViewDelegate {
 
+    var delegate : AddGroupViewControllerDelegate?
+    
     var group : Group!
     
     @IBOutlet weak var iconImageView: UIImageView!
@@ -39,6 +41,13 @@ class AddGroupDetailsViewController: UIViewController, UITextViewDelegate {
         descriptionTextView.resignFirstResponder()
         
         group.saveInBackground { (success, error) in
+            if let error = error {
+                
+                self.navigationItem.backBarButtonItem?.isEnabled = true
+                (sender as? UITabBarItem)?.isEnabled = true
+                
+                self.showSimpleAlert(title: "Error", message: error.localizedDescription)
+            }
             if success {
                 self.performSegue(withIdentifier: "ShowGroupCreatedSegue", sender: sender)
             }
@@ -46,15 +55,21 @@ class AddGroupDetailsViewController: UIViewController, UITextViewDelegate {
         
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if let groupCreatedViewController = segue.destination as? GroupCreatedViewController {
+            groupCreatedViewController.delegate = delegate
+            groupCreatedViewController.group = group
+        }
+        
     }
-    */
+    
 
     // MARK: - UITextViewDelegate
     

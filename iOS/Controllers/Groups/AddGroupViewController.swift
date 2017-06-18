@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol AddGroupViewControllerDelegate {
+    func didCreated(group: Group)
+}
+
 class AddGroupViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var delegate : AddGroupViewControllerDelegate?
+    
     let group = Group()
     
     @IBOutlet weak var groupIconImageView: UIImageView!
@@ -65,13 +71,13 @@ class AddGroupViewController: UIViewController, UIImagePickerControllerDelegate,
         
         if let addGroupDetailsViewController = segue.destination as? AddGroupDetailsViewController {
             group.name = nameLabel.text ?? "No name 👹"
-            group.create(iconImage: groupIconImageView.image!)
+//            group.create(iconImage: groupIconImageView.image!)
             /*
             group.setFile(forKey: #keyPath(Group.icon), withData: UIImagePNGRepresentation(groupIconImageView.image!)!, andName: "icon.png", block: { (succcess, error) in
                 
             })
              */
-            
+            addGroupDetailsViewController.delegate = delegate
             addGroupDetailsViewController.group = group
         }
     }

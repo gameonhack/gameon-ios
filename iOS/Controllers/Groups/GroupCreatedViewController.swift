@@ -10,6 +10,9 @@ import UIKit
 
 class GroupCreatedViewController: UIViewController {
 
+    var delegate : AddGroupViewControllerDelegate?
+    var group : Group!
+    
     @IBOutlet weak var iconImageView: UIImageView!
     
     override func viewDidLoad() {
@@ -33,7 +36,7 @@ class GroupCreatedViewController: UIViewController {
     
     @IBAction func continueAction(_ sender: Any) {
         self.dismiss(animated: true) { 
-            
+            self.delegate?.didCreated(group: self.group)
         }
     }
 
